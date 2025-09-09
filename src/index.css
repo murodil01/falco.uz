@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+.custom-modal .ant-modal-content {
+  width: 250px !important;
+  height: 200px !important;
+  border-radius: 16px;
+}
