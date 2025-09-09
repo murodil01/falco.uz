@@ -1,20 +1,52 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import project_slider from "../../../assets/project_slider.png";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Agroboost_pro from "../../../assets/Agroboost_pro.png";
+import fresh_line_pro from "../../../assets/fresh_line_pro.png";
+import FoodQuest_pro from "../../../assets/FoodQuest_pro.png";
+import robocontest from "../../../assets/robocontest.png";
+import com from "../../../assets/com.webp";
 
 const images = [
-  "https://picsum.photos/id/1011/600/400",
-  "https://picsum.photos/id/1012/600/400",
-  "https://picsum.photos/id/1013/600/400",
-  "https://picsum.photos/id/1014/600/400",
-  "https://picsum.photos/id/1015/600/400",
-  "https://picsum.photos/id/1016/600/400",
-  "https://picsum.photos/id/1018/600/400",
+  {
+    title: "Agroboost UZ",
+    subtitle: "Seed Stage",
+    description:
+      "Agroboost provides farmers with digital tools such as drone monitoring, smart sensors, and data analytics for better crop management. It works by collecting real-time data from fields and offering recommendations on irrigation, fertilization, and harvesting. The main benefit is increased productivity, reduced costs, and more sustainable farming practices. It solves the problems of low efficiency and lack of access to modern technology in agriculture, helping farmers make informed decisions.",
+    image: Agroboost_pro,
+  },
+  {
+    title: "FoodQuest UZ",
+    subtitle: "Pre-Seed Stage",
+    description:
+      "FoodQuest uses digital tools such as gamification features, special “magic sales,” and dynamic pricing to make food discovery engaging and affordable. It works by connecting restaurants and food providers with customers through a smart platform that offers discounts, rewards, and real-time availability of meals. The benefits include lower food prices, exciting user experiences, and better visibility for food businesses. FoodQuest addresses the problem of high food costs and unnecessary waste by redistributing surplus meals and balancing food consumption across the country.",
+    image: fresh_line_pro,
+  },
+  {
+    title: "Robocontest UZ",
+    subtitle: "Growth Stage",
+    description:
+      "Robocontest offers tools such as coding challenges, problem sets, and automated evaluation systems. It works by providing an online platform where participants can solve tasks, join contests, and receive instant feedback on their solutions. The benefit is hands-on practice, skill improvement, and preparation for real-world programming. It solves the problem of limited opportunities for young developers to test their knowledge and compete on an international level.",
+    image: FoodQuest_pro,
+  },
+  {
+    title: "Freshline",
+    subtitle: "Early Seed Stage",
+    description:
+      "Freshline provides logistics tools like digital tracking, route optimization, and cold-chain monitoring for fresh product delivery. It works by connecting farmers, suppliers, and customers through a transparent platform that ensures timely and safe delivery. The benefits include fresher products, reduced waste, and lower costs for both businesses and consumers. It solves the problem of inefficiency and product loss in traditional supply chains by offering smarter, technology-driven distribution.",
+    image: robocontest,
+  },
+  {
+    title: "Coming soon",
+    subtitle: "",
+    description:
+      "We never get tired of creating. 🚀 Another startup is on the way — bigger, smarter, and ready to inspire. Stay tuned, the future is loading…",
+    image: com,
+  },
 ];
 
 const ProjectSlider = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-
   const totalImages = images.length;
 
   const handlePrev = () => {
@@ -24,6 +56,18 @@ const ProjectSlider = () => {
   const handleNext = () => {
     setCurrentIndex((prev) => (prev === totalImages - 1 ? 0 : prev + 1));
   };
+
+  const current = images[currentIndex];
+  const next = images[(currentIndex + 1) % totalImages]; // keyingi rasm
+
+  // 🔹 Auto slide har 5 sekunda
+  useEffect(() => {
+    const interval = setInterval(() => {
+      handleNext();
+    }, 5000);
+
+    return () => clearInterval(interval); // cleanup
+  }, []);
 
   return (
     <section className="relative py-[80px] mt-30">
@@ -41,38 +85,43 @@ const ProjectSlider = () => {
           Our <span className="text-[#E8C777]">Projects</span>
         </h3>
 
-        <div className="flex flex-col md:flex-row gap-10 items-start">
+        <div className="flex flex-col-reverse md:flex-row gap-10 items-center">
           {/* Left text part */}
-          <div className="md:w-1/2 space-y-4">
-            <h3 className="text-[36px] text-[#09291B] font-[600]">Title</h3>
+          <div className="md:w-1/2 space-y-4 min-h-[360px] flex flex-col">
+            <h3 className="text-[36px] text-[#09291B] font-[600]">
+              {current.title}
+            </h3>
             <span className="text-[20px] text-[#808080] font-[600]">
-              Subtitle
+              {current.subtitle}
             </span>
             <p className="text-[#6E7074] font-[500] text-[18px] mt-[30px]">
-              Donec adipiscing tristique risus nec feugiat in. Ullamcorper morbi
-              tincidunt ornare massa eget egestas purus viverra. Pharetra sit
-              amet aliquam id diam maecenas ultricies mi eget. Aenean euismod
-              elementum nisi quis eleifend. Sit amet facilisis magna etiam
-              tempor orci. Vitae et leo duis ut. Arcu cursus vitae congue
-              mauris.
+              {current.description}
             </p>
           </div>
 
           {/* Right slider part */}
           <div className="md:w-1/2 flex flex-col items-center">
-            {/* Slider Image */}
-            <div className="mb-6">
+            <div className="flex flex-row items-center gap-4 md:gap-6">
+              {/* Main Image */}
               <img
-                src={images[currentIndex]}
-                alt={`Project ${currentIndex + 1}`}
-                className="w-[320px] h-[320px] object-cover rounded-[10px]"
+                src={current.image}
+                alt={current.title}
+                className="w-[180px] h-[180px] md:w-[320px] md:h-[320px] object-cover rounded-[10px] shadow-lg"
+              />
+
+              {/* Next preview image */}
+              <img
+                src={next.image}
+                alt={next.title}
+                onClick={handleNext}
+                className="w-[90px] h-[90px] md:w-[160px] md:h-[160px] object-cover rounded-[10px] opacity-70 hover:opacity-100 transition cursor-pointer"
               />
             </div>
           </div>
         </div>
 
         {/* Pagination & Controls */}
-        <div className="flex flex-col sm:flex-row justify-center items-center gap-4 mt-[80px]">
+        <div className="flex flex-row justify-center items-center gap-4 mt-[80px]">
           {/* Prev Button */}
           <button
             onClick={handlePrev}
@@ -88,11 +137,11 @@ const ProjectSlider = () => {
                 key={idx}
                 onClick={() => setCurrentIndex(idx)}
                 className={`px-4 py-2 rounded-full font-medium transition
-          ${
-            currentIndex === idx
-              ? "bg-[#09291B] text-white"
-              : "bg-white text-[#09291B]"
-          }`}
+        ${
+          currentIndex === idx
+            ? "bg-[#09291B] text-white"
+            : "bg-white text-[#09291B]"
+        }`}
               >
                 {idx + 1}
               </button>
