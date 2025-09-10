@@ -6,7 +6,7 @@ import { useState } from "react";
 
 const Education = ({ onContinue }) => {
   const [isStudent, setIsStudent] = useState(null);
-  const [educationLevel, setEducationLevel] = useState("");
+  const [educationLevel, setEducationLevel] = useState(null);
 
   return (
     <div className="flex flex-col gap-6">
@@ -39,7 +39,7 @@ const Education = ({ onContinue }) => {
             value={educationLevel}
             onChange={(value) => setEducationLevel(value)}
             placeholder="Select education level"
-            className="w-[270px] !h-[40px] !rounded-[10px]"
+            className="custom-select w-[270px] !h-[40px] !rounded-[10px]"
             options={[
               { value: "highschool", label: "High School" },
               { value: "bachelor", label: "Bachelor's Degree" },

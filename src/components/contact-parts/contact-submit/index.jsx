@@ -1,10 +1,17 @@
 import { Button, Input } from "antd";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom"; 
 
 const { TextArea } = Input;
 
-const ContactSubmit = ({ onSubmit }) => {
+const ContactSubmit = () => {
+  const navigate = useNavigate(); 
+
+  const handleSubmit = () => {
+    navigate("/"); 
+  };
+
   return (
     <div className="flex flex-col gap-6 ">
       <h3 className="text-[#313131] text-[22px] font-[600]">Get In Touch</h3>
@@ -18,7 +25,7 @@ const ContactSubmit = ({ onSubmit }) => {
 
       {/* Continue button */}
       <Button
-        onClick={onSubmit}
+        onClick={handleSubmit} 
         className="w-[560px] !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500]"
         style={{
           background:

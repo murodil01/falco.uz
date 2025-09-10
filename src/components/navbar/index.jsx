@@ -102,14 +102,14 @@ const Navbar = () => {
         : hash
         ? location.hash === hash
         : location.pathname === path && !location.hash;
-    return `${isActive ? "text-red-500" : "text-[#9C8A5D]"}`;
+    return `${isActive ? "text-[#9A9EA6]" : "text-[#9C8A5D]"}`;
   };
 
   return (
     <>
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-          scrolled ? "bg-[#09291b] shadow-md" : "bg-transparent"
+          scrolled ? "bg-[#F7F7F7] shadow-md" : "bg-transparent"
         }`}
       >
         <div className="container mx-auto max-w-[1260px] px-4 sm:px-5 md:px-7 py-[20px] flex flex-wrap items-center justify-between">
@@ -125,8 +125,8 @@ const Navbar = () => {
               <li>
                 <HashLink
                   smooth
-                  to="/#"
-                  className={getLinkClass({ path: "/" })}
+                  to="/#home"
+                  className={getLinkClass({ path: "/", hash: "#home" })}
                 >
                   Home
                 </HashLink>
@@ -212,9 +212,9 @@ const Navbar = () => {
             <li>
               <HashLink
                 smooth
-                to="/#"
+                to="/#home"
                 onClick={() => setIsOpen(false)}
-                className={getLinkClass({ path: "/" })}
+                className={getLinkClass({ path: "/", hash: "#home"  })}
               >
                 Home
               </HashLink>
@@ -249,9 +249,7 @@ const Navbar = () => {
                   <li
                     onClick={() => handleAboutSelect("projects", "/projects")}
                     className={`cursor-pointer px-2 py-2 rounded-md ${
-                      activeAbout === "projects"
-                        ? "bg-red-500 text-white"
-                        : ""
+                      activeAbout === "projects" ? "bg-red-500 text-white" : ""
                     }`}
                   >
                     Projects
@@ -320,12 +318,16 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div className="flex flex-col space-y-4 mt-8 w-3/4 mx-auto">
+          <div className="flex flex-col space-y-4 mt-8 border-t pt-6 border-[#9C8A5D]">
             {/* Contact Us */}
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="w-full px-4 py-3 bg-[#0F2C20] text-white rounded-[40px] hover:bg-[#9C8A5D] transition text-center"
+              className="w-full px-4 py-3  text-white text-[18px] rounded-[40px] hover:bg-[#9C8A5D] transition text-center"
+              style={{
+                background:
+                  "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
+              }}
             >
               Contact Us
             </Link>
@@ -334,7 +336,7 @@ const Navbar = () => {
             <Link
               to="/join-us"
               onClick={() => setIsOpen(false)}
-              className="w-full px-4 py-3 border-2 border-[#9C8A5D] text-[#9C8A5D] rounded-[40px] hover:bg-[#0F2C20] hover:text-white transition text-center"
+              className="w-full px-4 py-3 border-2 border-[#9C8A5D] text-[#9C8A5D] text-[18px] rounded-[40px] hover:bg-[#0F2C20] hover:text-white transition text-center"
             >
               Join Us
             </Link>

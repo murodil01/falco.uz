@@ -8,7 +8,7 @@ const About = () => {
       className="w-full h-[860px] bg-cover bg-center bg-no-repeat"
       style={{ backgroundImage: `url(${about})` }}
     >
-      <div className="max-w-[1260px] mx-auto py-20 md:py-25 flex flex-col md:flex-row items-center gap-40 px-10">
+      <div className="max-w-[1260px] mx-auto py-20 md:py-25 flex flex-col md:flex-row items-center gap-y-10 gap-x-40 px-10">
         {/* Chap taraf */}
         <div className=" text-white">
           <h3 className="text-3xl md:text-[70px] font-[800]">

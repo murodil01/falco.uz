@@ -9,7 +9,7 @@ import TopHeader from "../../components/top-header";
 
 const Home = () => {
   return (
-    <div>
+    <div id="home">
       <SplashScreen />
       <TopHeader />
       <Sldier />

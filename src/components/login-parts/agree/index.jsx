@@ -16,7 +16,7 @@ const Agree = ({ onContinue }) => {
         </h3>
         <Select
           placeholder="Your answer"
-          className="w-full !h-[40px] !rounded-[10px]"
+          className="custom-select w-full !h-[40px] !rounded-[10px]"
           options={[
             { value: "5h", label: "Up to 5 hours" },
             { value: "10h", label: "5 – 10 hours" },
@@ -35,7 +35,7 @@ const Agree = ({ onContinue }) => {
         </h3>
         <Select
           placeholder="Select yes or no"
-          className="w-full !h-[40px] !rounded-[10px]"
+          className="custom-select w-full !h-[40px] !rounded-[10px]"
           options={[
             { value: "yes", label: "Yes" },
             { value: "no", label: "No" },

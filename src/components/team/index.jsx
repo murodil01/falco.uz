@@ -1,7 +1,10 @@
 import teamBg from "../../assets/images/team.png";
 import team1 from "../../assets/images/team1.png";
 import team2 from "../../assets/images/team2.png";
-import person from "../../assets/images/person.png";
+import Bobur from "../../assets/images/Bobur.jpg";
+import Behruz from "../../assets/images/Behruz.jpg";
+import Fozil from "../../assets/images/Fozil.jpg";
+import Mushtariy from "../../assets/images/Mushtariy.jpg";
 import { RiTelegram2Line } from "react-icons/ri";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { useEffect } from "react";
@@ -18,6 +21,7 @@ const teamMembers = [
     telegram: "@Foziljon_Ruzmamatov",
     linkedin: "Not found",
     instagram: "_mr.fozil_",
+    image: Fozil,
   },
   {
     id: 2,
@@ -28,6 +32,7 @@ const teamMembers = [
     telegram: "@Mushtariybegim_Otabekovna",
     linkedin: "Not found",
     instagram: "begim_otabekovna",
+    image: Mushtariy,
   },
   {
     id: 3,
@@ -38,6 +43,7 @@ const teamMembers = [
     telegram: "@bnutfilloyev",
     linkedin: "Not found",
     instagram: "Not found",
+    image: Behruz,
   },
   {
     id: 4,
@@ -48,6 +54,7 @@ const teamMembers = [
     telegram: "@allayorovbobur21",
     linkedin: "https://www.linkedin.com/in/bobur-allayorov-66b0622a6/",
     instagram: "Not found",
+    image: Bobur,
   },
 ];
 
@@ -106,7 +113,7 @@ const Team = () => {
                     </defs>
 
                     <image
-                      href={person}
+                      href={member.image}
                       width="250"
                       height="320"
                       y="10"

@@ -27,7 +27,7 @@ const data = [
     date: { month: "APR", day: "20", year: "2025" },
     author: "By HR Team",
     title: "Vacancy: UI/UX Designer",
-    desc: "Soluta natus porro. Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    desc: "Soluta natus porro. Lorem ipsum dolor sit amet consectetur, adipisicing bottom elit.",
     phone: "+998 93 111 2233",
     img: about_hero,
   },
@@ -44,7 +44,7 @@ const data = [
 
 const CareerHero = () => {
   return (
-    <section className="relative py-[80px] mt-30">
+    <section className="relative py-[80px] mt-28">
       {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-[400px] -z-10">
         <img

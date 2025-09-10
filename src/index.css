@@ -5,3 +5,33 @@
   height: 200px !important;
   border-radius: 16px;
 }
+
+.custom-select .ant-select-selector {
+  border-radius: 10px !important;
+}
+
+/* Barcha scrolllarga chiroyli dizayn */
+::-webkit-scrollbar {
+  width: 8px; /* kengligi */
+  height: 8px; /* gorizontal scroll uchun */
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1; /* orqa fon */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #09291B, #00f2fe); /* gradient rang */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #43e97b, #38f9d7); /* hoverda rang */
+}
+
+/* Firefox scrollbari */
+* {
+  scrollbar-width: thin; /* ingichka scrollbar */
+  scrollbar-color: #09291B #f1f1f1; /* thumb va track rangi */
+}

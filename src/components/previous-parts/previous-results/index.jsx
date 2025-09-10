@@ -87,10 +87,9 @@ const PreviousResults = () => {
             {group.map((item, index) => (
               <div
                 key={item.id}
-                className={`
-            flex flex-col gap-4 md:gap-8 md:items-center mb-20
-            md:${index % 2 === 1 ? "flex-row-reverse" : "flex-row"} 
-          `}
+                className={`flex flex-col gap-4 md:gap-8 md:items-center mb-20 ${
+                  index % 2 === 1 ? "md:flex-row-reverse" : "md:flex-row"
+                }`}
               >
                 <img
                   src={item.img}
@@ -98,7 +97,7 @@ const PreviousResults = () => {
                   className="w-full md:max-w-[440px] h-auto flex-shrink-0 rounded-[26px]"
                 />
                 <div className="flex flex-col gap-6 md:gap-[30px]">
-                  <div className="flex  gap-2 md:gap-4 items-center">
+                  <div className="flex gap-2 md:gap-4 items-center">
                     <p className="text-[20px] md:text-[26px] font-[400] text-[#313131] bg-[#F3F2ED] rounded-[20px] py-[6px] px-[20px] md:py-[10px] md:px-[50px]">
                       {item.date}
                     </p>
@@ -122,13 +121,20 @@ const PreviousResults = () => {
 
       {/* Prev / Slide number / Next */}
       <div className="flex justify-center items-center gap-6 text-[#09291B] font-semibold">
+        {/* Prev */}
         <button
           onClick={() => sliderRef.current.slickPrev()}
-          className="bg-[#F1F2F4CC] text-[#09291B] px-3 py-3 rounded-full"
+          disabled={currentSlide === 0}
+          className={`px-3 py-3 rounded-full ${
+            currentSlide === 0
+              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+              : "bg-[#F1F2F4CC] text-[#09291B]"
+          }`}
         >
           <ArrowLeft size={20} />
         </button>
 
+        {/* Slide numbers */}
         <span>
           {Array.from(
             { length: groupedResults[currentSlide].length },
@@ -140,9 +146,15 @@ const PreviousResults = () => {
           )}
         </span>
 
+        {/* Next */}
         <button
           onClick={() => sliderRef.current.slickNext()}
-          className="bg-[#F1F2F4CC] text-[#09291B] px-3 py-3 rounded-full"
+          disabled={currentSlide === groupedResults.length - 1}
+          className={`px-3 py-3 rounded-full ${
+            currentSlide === groupedResults.length - 1
+              ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+              : "bg-[#F1F2F4CC] text-[#09291B]"
+          }`}
         >
           <ArrowRight size={20} />
         </button>

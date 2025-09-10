@@ -1,13 +1,13 @@
 import projects from "../../assets/images/projects.png";
 import agrobust from "../../assets/agrobust.png";
-import freshline from "../../assets/freshline.png";
+import fresh_line_pro from "../../assets/fresh_line_pro.png";
 import robcont from "../../assets/robcont.png";
 import foodquest from "../../assets/foodquest.png";
 
 const Slider = () => {
-  const images = [agrobust, freshline, robcont, foodquest];
+  const images = [agrobust, fresh_line_pro, robcont, foodquest];
 
-  const repeatedImages = [...images, ...images, ...images, ...images];
+  const repeatedImages = [...images, ...images];
 
   return (
     <section
@@ -57,7 +57,7 @@ const Slider = () => {
           }
           .animate-marquee {
             display: flex;
-            animation: marquee 40s linear infinite;
+            animation: marquee 10s linear infinite;
           }
         `}
       </style>

@@ -22,7 +22,7 @@ const Experience = ({ onContinue }) => {
           mode="multiple"
           allowClear
           placeholder="Select your skills and interests"
-          className="w-full !h-[40px] !rounded-[10px]"
+          className="custom-select w-full !h-[40px] !rounded-[10px]"
           options={[
             { value: "frontend", label: "Frontend Development" },
             { value: "backend", label: "Backend Development" },
@@ -42,7 +42,7 @@ const Experience = ({ onContinue }) => {
         <TextArea
           placeholder="Write your experience here..."
           rows={4}
-          className="!rounded-lg"
+          className="!rounded-[10px]"
         />
       </div>
 

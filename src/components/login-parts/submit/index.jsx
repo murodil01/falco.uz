@@ -1,10 +1,20 @@
 import { Button, Input } from "antd";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const { TextArea } = Input;
 
 const Submit = ({ onSubmit }) => {
+  const navigate = useNavigate();
+
+  const handleSubmit = () => {
+    if (onSubmit) {
+      onSubmit(); 
+    }
+    navigate("/"); // ✅ home sahifaga yo‘naltirish
+  };
+
   return (
     <div className="flex flex-col gap-6 ">
       <h3 className="text-[#313131] text-[22px] font-[600]">
@@ -18,9 +28,9 @@ const Submit = ({ onSubmit }) => {
         <TextArea placeholder="Your answer" rows={4} className="!rounded-lg" />
       </div>
 
-      {/* Continue button */}
+      {/* Submit button */}
       <Button
-        onClick={onSubmit}
+        onClick={handleSubmit}
         className="w-full !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500]"
         style={{
           background:
