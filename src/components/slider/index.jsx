@@ -21,9 +21,9 @@ const Slider = () => {
       }}
     >
       <div className="container mx-auto flex flex-col gap-20">
-        <h3 className="text-[50px] text-[#09291B] font-bold text-center mb-40">
+        <h2 className="text-[50px] text-[#09291B] font-bold text-center mb-40">
           Our <span className="text-[#9C8A5D]">Projects</span>
-        </h3>
+        </h2>
 
         {/* Slider container */}
         <div className="overflow-hidden">

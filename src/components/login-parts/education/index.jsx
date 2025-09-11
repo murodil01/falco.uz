@@ -14,7 +14,7 @@ const Education = ({ onContinue }) => {
         Ta’lim va faoliyat
       </h3>
 
-      <div className="flex items-start gap-8">
+      <div className="md:flex flex-col items-start gap-8">
         {/* Student bo'lishi */}
         <div>
           <h3 className="text-[#000000] text-[16px] font-[500] mb-2">
@@ -39,7 +39,7 @@ const Education = ({ onContinue }) => {
             value={educationLevel}
             onChange={(value) => setEducationLevel(value)}
             placeholder="Select education level"
-            className="custom-select w-[270px] !h-[40px] !rounded-[10px]"
+            className="custom-select !w-full !h-[40px] !rounded-[10px]"
             options={[
               { value: "highschool", label: "High School" },
               { value: "bachelor", label: "Bachelor's Degree" },

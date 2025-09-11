@@ -33,7 +33,7 @@ const JoinUs = () => {
         style={{ backgroundImage: `url(${login_bg})` }}
       >
         <div
-          className="max-w-[860px] w-full h-[600px] mx-auto px-8 py-8 flex flex-col items-center gap-12 justify-center bg-white/20 mt-12"
+          className="max-w-[860px] w-full min-h-[600px] mx-auto px-8 py-8 flex flex-col items-center gap-12 justify-center bg-white/20 mt-12"
           style={{
             border: "0.95px solid #EFF0F6",
             backdropFilter: "blur(9.52px)",
@@ -41,33 +41,39 @@ const JoinUs = () => {
           }}
         >
           {/* Progress Line */}
-          <div className="w-[520px] border-b border-[#D9DBE9] pb-6 relative">
+          <div className="max-w-[520px] w-full border-b border-[#D9DBE9] pb-6 relative">
             <div className="relative flex items-center justify-between">
               {/* Background line */}
               <div className="absolute top-1/2 left-0 w-full h-[6px] bg-[#EFF0F6] -translate-y-1/2 rounded-full" />
 
-              {/* Active line → faqat step > 2 bo'lsa chiziladi */}
-              {step > 2 && (
+              {/* Active line → faqat step >= 3 bo‘lsa chiziladi */}
+              {step >= 3 && (
                 <div
-                  className="absolute top-1/2 left-0 h-[6px] bg-[#22A75D] -translate-y-1/2 rounded-full transition-all"
+                  className="absolute top-1/2 left-0 h-[6px] bg-[#22A75D] -translate-y-1/2 rounded-full transition-all duration-500"
                   style={{
-                    width: step === 3 ? "50%" : step === 4 ? "75%" : "100%", // agar keyinchalik 4-step bo‘lsa
+                    width:
+                      step === 3
+                        ? "33%" // 1/3 qismi
+                        : step === 4
+                        ? "66%" // 2/3 qismi
+                        : "100%", // 5 va undan keyin to‘liq
                   }}
                 />
               )}
 
               {/* Steps */}
               {[1, 2, 3, 4].map((s) => {
-                const isActive =
-                  (step === 2 && s === 1) || // Documents → faqat 1
-                  (step > 2 && s < step); // Keyingi step’larda odatiy mantiq
+                const isActive = step > s; // faqat oldingi step’lar to‘liq bo‘lganda active bo‘ladi
+                const isCurrent = step === s; // hozirgi step
 
                 return (
                   <div
                     key={s}
-                    className={`relative z-10 w-8 h-8 flex items-center justify-center rounded-full border-2 ${
+                    className={`relative z-10 w-8 h-8 flex items-center justify-center rounded-full border-2 transition-colors ${
                       isActive
                         ? "bg-[#22A75D] border-[#22A75D] text-white"
+                        : isCurrent
+                        ? "bg-white border-[#22A75D] text-[#22A75D]"
                         : "bg-white border-[#EFF0F6] text-gray-400"
                     }`}
                   >

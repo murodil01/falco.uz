@@ -132,11 +132,11 @@ const Navbar = () => {
                 </HashLink>
               </li>
 
-              <li className="relative">
+              <li className="relative ">
                 <button
                   ref={aboutRef}
                   onClick={handleAboutClick}
-                  className="flex items-center gap-2 text-[#9C8A5D]"
+                  className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
                 >
                   About Us
                   <ChevronDown
@@ -152,7 +152,7 @@ const Navbar = () => {
                 <button
                   ref={newsRef}
                   onClick={handleNewsClick}
-                  className="flex items-center gap-2 text-[#9C8A5D] "
+                  className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
                 >
                   News
                   <ChevronDown
@@ -178,7 +178,7 @@ const Navbar = () => {
               {/* Contact Us */}
               <Link
                 to="/contact"
-                className="w-[140px] px-5 py-2 bg-[#0F2C20] text-white font-semibold text-[16px] rounded-[40px] hover:bg-[#9C8A5D] transition text-center"
+                className="w-[140px] px-5 flex justify-center items-center bg-[#0F2C20] text-white font-semibold text-[16px] rounded-[40px] hover:bg-[#9C8A5D] transition text-center"
               >
                 Contact Us
               </Link>
@@ -208,13 +208,13 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col pt-16 px-6">
-          <ul className="flex flex-col space-y-6 text-[20px] font-semibold text-[#9C8A5D] mt-10">
+          <ul className="flex flex-col space-y-6 text-[20px] font-semibold text-[#9C8A5D] mt-20">
             <li>
               <HashLink
                 smooth
                 to="/#home"
                 onClick={() => setIsOpen(false)}
-                className={getLinkClass({ path: "/", hash: "#home"  })}
+                className={getLinkClass({ path: "/", hash: "#home" })}
               >
                 Home
               </HashLink>
@@ -222,7 +222,7 @@ const Navbar = () => {
 
             <li>
               <button
-                className="flex items-center gap-2 text-[#9C8A5D]"
+                className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
                 onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
               >
                 About Us
@@ -237,9 +237,9 @@ const Navbar = () => {
                     onClick={() =>
                       handleAboutSelect("achievements", "/achievements")
                     }
-                    className={`cursor-pointer px-2 py-2 rounded-md ${
+                    className={`cursor-pointer px-2 py-2 rounded-[10px] ${
                       activeAbout === "achievements"
-                        ? "bg-red-500 text-white"
+                        ? "bg-[#F7F7F7] text-[#09291]"
                         : ""
                     }`}
                   >
@@ -248,15 +248,17 @@ const Navbar = () => {
 
                   <li
                     onClick={() => handleAboutSelect("projects", "/projects")}
-                    className={`cursor-pointer px-2 py-2 rounded-md ${
-                      activeAbout === "projects" ? "bg-red-500 text-white" : ""
+                    className={`cursor-pointer px-2 py-2 rounded-[10px] ${
+                      activeAbout === "projects"
+                        ? "bg-[#F7F7F7] text-[#09291]"
+                        : ""
                     }`}
                   >
                     Projects
                   </li>
                   <li
                     onClick={() => handleAboutSelect("about", "/about")}
-                    className={`cursor-pointer px-2 py-2 rounded-md ${
+                    className={`cursor-pointer px-2 py-2 rounded-[10px] ${
                       activeAbout === "about" ? "bg-red-500 text-white" : ""
                     }`}
                   >
@@ -268,7 +270,7 @@ const Navbar = () => {
 
             <li>
               <button
-                className="flex items-center gap-2 text-[#9C8A5D]"
+                className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
                 onClick={() => setMobileNewsOpen(!mobileNewsOpen)}
               >
                 News
@@ -281,24 +283,28 @@ const Navbar = () => {
                 <ul className="mt-2 flex flex-col gap-2">
                   <li
                     onClick={() => handleNewsSelect("expected", "/expected")}
-                    className={`cursor-pointer px-2 py-2 rounded-md ${
-                      activeNews === "expected" ? "bg-red-500 text-white" : ""
+                    className={`cursor-pointer px-2 py-2 rounded-[10px] ${
+                      activeNews === "expected"
+                        ? "bg-[#F7F7F7] text-[#09291]"
+                        : ""
                     }`}
                   >
                     Expected Competitions
                   </li>
                   <li
                     onClick={() => handleNewsSelect("previous", "/previous")}
-                    className={`cursor-pointer px-2 py-2 rounded-md ${
-                      activeNews === "previous" ? "bg-red-500 text-white" : ""
+                    className={`cursor-pointer px-2 py-2 rounded-[10px] ${
+                      activeNews === "previous"
+                        ? "bg-[#F7F7F7] text-[#09291]"
+                        : ""
                     }`}
                   >
                     Previous Competitions
                   </li>
                   <li
                     onClick={() => handleNewsSelect("falco", "/news")}
-                    className={`cursor-pointer px-2 py-2 rounded-md ${
-                      activeNews === "falco" ? "bg-red-500 text-white" : ""
+                    className={`cursor-pointer px-2 py-2 rounded-[10px] ${
+                      activeNews === "falco" ? "bg-[#F7F7F7] text-[#09291]" : ""
                     }`}
                   >
                     Falco News
@@ -352,6 +358,7 @@ const Navbar = () => {
         centered={false}
         closable={true}
         getContainer={false}
+        mask={false} 
         style={{
           position: "fixed",
           top: aboutPos.top,
@@ -404,6 +411,7 @@ const Navbar = () => {
         centered={false}
         closable={true}
         getContainer={false}
+        mask={false}
         style={{
           position: "fixed",
           top: newsPos.top,

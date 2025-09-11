@@ -11,7 +11,7 @@ const Documents = ({ onContinue }) => {
       <div>
         {/* layout vertical qilib qo‘ydim */}
         <Form layout="vertical">
-          <div className="flex gap-5">
+          <div className="flex flex-col md:flex-row gap-5">
             <Form.Item
               label="Full Name"
               labelCol={{
@@ -46,7 +46,7 @@ const Documents = ({ onContinue }) => {
             </Form.Item>
           </div>
 
-          <div className="flex gap-5">
+          <div className="flex flex-col md:flex-row gap-5">
             <Form.Item
               label="City / Region"
               labelCol={{
@@ -81,7 +81,7 @@ const Documents = ({ onContinue }) => {
             </Form.Item>
           </div>
 
-          <div className="flex gap-5">
+          <div className="flex flex-col md:flex-row gap-5">
             <Form.Item
               label="Phone Number"
               labelCol={{

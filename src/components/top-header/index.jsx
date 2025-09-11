@@ -7,6 +7,8 @@ const TopHeader = () => {
     <div className="relative min-h-screen lg:min-h-[1400px] overflow-hidden">
       {/* Rasm */}
       <img
+        fetchPriority="high"
+        decoding="async"
         src={header}
         alt="header"
         className="

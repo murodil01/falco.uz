@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
 .custom-modal .ant-modal-content {
   width: 250px !important;
   height: 200px !important;
@@ -22,7 +26,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(180deg, #09291B, #00f2fe); /* gradient rang */
+  background: linear-gradient(180deg, #09291b, #00f2fe); /* gradient rang */
   border-radius: 10px;
 }
 
@@ -33,5 +37,5 @@
 /* Firefox scrollbari */
 * {
   scrollbar-width: thin; /* ingichka scrollbar */
-  scrollbar-color: #09291B #f1f1f1; /* thumb va track rangi */
+  scrollbar-color: #09291b #f1f1f1; /* thumb va track rangi */
 }

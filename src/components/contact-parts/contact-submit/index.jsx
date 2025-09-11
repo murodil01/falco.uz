@@ -13,7 +13,7 @@ const ContactSubmit = () => {
   };
 
   return (
-    <div className="flex flex-col gap-6 ">
+    <div className="flex flex-col gap-6 w-full max-w-[560px]">
       <h3 className="text-[#313131] text-[22px] font-[600]">Get In Touch</h3>
 
       <div className="flex flex-col gap-2">
@@ -23,10 +23,10 @@ const ContactSubmit = () => {
         <TextArea placeholder="Your answer" rows={4} className="!rounded-lg" />
       </div>
 
-      {/* Continue button */}
+      {/* Submit button */}
       <Button
-        onClick={handleSubmit} 
-        className="w-[560px] !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500]"
+        onClick={handleSubmit}
+        className="w-full max-w-[560px] !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500]"
         style={{
           background:
             "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",

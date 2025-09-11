@@ -14,9 +14,12 @@ const Hero = () => {
             future. Falco is not just a community — it's your launchpad to
             greatness.
           </p>
-          <button className="bg-[#09291b] font-[500] rounded-[40px] text-white w-[230px] py-[14px] hover:bg-[#8e7d53] transition duration-300 text-lg">
-            <a href="#contact">Contact us</a>
-          </button>
+          <a
+            href="#contact"
+            className="bg-[#09291b] font-[500] rounded-[40px] text-white w-full max-w-[230px] px-[70px] py-[14px] hover:bg-[#8e7d53] transition duration-300 text-lg"
+          >
+            Contact us{" "}
+          </a>
         </div>
 
         {/* Image */}
@@ -25,7 +28,8 @@ const Hero = () => {
             <img
               src={hero}
               alt="Falco Illustration"
-              loading="lazy"
+              fetchPriority="high"
+              decoding="async"
               className="w-full h-auto object-cover transition-transform duration-300 ease-in-out hover:scale-110"
             />
           </div>

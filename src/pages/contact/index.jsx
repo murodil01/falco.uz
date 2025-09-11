@@ -35,8 +35,7 @@ const ContactUs = () => {
           }}
         >
           {/* Progress Line */}
-          {/* Progress Line */}
-          <div className="w-[520px] border-b border-[#D9DBE9] pb-6 relative">
+          <div className="max-w-[300px] w-full border-b border-[#D9DBE9] pb-6 relative">
             <div className="relative flex items-center justify-between">
               {/* Background line */}
               <div className="absolute top-1/2 left-0 w-full h-[6px] bg-[#EFF0F6] -translate-y-1/2 rounded-full" />

@@ -31,7 +31,7 @@ const About = () => {
             launchpad to greatness.
           </p>
           <button
-            className="mt-4 w-[230px] flex justify-center items-center gap-2 px-6 py-[14px] rounded-[24px] text-[20px] font-semibold text-white transition-colors"
+            className="mt-4 w-[260px] flex justify-center items-center gap-2 px-[47px] py-[14px] rounded-[24px] text-[20px] font-semibold text-white transition-colors cursor-pointer"
             style={{
               background:
                 "linear-gradient(99.32deg, #191B21 0.56%, rgba(34,167,93,0.9) 59.52%, rgba(25,27,33,0.8) 117.27%)",

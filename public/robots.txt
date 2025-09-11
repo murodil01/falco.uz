@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Keraksiz papkalarni bloklash
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /@vite/
+Disallow: /__vite_ping
+
+# Sitemap
+Sitemap: https://yourdomain.com/sitemap.xml

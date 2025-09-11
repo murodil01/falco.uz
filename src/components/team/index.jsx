@@ -64,6 +64,7 @@ const Team = () => {
   }, []);
   return (
     <section
+      id="team"
       className="team relative z-30 py-24 -mb-60 min-h-[1210px]"
       style={{
         backgroundImage: `url(${teamBg})`,
@@ -150,6 +151,7 @@ const Team = () => {
                     }
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Telegram"
                   >
                     <RiTelegram2Line size={23} />
                   </a>
@@ -161,6 +163,7 @@ const Team = () => {
                     }
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="LinkedIn"
                   >
                     <FaLinkedinIn size={20} />
                   </a>
@@ -174,6 +177,7 @@ const Team = () => {
                     }
                     target="_blank"
                     rel="noopener noreferrer"
+                    aria-label="Instagram"
                   >
                     <FaInstagram size={20} />
                   </a>
