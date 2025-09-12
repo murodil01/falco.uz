@@ -8,7 +8,7 @@ import { ChevronRight } from "lucide-react";
 
 const NewsHero = () => {
   return (
-    <section className="relative py-[80px] mt-30">
+    <section className="relative py-[80px] mt-27">
       {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-[400px] -z-10">
         <img

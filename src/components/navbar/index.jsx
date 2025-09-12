@@ -178,7 +178,11 @@ const Navbar = () => {
               {/* Contact Us */}
               <Link
                 to="/contact"
-                className="w-[140px] px-5 flex justify-center items-center bg-[#0F2C20] text-white font-semibold text-[16px] rounded-[40px] hover:bg-[#9C8A5D] transition text-center"
+                className="w-[140px] px-5 flex justify-center items-center  text-white font-semibold text-[16px] rounded-[40px] transition text-center"
+                style={{
+                  background:
+                    "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
+                }}
               >
                 Contact Us
               </Link>
@@ -186,7 +190,7 @@ const Navbar = () => {
               {/* Join Us */}
               <Link
                 to="/join-us"
-                className="w-[140px] px-5 py-2 border-2 border-[#9C8A5D] text-[#9C8A5D] hover:bg-[#0F2C20] hover:text-white font-semibold text-[16px] rounded-[40px] transition text-center"
+                className="w-[140px] px-5 py-2 border-2 border-[#9C8A5D] text-[#9C8A5D] font-semibold text-[16px] rounded-[40px] transition text-center"
               >
                 Join Us
               </Link>
@@ -358,7 +362,7 @@ const Navbar = () => {
         centered={false}
         closable={true}
         getContainer={false}
-        mask={false} 
+        mask={false}
         style={{
           position: "fixed",
           top: aboutPos.top,

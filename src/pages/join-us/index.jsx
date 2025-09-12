@@ -41,7 +41,7 @@ const JoinUs = () => {
           }}
         >
           {/* Progress Line */}
-          <div className="max-w-[520px] w-full border-b border-[#D9DBE9] pb-6 relative">
+          <div className="max-w-[520px] w-full relative">
             <div className="relative flex items-center justify-between">
               {/* Background line */}
               <div className="absolute top-1/2 left-0 w-full h-[6px] bg-[#EFF0F6] -translate-y-1/2 rounded-full" />
@@ -83,6 +83,8 @@ const JoinUs = () => {
               })}
             </div>
           </div>
+
+          <div className="bg-[#D9DBE9] w-full max-w-[570px] h-[2px]"></div>
 
           {/* Dynamic Pages */}
           {step === 1 && <Welcome onContinue={() => setStep(2)} />}

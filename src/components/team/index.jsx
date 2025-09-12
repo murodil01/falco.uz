@@ -142,7 +142,7 @@ const Team = () => {
 
               {/* Social Links */}
               <div className="flex justify-center gap-4">
-                <div className="team-link w-[42px] h-[42px] rounded-full hover:bg-blue-600 bg-[#313131] text-white flex items-center justify-center text-[17px] transition">
+                <div className="team-link w-[42px] h-[42px] cursor-pointer rounded-full hover:bg-blue-600 bg-[#313131] text-white flex items-center justify-center text-[17px] transition">
                   <a
                     href={
                       member.telegram !== "Not found"
@@ -156,7 +156,7 @@ const Team = () => {
                     <RiTelegram2Line size={23} />
                   </a>
                 </div>
-                <div className="team-link w-[42px] h-[42px] rounded-full bg-[#313131] hover:bg-blue-900 text-white flex items-center justify-center text-[17px] transition">
+                <div className="team-link w-[42px] h-[42px] cursor-pointer rounded-full bg-[#313131] hover:bg-blue-900 text-white flex items-center justify-center text-[17px] transition">
                   <a
                     href={
                       member.linkedin !== "Not found" ? member.linkedin : "#"
@@ -168,7 +168,7 @@ const Team = () => {
                     <FaLinkedinIn size={20} />
                   </a>
                 </div>
-                <div className="team-link w-[42px] h-[42px] rounded-full bg-[#313131] hover:bg-pink-500 text-white flex items-center justify-center text-[17px] transition">
+                <div className="team-link w-[42px] h-[42px] cursor-pointer rounded-full bg-[#313131] hover:bg-pink-500 text-white flex items-center justify-center text-[17px] transition">
                   <a
                     href={
                       member.instagram !== "Not found"

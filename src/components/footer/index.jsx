@@ -11,7 +11,7 @@ import {
 const Footer = () => {
   return (
     <footer className="bg-white text-[#0f2c20] pt-16">
-      <div className="container max-w-[1260px] mx-auto flex flex-wrap justify-between items-start gap-10 px-10">
+      <div className="container max-w-[1260px] mx-auto flex flex-wrap justify-between items-start gap-10 px-4 sm:px-6 md:px-8 lg:px-10">
         {/* 1-qism */}
         <div className="flex-1 min-w-[230px] -mt-16 mb-10 mr-10">
           <a href="#">

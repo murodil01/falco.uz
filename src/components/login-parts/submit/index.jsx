@@ -16,7 +16,7 @@ const Submit = ({ onSubmit }) => {
   };
 
   return (
-    <div className="flex flex-col gap-6 ">
+    <div className="flex flex-col gap-6 !max-w-[500px] w-full">
       <h3 className="text-[#313131] text-[22px] font-[600]">
         Motivatsiya va ishtirok
       </h3>

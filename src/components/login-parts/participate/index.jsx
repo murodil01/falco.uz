@@ -6,7 +6,7 @@ const { TextArea } = Input;
 
 const Participate = ({ onContinue }) => {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 !max-w-[600px] w-full">
       {/* Title */}
       <h3 className="text-[#313131] text-[22px] font-[600]">
         Ko‘nikmalar va tajriba

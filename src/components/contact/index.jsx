@@ -41,23 +41,23 @@ const Contact = () => {
         </p>
 
         {/* Contact info */}
-        <div className="contact-info flex justify-between flex-wrap gap-8 mb-16 max-md:flex-col">
+        <div className="contact-info flex justify-between flex-wrap gap-8 mb-16 max-md:flex-col max-md:items-center">
           {/* Location */}
           <div
-            className="flex items-center gap-4 max-w-[250px] text-left"
+            className="flex items-center gap-4 w-full max-w-[250px] text-left"
             data-aos="fade-right"
           >
-            <MapPin size={30} />
-            <div className="flex flex-col space-y-1">
+            <MapPin size={30} className="flex-none" />
+            <div className="flex flex-col space-y-1 text-left">
               <a
-                href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7"
-                className="text-white text-[15px] font-medium"
+                href="..."
+                className="text-white text-[15px] font-medium block"
               >
                 108 Amir Temur Avenue
               </a>
               <a
-                href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7"
-                className="text-white text-[15px] font-medium"
+                href="..."
+                className="text-white text-[15px] font-medium block"
               >
                 Tashkent 100200, Uzbekistan
               </a>
@@ -66,20 +66,20 @@ const Contact = () => {
 
           {/* Phone */}
           <div
-            className="flex items-center gap-4 max-w-[250px] text-left"
+            className="flex items-center gap-4 w-full max-w-[250px] text-left"
             data-aos="fade-up"
           >
-            <Phone size={30} />
-            <div className="flex flex-col space-y-1">
+            <Phone size={30} className="flex-none" />
+            <div className="flex flex-col space-y-1 text-left">
               <a
-                href="tel:+998908086383"
-                className="text-white text-[15px] font-medium"
+                href="tel:..."
+                className="text-white text-[15px] font-medium block"
               >
                 +998 90 808 63 83
               </a>
               <a
-                href="tel:+998991292614"
-                className="text-white text-[15px] font-medium"
+                href="tel:..."
+                className="text-white text-[15px] font-medium block"
               >
                 +998 99 129 26 14
               </a>
@@ -88,20 +88,20 @@ const Contact = () => {
 
           {/* Email */}
           <div
-            className="flex items-center gap-4 max-w-[250px] text-left"
+            className="flex items-center gap-4 w-full max-w-[250px] text-left"
             data-aos="fade-left"
           >
-            <Mail size={30} />
-            <div className="flex flex-col space-y-1">
+            <Mail size={30} className="flex-none" />
+            <div className="flex flex-col space-y-1 text-left">
               <a
-                href="mailto:hamrayev-2000@mail.ru"
-                className="text-white text-[15px] font-medium"
+                href="mailto:..."
+                className="text-white text-[15px] font-medium block"
               >
                 hamrayev-2000@mail.ru
               </a>
               <a
-                href="mailto:fozilruzmamatoz@gmail.com"
-                className="text-white text-[15px] font-medium"
+                href="mailto:..."
+                className="text-white text-[15px] font-medium block"
               >
                 fozilruzmamatoz@gmail.com
               </a>

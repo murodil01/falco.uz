@@ -1,41 +1,39 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
+import Hero_Section from "../../../assets/hero_section.png";
+import hero_mobile from "../../../assets/hero_mobile.jpg";
 
 const cardsData = [
-  {
-    id: 1,
-    date: "10.12.2025",
-    title: "President Tech Award asosiy yo‘nalishi finalchilari e’lon qilindi",
-  },
-  {
-    id: 2,
-    date: "12.12.2025",
-    title: "Yoshlar innovatsiya tanlovi yakunlandi",
-  },
-  {
-    id: 3,
-    date: "15.12.2025",
-    title: "Startup loyihalar bo‘yicha final bosqichi o‘tkazildi",
-  },
+  { id: 1, date: "10.12.2025", title: "President Tech Award asosiy yo‘nalishi finalchilari e’lon qilindi" },
+  { id: 2, date: "12.12.2025", title: "Yoshlar innovatsiya tanlovi yakunlandi" },
+  { id: 3, date: "15.12.2025", title: "Startup loyihalar bo‘yicha final bosqichi o‘tkazildi" },
   { id: 4, date: "20.12.2025", title: "IT Hackathon g‘oliblari taqdirlandi" },
-  {
-    id: 5,
-    date: "25.12.2025",
-    title: "Innovatsion texnologiyalar tanlovi boshlandi",
-  },
-  {
-    id: 6,
-    date: "25.12.2025",
-    title: "Welcome to Falco Community",
-  },
+  { id: 5, date: "25.12.2025", title: "Innovatsion texnologiyalar tanlovi boshlandi" },
+  { id: 6, date: "25.12.2025", title: "Welcome to Falco Community" },
 ];
 
 const ExpectedHero = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [bgImage, setBgImage] = useState(Hero_Section); // default desktop rasm
   const viewportRef = useRef(null);
   const [cardWidth, setCardWidth] = useState(0);
 
   const GAP_PX = 24;
+
+  useEffect(() => {
+    // 📱 ekranga qarab rasmni almashtirish
+    const handleResize = () => {
+      if (window.innerWidth < 768) {
+        setBgImage(hero_mobile);
+      } else {
+        setBgImage(Hero_Section);
+      }
+    };
+
+    handleResize(); // birinchi renderda ishlatish
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const update = () => {
@@ -61,22 +59,19 @@ const ExpectedHero = () => {
     <section
       className="w-full py-14 mt-26"
       style={{
-        background:
-          "linear-gradient(99.32deg, #191B21 0.56%, rgba(34,167,93,0.9) 59.52%, #22A75D 117.27%)",
+        backgroundImage: `url(${bgImage})`,
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "top center",
+        backgroundSize: "contain",
       }}
     >
-      <div className="max-w-[1260px] mx-auto px-4">
+      <div className="max-w-[1260px] mx-auto px-4 flex flex-col gap-[60px]">
         {/* Title + Buttons */}
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center mb-6 gap-4">
-          {/* Chap bo‘sh joy (faqat katta ekranda balans uchun) */}
           <div className="hidden md:block" />
-
-          {/* H2 Title */}
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center">
             Expected Competitions
           </h2>
-
-          {/* Buttons */}
           <div className="flex justify-center md:justify-end gap-3 mt-2 md:mt-0">
             <button
               onClick={handlePrev}
@@ -93,7 +88,6 @@ const ExpectedHero = () => {
                 }`}
               />
             </button>
-
             <button
               onClick={handleNext}
               disabled={currentIndex >= cardsData.length - 3}
@@ -114,7 +108,7 @@ const ExpectedHero = () => {
           </div>
         </div>
 
-        {/* 👉 Mobile: stack (flex-col / grid), Desktop: slider */}
+        {/* 👉 Mobile */}
         <div className="block md:hidden space-y-6">
           {cardsData.slice(currentIndex, currentIndex + 3).map((card) => (
             <div key={card.id} className="flex flex-col">
@@ -137,6 +131,7 @@ const ExpectedHero = () => {
           ))}
         </div>
 
+        {/* 👉 Desktop */}
         <div ref={viewportRef} className="overflow-hidden hidden md:block">
           <div
             className="flex items-stretch transition-transform duration-500"
@@ -149,9 +144,7 @@ const ExpectedHero = () => {
               <div
                 key={card.id}
                 className="flex-shrink-0 flex flex-col"
-                style={{
-                  width: `${cardWidth}px`,
-                }}
+                style={{ width: `${cardWidth}px` }}
               >
                 <div className="h-[225px] bg-[#C4C4C4] rounded-[10px] flex items-end justify-start p-4">
                   <button

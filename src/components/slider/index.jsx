@@ -12,7 +12,7 @@ const Slider = () => {
   return (
     <section
       id="projects"
-      className="relative w-full pb-10 mt-0 lg:-mt-130"
+      className="relative w-full pb-10 mt-20 lg:-mt-130"
       style={{
         backgroundImage: `url(${projects})`,
         backgroundSize: "cover",
@@ -20,7 +20,7 @@ const Slider = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="container mx-auto flex flex-col gap-20">
+      <div className="container mx-auto flex flex-col gap-6 sm:gap-10 md:gap-16 lg:gap-20">
         <h2 className="text-[50px] text-[#09291B] font-bold text-center mb-40">
           Our <span className="text-[#9C8A5D]">Projects</span>
         </h2>
@@ -31,12 +31,18 @@ const Slider = () => {
             {repeatedImages.map((img, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0 w-48 h-48 bg-white rounded-full flex items-center justify-center shadow-lg mx-3"
+                className="
+          flex-shrink-0 
+          w-30 h-30 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 
+          bg-white rounded-full 
+          flex items-center justify-center 
+          shadow-lg mx-2 sm:mx-3
+        "
               >
                 <img
                   src={img}
                   alt={`project-${idx}`}
-                  className="w-32 h-32 object-contain"
+                  className="w-20 h-20 sm:w-22 sm:h-22 md:w-28 md:h-28 lg:w-32 lg:h-32 object-contain"
                 />
               </div>
             ))}

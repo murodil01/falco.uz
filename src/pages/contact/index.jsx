@@ -35,7 +35,7 @@ const ContactUs = () => {
           }}
         >
           {/* Progress Line */}
-          <div className="max-w-[300px] w-full border-b border-[#D9DBE9] pb-6 relative">
+          <div className="max-w-[300px] w-full relative">
             <div className="relative flex items-center justify-between">
               {/* Background line */}
               <div className="absolute top-1/2 left-0 w-full h-[6px] bg-[#EFF0F6] -translate-y-1/2 rounded-full" />
@@ -61,7 +61,8 @@ const ContactUs = () => {
                 return (
                   <div
                     key={s}
-                    className={`relative z-10 w-8 h-8 flex items-center justify-center rounded-full border-2 transition-all ${
+                    onClick={() => setStep(s)} // 👈 step tugmasiga bosganda shu stepga o'tadi
+                    className={`relative z-10 w-8 h-8 flex items-center justify-center rounded-full border-2 transition-all cursor-pointer ${
                       isActive
                         ? "bg-[#22A75D] border-[#22A75D] text-white"
                         : "bg-white border-[#EFF0F6] text-gray-400"
@@ -73,6 +74,8 @@ const ContactUs = () => {
               })}
             </div>
           </div>
+
+          <div className="bg-[#D9DBE9] w-full max-w-[560px] h-[2px]"></div>
 
           {/* Dynamic Pages */}
           {step === 1 && <Information onNext={() => setStep(2)} />}

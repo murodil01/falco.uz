@@ -15,7 +15,7 @@ const Experience = ({ onContinue }) => {
       {/* Skills Select */}
       <div className="flex flex-col gap-2">
         <h4 className="text-[#000000] text-[16px] font-[500]">
-          Which areas best describe your skills or interests?{" "}
+          Which areas best describe your skills or interests?
           <span className="text-gray-500">(Multi-select)</span>
         </h4>
         <Select
