@@ -1,10 +1,10 @@
 import teamBg from "../../assets/images/team.png";
 import team1 from "../../assets/images/team1.png";
 import team2 from "../../assets/images/team2.png";
-import Bobur from "../../assets/images/Bobur.jpg";
-import Behruz from "../../assets/images/Behruz.jpg";
-import Fozil from "../../assets/images/Fozil.jpg";
-import Mushtariy from "../../assets/images/Mushtariy.jpg";
+import Bobur1 from "../../assets/images/Bobur1.png";
+import Behruz from "../../assets/images/Behruz.png";
+import Fozil from "../../assets/images/Fozil.png";
+import Mushtariy from "../../assets/images/Mushtariy.png";
 import { RiTelegram2Line } from "react-icons/ri";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { useEffect } from "react";
@@ -54,7 +54,7 @@ const teamMembers = [
     telegram: "@allayorovbobur21",
     linkedin: "https://www.linkedin.com/in/bobur-allayorov-66b0622a6/",
     instagram: "Not found",
-    image: Bobur,
+    image: Bobur1,
   },
 ];
 
@@ -62,6 +62,7 @@ const Team = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+
   return (
     <section
       id="team"
@@ -80,11 +81,12 @@ const Team = () => {
         </h3>
 
         {/* Cards */}
-        <div className="container mx-auto mt-16 grid gap-8 grid-cols-[repeat(auto-fit,minmax(270px,1fr))] justify-items-center">
+        <div className="container mx-auto mt-16 grid gap-0 grid-cols-[repeat(auto-fit,minmax(270px,1fr))] justify-items-center">
           {teamMembers.map((member) => (
             <div
               key={member.id}
-              className="team__card max-w-[300px] w-full text-center flex flex-col"
+              className={`team__card max-w-[300px] w-full text-center flex flex-col 
+  ${member.id === 2 || member.id === 4 ? "md:-translate-y-12" : ""}`}
               data-aos="fade-up"
               data-aos-delay={member.id * 100}
             >
@@ -104,20 +106,24 @@ const Team = () => {
                         <path d="M0,0 H250 V220 Q125,300 0,220 Z" />
                       </clipPath>
 
-                      {/* 2 va 4 – pastki qismi tashqariga yumaloqroq kesilgan */}
+                      {/* 2 va 4 – pastki qismi ichkariga kesilgan */}
                       <clipPath
                         id="halfMoonClipReverse"
                         clipPathUnits="userSpaceOnUse"
                       >
-                        <path d="M0,0 H250 V300 Q125,250 0,300 Z" />
+                        <path d="M0,0 H250 V296 Q125,275 0,296 Z" />
                       </clipPath>
                     </defs>
 
                     <image
                       href={member.image}
                       width="250"
-                      height="320"
-                      y="10"
+                      height="380"
+                      transform={
+                        member.id === 1 || member.id === 3
+                          ? "translate(0,40)" // 50 o‘rniga 30 => yuqoriroq chiqadi
+                          : "translate(0,0)"
+                      }
                       preserveAspectRatio="xMidYMid slice"
                       clipPath={`url(#${
                         member.id === 1 || member.id === 3
@@ -133,7 +139,7 @@ const Team = () => {
               <h3 className="mt-5 min-h-[60px] text-[20px] font-semibold">
                 {member.name}
               </h3>
-              <span className="block text-[16px] font-medium text-[#9c8a5d] mb-2">
+              <span className="block text-[16px] font-medium text-[#9c8a5d] mb-3">
                 {member.role}
               </span>
               <p className="text-[14px] text-[#555] leading-relaxed mb-4">
