@@ -2,6 +2,7 @@ import About from "../../components/about";
 import Answer from "../../components/answer";
 import Contact from "../../components/contact";
 import Footer from "../../components/footer";
+import NewsMain from "../../components/news-main";
 import Sldier from "../../components/slider";
 import SplashScreen from "../../components/splash";
 import Team from "../../components/team";
@@ -15,6 +16,7 @@ const Home = () => {
       <Sldier />
       <About />
       <Answer />
+      <NewsMain/>
       <Team/>
       <Contact/>
       <Footer />

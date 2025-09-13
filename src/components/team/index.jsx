@@ -66,7 +66,7 @@ const Team = () => {
   return (
     <section
       id="team"
-      className="team relative z-30 py-24 -mb-60 min-h-[1210px]"
+      className="team relative z-30 py-24 -mb-60 -mt-80 lg:mt-0 min-h-[1210px]"
       style={{
         backgroundImage: `url(${teamBg})`,
         backgroundRepeat: "no-repeat",
@@ -76,12 +76,12 @@ const Team = () => {
     >
       <div className="max-w-[1260px] mx-auto">
         {/* Title */}
-        <h3 className="text-[50px] font-bold text-center text-[#231f20] mt-[150px] max-md:text-[36px]">
+        <h3 className="text-[50px] font-bold text-center text-[#231f20] mt-[220px] max-md:text-[36px]">
           Meet Our <span className="text-[#9c8a5d]">Team</span>
         </h3>
 
         {/* Cards */}
-        <div className="container mx-auto mt-16 grid gap-0 grid-cols-[repeat(auto-fit,minmax(270px,1fr))] justify-items-center">
+        <div className="container mx-auto mt-20 grid gap-0 grid-cols-[repeat(auto-fit,minmax(270px,1fr))] justify-items-center">
           {teamMembers.map((member) => (
             <div
               key={member.id}
