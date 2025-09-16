@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef } from "react";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import Hero_Section from "../../../assets/hero_section.png";
+import Hero_Section from "../../../assets/Hero_Section.png";
 import hero_mobile from "../../../assets/hero_mobile.jpg";
 
 const cardsData = [
