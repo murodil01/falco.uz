@@ -1,6 +1,7 @@
-import planners from "../../../assets/planners.png";
+// import planners from "../../../assets/planners.png";
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
+import ImageSlider from "./ImageSlider";
 
 const Planners = () => {
   return (
@@ -47,11 +48,7 @@ const Planners = () => {
 
         {/* Image Section */}
         <div className="w-full md:w-1/2 flex justify-center md:justify-end">
-          <img
-            src={planners}
-            alt="Planners"
-            className="max-w-[100%] md:max-w-[500px] h-auto"
-          />
+          <ImageSlider/>
         </div>
       </div>
     </div>

@@ -1,9 +1,9 @@
-import { useState } from "react";
+import { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const attendedData = [
+const awardedData = [
   {
     title: "Water City Dreams",
     date: "September 18, 2022",
@@ -96,11 +96,16 @@ const attendedData = [
   },
 ];
 
-// Custom arrow komponentlari
-const NextArrow = ({ onClick }) => (
+// Custom Arrow komponentlari
+const NextArrow = ({ onClick, disabled }) => (
   <button
-    className="absolute right-4 bottom-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors z-10"
-    onClick={onClick}
+    className={`bg-[#09291B] text-white rounded-full p-3 shadow-lg transition-colors ${
+      disabled
+        ? "opacity-40 cursor-not-allowed"
+        : "hover:bg-gray-700 cursor-pointer"
+    }`}
+    onClick={!disabled ? onClick : undefined}
+    disabled={disabled}
   >
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
       <path
@@ -108,16 +113,20 @@ const NextArrow = ({ onClick }) => (
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
-        strokeLinejoin="round"
       />
     </svg>
   </button>
 );
 
-const PrevArrow = ({ onClick }) => (
+const PrevArrow = ({ onClick, disabled }) => (
   <button
-    className="absolute left-4 bottom-4 bg-white rounded-full p-3 shadow-lg hover:bg-gray-100 transition-colors z-10"
-    onClick={onClick}
+    className={`bg-[#09291B] text-white rounded-full p-3 shadow-lg transition-colors ${
+      disabled
+        ? "opacity-40 cursor-not-allowed"
+        : "hover:bg-gray-700 cursor-pointer"
+    }`}
+    onClick={!disabled ? onClick : undefined}
+    disabled={disabled}
   >
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
       <path
@@ -125,7 +134,6 @@ const PrevArrow = ({ onClick }) => (
         stroke="currentColor"
         strokeWidth="2"
         strokeLinecap="round"
-        strokeLinejoin="round"
       />
     </svg>
   </button>
@@ -134,22 +142,20 @@ const PrevArrow = ({ onClick }) => (
 const Awarded = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Desktop uchun 3x3 grid yaratish
+  // Desktop uchun 3x3 grid
   const createDesktopSlides = () => {
     const slides = [];
-    for (let i = 0; i < attendedData.length; i += 9) {
-      const slideItems = attendedData.slice(i, i + 9);
-      slides.push(slideItems);
+    for (let i = 0; i < awardedData.length; i += 9) {
+      slides.push(awardedData.slice(i, i + 9));
     }
     return slides;
   };
 
-  // Mobile uchun 3 ta card bitta slide
+  // Mobile uchun 3ta card
   const createMobileSlides = () => {
     const slides = [];
-    for (let i = 0; i < attendedData.length; i += 3) {
-      const slideItems = attendedData.slice(i, i + 3);
-      slides.push(slideItems);
+    for (let i = 0; i < awardedData.length; i += 3) {
+      slides.push(awardedData.slice(i, i + 3));
     }
     return slides;
   };
@@ -157,37 +163,23 @@ const Awarded = () => {
   const desktopSlides = createDesktopSlides();
   const mobileSlides = createMobileSlides();
 
-  // Desktop slider settings
-  const desktopSliderSettings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    beforeChange: (current, next) => setCurrentSlide(next),
-  };
-
-  // Mobile slider settings
-  const mobileSliderSettings = {
-    dots: false,
-    infinite: false,
-    speed: 500,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: true,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
-    beforeChange: (current, next) => setCurrentSlide(next),
-  };
+  const desktopSliderRef = useRef(null);
+  const mobileSliderRef = useRef(null);
 
   return (
     <div className="w-full relative">
-      {/* Desktop Slider */}
+      {/* Desktop */}
       <div className="hidden md:block">
-        <Slider {...desktopSliderSettings}>
+        <Slider
+          ref={desktopSliderRef}
+          dots={false}
+          infinite={false}
+          speed={500}
+          slidesToShow={1}
+          slidesToScroll={1}
+          arrows={false}
+          beforeChange={(current, next) => setCurrentSlide(next)}
+        >
           {desktopSlides.map((slideItems, slideIdx) => (
             <div key={slideIdx} className="px-2">
               <div className="grid grid-cols-3 gap-6">
@@ -212,27 +204,36 @@ const Awarded = () => {
           ))}
         </Slider>
 
-        {/* Desktop pagination */}
-        <div className="flex justify-center items-center mt-6 gap-4">
+        {/* Controls */}
+        <div className="flex justify-center items-center gap-6 mt-6">
+          <PrevArrow
+            onClick={() => desktopSliderRef.current?.slickPrev()}
+            disabled={currentSlide === 0}
+          />
+
           <span className="text-gray-600 text-sm">
             {currentSlide + 1} / {desktopSlides.length}
           </span>
-          <div className="flex gap-2">
-            {desktopSlides.map((_, idx) => (
-              <div
-                key={idx}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  idx === currentSlide ? "bg-[#C4C4C4]" : "bg-gray-300"
-                }`}
-              />
-            ))}
-          </div>
+
+          <NextArrow
+            onClick={() => desktopSliderRef.current?.slickNext()}
+            disabled={currentSlide === desktopSlides.length - 1}
+          />
         </div>
       </div>
 
-      {/* Mobile Slider */}
+      {/* Mobile */}
       <div className="md:hidden">
-        <Slider {...mobileSliderSettings}>
+        <Slider
+          ref={mobileSliderRef}
+          dots={false}
+          infinite={false}
+          speed={500}
+          slidesToShow={1}
+          slidesToScroll={1}
+          arrows={false}
+          beforeChange={(current, next) => setCurrentSlide(next)}
+        >
           {mobileSlides.map((slideItems, slideIdx) => (
             <div key={slideIdx} className="px-2">
               <div className="flex flex-col gap-4">
@@ -251,21 +252,21 @@ const Awarded = () => {
           ))}
         </Slider>
 
-        {/* Mobile pagination */}
-        <div className="flex justify-center items-center mt-6 gap-4">
+        {/* Controls */}
+        <div className="flex justify-center items-center gap-6 mt-6">
+          <PrevArrow
+            onClick={() => mobileSliderRef.current?.slickPrev()}
+            disabled={currentSlide === 0}
+          />
+
           <span className="text-gray-600 text-sm">
             {currentSlide + 1} / {mobileSlides.length}
           </span>
-          <div className="flex gap-2">
-            {mobileSlides.map((_, idx) => (
-              <div
-                key={idx}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  idx === currentSlide ? "bg-[#C4C4C4]" : "bg-gray-300"
-                }`}
-              />
-            ))}
-          </div>
+
+          <NextArrow
+            onClick={() => mobileSliderRef.current?.slickNext()}
+            disabled={currentSlide === mobileSlides.length - 1}
+          />
         </div>
       </div>
     </div>
@@ -273,3 +274,4 @@ const Awarded = () => {
 };
 
 export default Awarded;
+

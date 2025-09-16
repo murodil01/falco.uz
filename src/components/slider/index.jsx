@@ -7,7 +7,7 @@ import foodquest from "../../assets/foodquest.png";
 const Slider = () => {
   const images = [agrobust, fresh_line_pro, robcont, foodquest];
 
-  const repeatedImages = [...images, ...images];
+  const repeatedImages = [...images, ...images, ...images];
 
   return (
     <section
@@ -20,7 +20,7 @@ const Slider = () => {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="container mx-auto flex flex-col gap-6 sm:gap-10 md:gap-16 lg:gap-20">
+      <div className=" flex flex-col gap-6 sm:gap-10 md:gap-16 lg:gap-20">
         <h2 className="text-[50px] text-[#09291B] font-bold text-center mb-40">
           Our <span className="text-[#9C8A5D]">Projects</span>
         </h2>
@@ -72,3 +72,4 @@ const Slider = () => {
 };
 
 export default Slider;
+//container mx-auto

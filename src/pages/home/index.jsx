@@ -7,6 +7,7 @@ import Sldier from "../../components/slider";
 import SplashScreen from "../../components/splash";
 import Team from "../../components/team";
 import TopHeader from "../../components/top-header";
+import FloatingMenu from "../../components/floating-menu"
 
 const Home = () => {
   return (
@@ -20,6 +21,7 @@ const Home = () => {
       <Team/>
       <Contact/>
       <Footer />
+      <FloatingMenu/>
     </div>
   );
 };
