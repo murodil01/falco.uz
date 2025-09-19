@@ -3,15 +3,15 @@ import footer from "../../assets/images/footer-log.png";
 import { Link } from "react-router-dom";
 import {
   FaFacebookF,
-  FaTwitter,
   FaInstagram,
   FaTelegramPlane,
 } from "react-icons/fa";
+import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
   return (
     <footer className="bg-white text-[#0f2c20] pt-16">
-      <div className="container max-w-[1260px] mx-auto flex flex-wrap justify-between items-start gap-10 px-4 sm:px-6 md:px-8 lg:px-10">
+      <div className="container max-w-[1260px] mx-auto mb-10 flex flex-wrap justify-between items-start gap-10 px-4 sm:px-6 md:px-8 lg:px-10">
         {/* 1-qism */}
         <div className="flex-1 min-w-[230px] -mt-16 mb-10 mr-10">
           <a href="#">
@@ -58,7 +58,9 @@ const Footer = () => {
               <Link to={"/projects"}>Projects </Link>
             </li>
             <li>
-              <a href="#team">Team</a>
+              <HashLink smooth to="/#team">
+                Team
+              </HashLink>
             </li>
           </ul>
         </div>
@@ -66,20 +68,20 @@ const Footer = () => {
         {/* 3-qism */}
         <div className="flex-1 min-w-[230px]">
           <h3 className="font-semibold text-[22px] uppercase tracking-wide mb-6">
-            Our Services
+            Discover
           </h3>
           <ul className="space-y-4 font-[400] text-[18px] text-[#0F2C20]">
             <li>
-              <a href="#">Web Design</a>
+              <a href="#">Upcoming Competitions/Events</a>
             </li>
             <li>
-              <a href="#">Web Development</a>
+              <a href="#">Previous Compertitions/Events</a>
             </li>
             <li>
-              <a href="#">Product Management</a>
+              <a href="#">Career</a>
             </li>
             <li>
-              <a href="#">Marketing</a>
+              <a href="#">Achievements</a>
             </li>
           </ul>
         </div>
@@ -125,7 +127,7 @@ const Footer = () => {
       </div>
 
       {/* pastki qism */}
-      <div className="md:mt-0 mt-10 bg-gradient-to-r from-[#1c5239] to-[#219e5a] py-5">
+      <div className="md:mt-0 mt-0 bg-gradient-to-r from-[#1c5239] to-[#219e5a] py-5">
         <div className="container mx-auto text-center">
           <p className="text-white text-[16px]">
             © Copyright Falco community All Rights Reserved

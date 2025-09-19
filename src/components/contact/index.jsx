@@ -28,10 +28,10 @@ const Contact = () => {
           Contact Us
         </h3>
         <p className="max-w-[890px] mx-auto mb-16 text-[20px] leading-relaxed max-md:text-[16px] max-sm:text-[14px]">
-          We value your interest and involvement in the 1215 Tribes community.
-          Whether you have questions, need support, or want to get more
-          involved, we're here to help. Below are the ways you can reach out to
-          us directly or stay connected through our updates.
+          Thanks for reaching out to FALCO! Whether you’re curious about
+          joining, looking for collaboration, or just want to learn more, we’d
+          love to hear from you. Stay connected with us and be the first to know
+          about our latest projects and events.
         </p>
 
         {/* Contact info */}
@@ -112,13 +112,13 @@ const Contact = () => {
             to={"/contact"}
             className="w-[250px] h-[85px] flex justify-center items-center bg-[#2bffff26] text-white rounded-[17px] text-[28px] font-medium hover:bg-[#9c8a5d] transition max-md:w-[150px] max-md:h-[50px] max-md:text-[16px] max-md:rounded-md max-sm:w-[130px] max-sm:h-[45px] max-sm:text-[14px]"
           >
-            Contact Form
+            Contact Us
           </Link>
           <Link
             to={"/join-us"}
             className="w-[250px] h-[85px] flex justify-center items-center bg-[#2bffff26] text-white rounded-[17px] text-[28px] font-medium hover:bg-[#9c8a5d] transition max-md:w-[150px] max-md:h-[50px] max-md:text-[16px] max-md:rounded-md max-sm:w-[130px] max-sm:h-[45px] max-sm:text-[14px]"
           >
-            Join Form
+            Join Us
           </Link>
         </div>
       </div>

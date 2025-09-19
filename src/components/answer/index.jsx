@@ -28,7 +28,7 @@ const faqData = [
   },
   {
     key: "5",
-    question: "What's the benefit of joining Falco?",
+    question: "What are the benefits of joining",
     answer:
       "As a member, you will connect with some of the most talented young people in Uzbekistan, collaborate on impactful projects, learn from one another, and gain access to mentorship and startup opportunities in the future.",
   },
@@ -50,7 +50,7 @@ const Answer = () => {
   return (
     <section className="container mx-auto px-4 py-20">
       <h3 className="text-3xl md:text-[50px] text-[#09291B] font-[700] mb-10 text-center">
-        Frequently asking <span className="text-[#9C8A5D]">questions</span>
+        Frequently asked <span className="text-[#9C8A5D]">questions</span>
       </h3>
 
       <div className="space-y-6 max-w-[1000px] mx-auto">
