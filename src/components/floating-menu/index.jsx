@@ -30,6 +30,7 @@ const FloatingMenu = () => {
 
       {/* Main Button */}
       <button
+      aria-label="FloatingBtn"
         onClick={() => setOpen(!open)}
         className="w-12 h-12 flex items-center justify-center rounded-full text-white shadow-lg bg-gray-800 transition"
       >

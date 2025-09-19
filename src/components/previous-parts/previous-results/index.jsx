@@ -136,14 +136,8 @@ const PreviousResults = () => {
 
         {/* Slide numbers */}
         <span>
-          {Array.from(
-            { length: groupedResults[currentSlide].length },
-            (_, i) => (
-              <span key={i} className="mx-1">
-                {currentSlide * 3 + i + 1}
-              </span>
-            )
-          )}
+          {String(currentSlide + 1).padStart(2, "0")} /{" "}
+          {String(groupedResults.length).padStart(2, "0")}
         </span>
 
         {/* Next */}

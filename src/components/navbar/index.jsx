@@ -57,7 +57,7 @@ const Navbar = () => {
   const updateModalPos = (ref, setPos) => {
     if (ref.current) {
       const rect = ref.current.getBoundingClientRect();
-      const navbarHeight = scrolled ? 100 : 120; // navbar balandligi
+      const navbarHeight = scrolled ? 70 : 70; // navbar balandligi
       setPos({
         top: navbarHeight, // navbar ostidan
         left: rect.left,
@@ -102,7 +102,12 @@ const Navbar = () => {
         : hash
         ? location.hash === hash
         : location.pathname === path && !location.hash;
-    return `${isActive ? "text-[#9A9EA6]" : "text-[#9C8A5D]"}`;
+
+    return `${
+      isActive
+        ? "text-[#9A9EA6] border-b-2 border-[#9A9EA6]"
+        : "text-[#9C8A5D] border-b-2 border-transparent hover:border-[#9C8A5D]"
+    } pb-1 transition-all duration-300`;
   };
 
   return (
@@ -115,7 +120,11 @@ const Navbar = () => {
         <div className="container mx-auto max-w-[1260px] px-4 sm:px-5 md:px-7 py-[20px] flex flex-wrap items-center justify-between">
           <div className="flex-shrink-0">
             <Link to="/">
-              <img src={logo} alt="Logo" className="h-[60px] w-auto" />
+              <img
+                src={logo}
+                alt="Logo"
+                className="h-[60px] w-auto border-0 outline-none"
+              />
             </Link>
           </div>
 
@@ -263,7 +272,9 @@ const Navbar = () => {
                   <li
                     onClick={() => handleAboutSelect("about", "/about")}
                     className={`cursor-pointer px-2 py-2 rounded-[10px] ${
-                      activeAbout === "about" ? "bg-red-500 text-white" : ""
+                      activeAbout === "about"
+                        ? "bg-[#F7F7F7] text-[#09291]"
+                        : ""
                     }`}
                   >
                     About

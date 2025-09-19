@@ -6,37 +6,37 @@ const faqData = [
     key: "1",
     question: "What is Falco Community?",
     answer:
-      "Falco is a growing hybrid community that brings together talented and intelligent individuals across Uzbekistan, aged 15-30, to collaborate, innovate, and grow.",
+      "Falco is a nationwide youth community in Uzbekistan that brings together talented and ambitious individuals aged 15–30. More than just a network, it is a hybrid platform where members collaborate on meaningful projects, exchange knowledge, and develop skills in technology, science, design, and entrepreneurship. Falco is built on innovation, teamwork, and growth — creating an environment where ideas turn into real impact and young people can unlock their full potential.",
   },
   {
     key: "2",
     question: "Who can join Falco?",
     answer:
-      "Anyone between the ages of 15-30 who is passionate, creative, and eager to solve real-world problems — especially in tech, design, science, and innovation.",
+      "Anyone between the ages of 15 and 30 who is creative, proactive, and interested in solving real-world challenges — especially in technology, design, science, and innovation — can join Falco.",
   },
   {
     key: "3",
     question: "What kind of activities does Falco organize?",
     answer:
-      "Currently, Falco hosts internal team meetings and project work. In the future, we plan to launch mentorship sessions, workshops, and public events depending on member engagement.",
+      "Currently, Falco hosts internal team meetings and project work. In the near future, we plan to launch mentorship sessions, trainings, seminars, and open community events.",
   },
   {
     key: "4",
     question: "Is Falco free to join?",
     answer:
-      "Yes, Falco will be free to join during its initial phase. Our mission is to make opportunity accessible to talented minds.",
+      "Yes! Membership in Falco is completely free — now and in the future — because great opportunities should be accessible to everyone.",
   },
   {
     key: "5",
     question: "What's the benefit of joining Falco?",
     answer:
-      "You'll connect with other top talents in Uzbekistan, collaborate on meaningful projects, learn from peers, and possibly access future mentorship or startup opportunities.",
+      "As a member, you will connect with some of the most talented young people in Uzbekistan, collaborate on impactful projects, learn from one another, and gain access to mentorship and startup opportunities in the future.",
   },
   {
     key: "6",
     question: "How do I stay updated with Falco's activities?",
     answer:
-      "Follow us on [Instagram/Telegram/etc.] and join our official channels to get updates on events, openings, and new initiatives.",
+      "Subscribe to our official channels [Instagram / Telegram and others] to be the first to know about upcoming events, opportunities, and new initiatives.",
   },
 ];
 

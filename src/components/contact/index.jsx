@@ -3,18 +3,12 @@ import contact from "../../assets/contact.png";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 const Contact = () => {
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
-
-  const handleFormRedirect = () => {
-    window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSfRHguEMypnJXz_YQJhj-PKg7wUf5W4FdAKwn_DCOLWXzpcFA/viewform?usp=header",
-      "_blank"
-    );
-  };
 
   return (
     <section
@@ -114,20 +108,18 @@ const Contact = () => {
           className="flex justify-center flex-wrap gap-4"
           data-aos="zoom-in-up"
         >
-          <a
-            href="https://docs.google.com/forms/d/e/1FAIpQLSf7PQwcD6aIE0QfQXH50TXYuTDFr7jO-yiA7fbaO8anFOfP2g/viewform"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            to={"/contact"}
             className="w-[250px] h-[85px] flex justify-center items-center bg-[#2bffff26] text-white rounded-[17px] text-[28px] font-medium hover:bg-[#9c8a5d] transition max-md:w-[150px] max-md:h-[50px] max-md:text-[16px] max-md:rounded-md max-sm:w-[130px] max-sm:h-[45px] max-sm:text-[14px]"
           >
             Contact Form
-          </a>
-          <button
-            onClick={handleFormRedirect}
+          </Link>
+          <Link
+            to={"/join-us"}
             className="w-[250px] h-[85px] flex justify-center items-center bg-[#2bffff26] text-white rounded-[17px] text-[28px] font-medium hover:bg-[#9c8a5d] transition max-md:w-[150px] max-md:h-[50px] max-md:text-[16px] max-md:rounded-md max-sm:w-[130px] max-sm:h-[45px] max-sm:text-[14px]"
           >
             Join Form
-          </button>
+          </Link>
         </div>
       </div>
     </section>

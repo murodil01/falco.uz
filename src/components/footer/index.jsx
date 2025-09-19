@@ -99,16 +99,7 @@ const Footer = () => {
                 aria-label="Facebook"
                 className="text-white bg-[#0F2C20] p-[7px] rounded-full hover:bg-[#1877F2] transition-colors duration-300 "
               >
-                <FaFacebookF size={20}/>
-              </a>
-              <a
-                href="https://twitter.com/"
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="Twitter"
-                className="text-white bg-[#0F2C20] p-[7px] rounded-full hover:bg-[#1DA1F2] transition-colors duration-300 "
-              >
-                <FaTwitter size={20}/>
+                <FaFacebookF size={20} />
               </a>
               <a
                 href="https://instagram.com/"
@@ -117,7 +108,7 @@ const Footer = () => {
                 aria-label="Instagram"
                 className="text-white bg-[#0F2C20] p-[7px] rounded-full hover:bg-[#E4405F] transition-colors duration-300 "
               >
-                <FaInstagram size={20}/>
+                <FaInstagram size={20} />
               </a>
               <a
                 href="https://t.me/"
@@ -126,7 +117,7 @@ const Footer = () => {
                 aria-label="Telegram"
                 className="text-white bg-[#0F2C20] p-[7px] rounded-full hover:bg-[#0088cc] transition-colors duration-300 "
               >
-                <FaTelegramPlane size={20}/>
+                <FaTelegramPlane size={20} />
               </a>
             </li>
           </ul>

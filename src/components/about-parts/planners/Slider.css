@@ -10,45 +10,60 @@ body {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 .Images {
-  height: 500px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 20px;
+  flex-wrap: nowrap;
+  width: 100%;
+  max-width: 1000px;
 }
 
+/* O‘rtadagi katta rasm */
 .middleImage {
-  height: 350px;
   width: 250px;
+  height: 350px;
+  max-width: 40vw;
+  max-height: 60vh;
   object-fit: cover;
   border-radius: 15px;
   box-shadow: 0px 0px 5px 1px;
 }
 
-.rightImage {
-  height: 200px;
-  width: 150px;
-  object-fit: cover;
-  border-radius: 10px;
-  filter: blur(2px) saturate(0.7);
-}
-
+/* Chapdagi kichik rasm */
 .leftImage {
-  height: 250px;
   width: 150px;
+  height: 250px;
+  max-width: 25vw;
+  max-height: 40vh;
   object-fit: cover;
   border-radius: 10px;
   filter: blur(3px) saturate(0.5);
 }
 
+/* O‘ngdagi kichik rasm */
+.rightImage {
+  width: 150px;
+  height: 200px;
+  max-width: 25vw;
+  max-height: 35vh;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: blur(2px) saturate(0.7);
+}
+
+/* Tugmalar */
 .buttons {
   display: flex;
   align-items: center;
   gap: 20px;
   transform: translateY(-5px);
+  margin-top: 50px;
 }
 
 .rightButton,
@@ -62,21 +77,52 @@ body {
   align-items: center;
   background: white;
   cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.rightButton:hover,
+.leftButton:hover {
+  background: #0F2C20;
+  color: white;
+  border: #0F2C20;
 }
 
+/* Dots */
 .dotsPlace {
   display: flex;
   gap: 10px;
   margin-top: 10px;
 }
-
 .dots {
   height: 8px;
   width: 8px;
   border: 1px solid black;
   border-radius: 50%;
 }
-
 .activeDot {
   background: black;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .middleImage {
+    width: 200px;
+    height: 280px;
+  }
+  .leftImage,
+  .rightImage {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  .middleImage {
+    width: 160px;
+    height: 220px;
+  }
+  .leftImage,
+  .rightImage {
+    width: 70px;
+    height: 100px;
+  }
 }

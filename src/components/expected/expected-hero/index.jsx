@@ -4,11 +4,27 @@ import Hero_Section from "../../../assets/Hero_Section.png";
 import hero_mobile from "../../../assets/hero_mobile.jpg";
 
 const cardsData = [
-  { id: 1, date: "10.12.2025", title: "President Tech Award asosiy yo‘nalishi finalchilari e’lon qilindi" },
-  { id: 2, date: "12.12.2025", title: "Yoshlar innovatsiya tanlovi yakunlandi" },
-  { id: 3, date: "15.12.2025", title: "Startup loyihalar bo‘yicha final bosqichi o‘tkazildi" },
+  {
+    id: 1,
+    date: "10.12.2025",
+    title: "President Tech Award asosiy yo‘nalishi finalchilari e’lon qilindi",
+  },
+  {
+    id: 2,
+    date: "12.12.2025",
+    title: "Yoshlar innovatsiya tanlovi yakunlandi",
+  },
+  {
+    id: 3,
+    date: "15.12.2025",
+    title: "Startup loyihalar bo‘yicha final bosqichi o‘tkazildi",
+  },
   { id: 4, date: "20.12.2025", title: "IT Hackathon g‘oliblari taqdirlandi" },
-  { id: 5, date: "25.12.2025", title: "Innovatsion texnologiyalar tanlovi boshlandi" },
+  {
+    id: 5,
+    date: "25.12.2025",
+    title: "Innovatsion texnologiyalar tanlovi boshlandi",
+  },
   { id: 6, date: "25.12.2025", title: "Welcome to Falco Community" },
 ];
 
@@ -74,6 +90,7 @@ const ExpectedHero = () => {
           </h2>
           <div className="flex justify-center md:justify-end gap-3 mt-2 md:mt-0">
             <button
+              aria-label="btn1"
               onClick={handlePrev}
               disabled={currentIndex === 0}
               className={`p-2 rounded-full shadow transition ${
@@ -89,6 +106,7 @@ const ExpectedHero = () => {
               />
             </button>
             <button
+              aria-label="btn2"
               onClick={handleNext}
               disabled={currentIndex >= cardsData.length - 3}
               className={`p-2 rounded-full shadow transition ${
