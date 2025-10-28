@@ -40,4 +40,11 @@ body {
   scrollbar-color: #09291b #f1f1f1; /* thumb va track rangi */
 }
 
-
+.team_text_bg {
+  background: linear-gradient(
+    99.32deg,
+    #22a75d 0.56%,
+    rgba(34, 167, 93, 0.9) 59.52%,
+    #191b21 117.27%
+  );
+}
