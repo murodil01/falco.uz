@@ -133,7 +133,7 @@ const Team = () => {
           {teamMembers.map((member) => (
             <SwiperSlide key={member.id}>
               <div
-                className={`team__card max-w-[310px] border-2 border-[#9C8A5D] rounded-2xl overflow-hidden w-full mx-auto text-center flex flex-col justify-between relative`}
+                className={`team__card max-w-[310px] team_text_bg border-2 border-[#9C8A5D] rounded-2xl overflow-hidden w-full mx-auto text-center flex flex-col justify-between relative`}
                 data-aos="fade-up"
                 data-aos-delay={member.id * 100}
                 style={{
@@ -141,7 +141,7 @@ const Team = () => {
                 }}
               >
                 {/* Image Container */}
-                <div className="w-full h-[270px]">
+                <div className="w-full h-[270px">
                   <img
                     src={member.image}
                     alt={member.name}
@@ -150,7 +150,7 @@ const Team = () => {
                 </div>
 
                 {/* Info Container */}
-                <div className="team_text_bg p-6 text-white text-left">
+                <div className="p-6 text-white text-left">
                   <h3 className="text-[18px] font-bold">{member.name}</h3>
                   <span className="block text-[14px] font-medium text-[#EFD593] my-3">
                     {member.role}
@@ -210,3 +210,22 @@ const Team = () => {
 };
 
 export default Team;
+/*
+<div className="relative w-full h-[270px] overflow-hidden">
+  <svg className="absolute inset-0 w-0 h-0">
+    <defs>
+      <clipPath id="waveClip" clipPathUnits="objectBoundingBox">
+        <path d="M0,0.3 C0.3,1 0.7,0 1,0.7 L1,1 L0,1 Z" />
+      </clipPath>
+    </defs>
+  </svg>
+
+  <img
+    src={member.image}
+    alt={member.name}
+    className="w-full h-full object-cover"
+    style={{ clipPath: "url(#waveClip)" }}
+  />
+</div>
+
+*/

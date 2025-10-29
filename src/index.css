@@ -48,3 +48,13 @@ body {
     #191b21 117.27%
   );
 }
+
+.floating_menu_bg {
+  background: linear-gradient(
+    99.32deg,
+    #191b21 0.56%,
+    rgba(34, 167, 93, 0.9) 59.52%,
+    #22a75d 117.27%
+  );
+}
+
