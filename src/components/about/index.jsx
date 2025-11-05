@@ -1,4 +1,5 @@
-import about from "../../assets/images/about-bg.png";
+import about_bg from "../../assets/about_bg.png";
+import about2 from "../../assets/about2.png";
 import { ChevronRight } from "lucide-react";
 import { motion } from "framer-motion";
 
@@ -6,52 +7,62 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full min-h-[100vh] bg-no-repeat"
+      className="w-full min-h-screen bg-no-repeat"
       style={{
-        backgroundImage: `url(${about})`,
+        backgroundImage: `url(${about_bg})`,
         backgroundSize: "100% 100%", // Eni va balandlik to'liq ekran
         backgroundPosition: "center bottom", // Pastki qismga yopishadi
       }}
     >
-      <div className="max-w-[1260px] mx-auto pt-20 md:pt-30 flex flex-col md:flex-row items-center gap-y-10 gap-x-40 px-10 relative z-10">
-        {/* Chap taraf */}
-        <div className="text-white">
-          <h3 className="text-3xl md:text-[70px] font-[800] uppercase">
-            Become our member now
-          </h3>
-        </div>
+      <div className="max-w-[1260px] mx-auto py-20 md:pt-[120px] px-10 relative z-10">
+        <h3 className="text-[#EBEBEB] text-center font-bold text-[56px] mb-[100px]">
+          Why <span className="text-[#E8C777]">Us</span>
+        </h3>
+        <div className="flex flex-col md:flex-row md:items-start items-center gap-y-10 gap-x-40 ">
+          {/* Chap taraf */}
+          <div className="text-white flex flex-col gap-[20px]">
+            <div className="bg-white py-[8px] px-[30px] rounded-[50px] text-center w-full max-w-[353px]">
+              <h3 className="text-[17px] text-[#09291B] italic md:text-[24px] font-[300] capitalize">
+                Become our member now
+              </h3>
+            </div>
 
-        {/* O‘ng taraf */}
-        <div className="text-white flex flex-col gap-4">
-          <p className="text-base md:text-[20px] font-[500] leading-relaxed">
-            Where ambition takes flight. Joining FALCO means becoming part of a
-            fast, intelligent, and innovative community where ideas turn into
-            impact. Together, we learn, compete, and create opportunities that
-            go beyond boundaries.
-          </p>
-          <p className="text-base md:text-[20px] font-[500] leading-relaxed">
-            Whether you’re driven by startups, competitions, or innovation,
-            FALCO is the launchpad that accelerates your growth. Don’t wait on
-            the sidelines — step in and become part of the future we’re
-            building.
-          </p>
-          <button
-            className="mt-4 w-[260px] flex justify-center items-center gap-2 px-[47px] py-[14px] rounded-[24px] text-[20px] font-semibold text-white transition-colors cursor-pointer"
-            style={{
-              background:
-                "linear-gradient(99.32deg, #191B21 0.56%, rgba(34,167,93,0.9) 59.52%, rgba(25,27,33,0.8) 117.27%)",
-            }}
-          >
-            <span className="flex items-center gap-2">
-              Learn more
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ repeat: Infinity, duration: 1 }}
-              >
-                <ChevronRight size={30} />
-              </motion.span>
-            </span>
-          </button>
+            <h3 className="font-[600] text-[36px]">
+              Lorem Ipsum lore ipsum{" "}
+              <span className="text-[#E8C777]">lorem</span>
+            </h3>
+
+            <p className="text-base md:text-[18px] font-[400] leading-relaxed">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
+              ipsum nobis asperiores soluta voluptas quas voluptates. Molestiae
+              tempora dignissimos, animi praesentium molestias perferendis porro
+              expedita delectus. Soluta natus porro.
+            </p>
+            <button
+              className="mt-4 w-[310px] flex justify-center items-center gap-2 px-[47px] py-[14px] rounded-[24px] uppercase text-[16px] font-semibold text-white transition-colors cursor-pointer"
+              style={{
+                background:
+                  "linear-gradient(99.32deg, #191B21 0.56%, rgba(34,167,93,0.9) 59.52%, rgba(25,27,33,0.8) 117.27%)",
+              }}
+            >
+              <span className="flex items-center gap-2">
+                Learn more
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 1 }}
+                >
+                  <ChevronRight size={30} />
+                </motion.span>
+              </span>
+            </button>
+          </div>
+
+          {/* O‘ng taraf */}
+          <img
+            src={about2}
+            alt="Image"
+            className="max-w-[480px] w-full h-auto"
+          />
         </div>
       </div>
 
