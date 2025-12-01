@@ -66,7 +66,7 @@ const Statistic = () => {
               alt={item.title}
               className="w-[170px] h-auto object-contain mb-3"
             />
-            <p className="font-semibold h-[70px] text-[20] md:text-[24px] mb-3.5 whitespace-pre-line">
+            <p className="font-semibold h-[70px] text-[20px] md:text-[24px] mb-3.5 whitespace-pre-line">
               {item.title}
             </p>
             <p className="text-[25px] md:text-[38px] text-[#09291B] font-semibold">
