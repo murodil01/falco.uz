@@ -26,7 +26,7 @@ const AchieveHero = () => {
 
       <div className="container mx-auto max-w-[1260px] px-4 md:px-6 relative z-10">
         <h3 className="text-3xl sm:text-4xl md:text-5xl lg:text-[60px] text-white font-bold mb-12 text-center">
-          Our <span className="text-[#E8C777]">Achievements</span>
+          Bizning <span className="text-[#E8C777]">Yutuqlarimiz</span>
         </h3>
 
         {/* Buttons */}
@@ -45,7 +45,7 @@ const AchieveHero = () => {
                   : "transparent",
             }}
           >
-            Attended projects
+            Ishtirok etilgan loyihalar
           </button>
 
           <button
@@ -62,7 +62,7 @@ const AchieveHero = () => {
                   : "transparent",
             }}
           >
-            Awarded projects
+            Mukofotlangan loyihalar
           </button>
         </div>
 

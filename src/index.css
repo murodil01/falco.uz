@@ -58,3 +58,29 @@ body {
   );
 }
 
+/* ========================================= */
+/* Global CSS (index.css) ichida qo'shilishi kerak */
+/* ========================================= */
+
+/* Faqat oldinga (o'ngdan chapga) harakatlanuvchi cheksiz siljish animatsiyasi */
+@keyframes scroll-forward {
+  /* Boshlang'ich holat: siljish yo'q */
+  0% { 
+    transform: translateX(0); 
+  }
+  /* Yakuniy holat: Rasmlar to'plami ikki marta takrorlanganligi sababli, 
+     50% siljish birinchi to'plam tugashini ta'minlaydi va sikl uzluksiz bo'ladi. */
+  100% { 
+    transform: translateX(-50%); 
+  }
+}
+
+/* Agar sizga qarama-qarshi (chapdan o'ngga) yo'nalish ham kerak bo'lsa: */
+@keyframes scroll-backward {
+  0% { 
+    transform: translateX(-50%); 
+  }
+  100% { 
+    transform: translateX(0); 
+  }
+}

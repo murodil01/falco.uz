@@ -137,7 +137,7 @@ const Navbar = () => {
                   to="/#home"
                   className={getLinkClass({ path: "/", hash: "#home" })}
                 >
-                  Home
+                  Bosh sahifa
                 </HashLink>
               </li>
 
@@ -147,7 +147,7 @@ const Navbar = () => {
                   onClick={handleAboutClick}
                   className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
                 >
-                  About Us
+                  Biz haqimizda
                   <ChevronDown
                     size={18}
                     className={`transition-transform ${
@@ -163,7 +163,7 @@ const Navbar = () => {
                   onClick={handleNewsClick}
                   className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
                 >
-                  News
+                  Yangiliklar
                   <ChevronDown
                     size={18}
                     className={`transition-transform ${
@@ -178,7 +178,7 @@ const Navbar = () => {
                   to="/career"
                   className={getLinkClass({ path: "/career" })}
                 >
-                  Career
+                  Karyera
                 </Link>
               </li>
             </ul>
@@ -193,15 +193,15 @@ const Navbar = () => {
                     "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
                 }}
               >
-                Contact Us
+                Bog’laning
               </Link>
 
               {/* Join Us */}
               <Link
                 to="/join-us"
-                className="w-[140px] px-5 py-2 border-2 border-[#9C8A5D] text-[#9C8A5D] font-semibold text-[16px] rounded-[40px] transition text-center"
+                className="w-[180px] px-5 py-2 border-2 border-[#9C8A5D] text-[#9C8A5D] font-semibold text-[16px] rounded-[40px] transition text-center"
               >
-                Join Us
+                Bizga qo’shiling!
               </Link>
             </div>
           </nav>
@@ -229,7 +229,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={getLinkClass({ path: "/", hash: "#home" })}
               >
-                Home
+                Bosh sahifa
               </HashLink>
             </li>
 
@@ -238,7 +238,7 @@ const Navbar = () => {
                 className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
                 onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
               >
-                About Us
+                Biz haqimizda
                 <ChevronDown
                   size={20}
                   className={`${mobileAboutOpen ? "rotate-180" : ""}`}
@@ -247,16 +247,14 @@ const Navbar = () => {
               {mobileAboutOpen && (
                 <ul className="mt-2 flex flex-col gap-2">
                   <li
-                    onClick={() =>
-                      handleAboutSelect("achievements", "/achievements")
-                    }
+                    onClick={() => handleAboutSelect("about", "/about")}
                     className={`cursor-pointer px-2 py-2 rounded-[10px] ${
-                      activeAbout === "achievements"
+                      activeAbout === "about"
                         ? "bg-[#F7F7F7] text-[#09291]"
                         : ""
                     }`}
                   >
-                    Our Achievements
+                    Sayohatlar
                   </li>
 
                   <li
@@ -267,17 +265,20 @@ const Navbar = () => {
                         : ""
                     }`}
                   >
-                    Projects
+                    Loyihalar
                   </li>
+
                   <li
-                    onClick={() => handleAboutSelect("about", "/about")}
+                    onClick={() =>
+                      handleAboutSelect("achievements", "/achievements")
+                    }
                     className={`cursor-pointer px-2 py-2 rounded-[10px] ${
-                      activeAbout === "about"
+                      activeAbout === "achievements"
                         ? "bg-[#F7F7F7] text-[#09291]"
                         : ""
                     }`}
                   >
-                    About
+                    Yutuqlar
                   </li>
                 </ul>
               )}
@@ -288,7 +289,7 @@ const Navbar = () => {
                 className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
                 onClick={() => setMobileNewsOpen(!mobileNewsOpen)}
               >
-                News
+                Yangiliklar
                 <ChevronDown
                   size={20}
                   className={`${mobileNewsOpen ? "rotate-180" : ""}`}
@@ -304,7 +305,7 @@ const Navbar = () => {
                         : ""
                     }`}
                   >
-                    Expected Competitions
+                    Kutilayotgan tanlovlar
                   </li>
                   <li
                     onClick={() => handleNewsSelect("previous", "/previous")}
@@ -314,7 +315,7 @@ const Navbar = () => {
                         : ""
                     }`}
                   >
-                    Previous Competitions
+                    Tugallangan tanlovlar
                   </li>
                   <li
                     onClick={() => handleNewsSelect("falco", "/news")}
@@ -322,7 +323,7 @@ const Navbar = () => {
                       activeNews === "falco" ? "bg-[#F7F7F7] text-[#09291]" : ""
                     }`}
                   >
-                    Falco News
+                    Falco yangiliklari
                   </li>
                 </ul>
               )}
@@ -334,7 +335,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
                 className={getLinkClass({ path: "/career" })}
               >
-                Career
+                Karyera
               </Link>
             </li>
           </ul>
@@ -350,7 +351,7 @@ const Navbar = () => {
                   "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
               }}
             >
-              Contact Us
+              Bog’laning
             </Link>
 
             {/* Join Us */}
@@ -359,7 +360,7 @@ const Navbar = () => {
               onClick={() => setIsOpen(false)}
               className="w-full px-4 py-3 border-2 border-[#9C8A5D] text-[#9C8A5D] text-[18px] rounded-[40px] hover:bg-[#0F2C20] hover:text-white transition text-center"
             >
-              Join Us
+              Bizga qo'shiling
             </Link>
           </div>
         </div>
@@ -383,28 +384,8 @@ const Navbar = () => {
         className="custom-modal hidden md:block"
         zIndex={60}
       >
-        <h3 className="text-[#9A9EA6] font-[600] text-[16px] mb-2">About</h3>
+        <h3 className="text-[#9A9EA6] font-[600] text-[16px] mb-2">Biz haqimizda</h3>
         <div className="flex flex-col gap-1">
-          <p
-            onClick={() => handleAboutSelect("achievements", "/achievements")}
-            className={`cursor-pointer font-[600] text-[16px] px-2 py-2 rounded-md transition-colors ${
-              activeAbout === "achievements"
-                ? "bg-[#F7F7F7] text-[#09291B]"
-                : "text-[#313131] hover:bg-gray-100"
-            }`}
-          >
-            Our Achievements
-          </p>
-          <p
-            onClick={() => handleAboutSelect("projects", "/projects")}
-            className={`cursor-pointer font-[600] text-[16px] px-2 py-2 rounded-md transition-colors ${
-              activeAbout === "projects"
-                ? "bg-[#F7F7F7] text-[#09291B]"
-                : "text-[#313131] hover:bg-gray-100"
-            }`}
-          >
-            Projects
-          </p>
           <p
             onClick={() => handleAboutSelect("about", "/about")}
             className={`cursor-pointer font-[600] text-[16px] px-2 py-2 rounded-md transition-colors ${
@@ -413,7 +394,29 @@ const Navbar = () => {
                 : "text-[#313131] hover:bg-gray-100"
             }`}
           >
-            About
+            Sayohatlar
+          </p>
+
+          <p
+            onClick={() => handleAboutSelect("projects", "/projects")}
+            className={`cursor-pointer font-[600] text-[16px] px-2 py-2 rounded-md transition-colors ${
+              activeAbout === "projects"
+                ? "bg-[#F7F7F7] text-[#09291B]"
+                : "text-[#313131] hover:bg-gray-100"
+            }`}
+          >
+            Loyihalar
+          </p>
+
+          <p
+            onClick={() => handleAboutSelect("achievements", "/achievements")}
+            className={`cursor-pointer font-[600] text-[16px] px-2 py-2 rounded-md transition-colors ${
+              activeAbout === "achievements"
+                ? "bg-[#F7F7F7] text-[#09291B]"
+                : "text-[#313131] hover:bg-gray-100"
+            }`}
+          >
+            Yutuqlar
           </p>
         </div>
       </Modal>
@@ -436,7 +439,7 @@ const Navbar = () => {
         className="custom-modal hidden md:block"
         zIndex={60}
       >
-        <h3 className="text-[#9A9EA6] font-[600] text-[16px] mb-2">News</h3>
+        <h3 className="text-[#9A9EA6] font-[600] text-[16px] mb-2">Yangiliklar</h3>
         <div className="flex flex-col gap-1">
           <p
             onClick={() => handleNewsSelect("expected", "/expected")}
@@ -446,7 +449,7 @@ const Navbar = () => {
                 : "text-[#313131] hover:bg-gray-100"
             }`}
           >
-            Expected Competitions
+            Kutilayotgan tanlovlar
           </p>
           <p
             onClick={() => handleNewsSelect("previous", "/previous")}
@@ -456,7 +459,7 @@ const Navbar = () => {
                 : "text-[#313131] hover:bg-gray-100"
             }`}
           >
-            Previous Competitions
+            Tugallangan tanlovlar
           </p>
           <p
             onClick={() => handleNewsSelect("falco", "/news")}
@@ -466,7 +469,7 @@ const Navbar = () => {
                 : "text-[#313131] hover:bg-gray-100"
             }`}
           >
-            Falco News
+            Falco yangiliklari
           </p>
         </div>
       </Modal>

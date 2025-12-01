@@ -25,13 +25,13 @@ const Contact = () => {
       <div className="max-w-[1260px] mx-auto text-center">
         {/* Title */}
         <h3 className="text-[55px] font-semibold mb-5 max-md:text-[36px] max-sm:text-[28px]">
-          Contact Us
+          Biz bilan bog‘laning
         </h3>
         <p className="max-w-[890px] mx-auto mb-16 text-[20px] leading-relaxed max-md:text-[16px] max-sm:text-[14px]">
-          Thanks for reaching out to FALCO! Whether you’re curious about
-          joining, looking for collaboration, or just want to learn more, we’d
-          love to hear from you. Stay connected with us and be the first to know
-          about our latest projects and events.
+          Falco hamjamiyatiga bo‘lgan qiziqishingiz biz uchun juda muhim. Agar
+          savolingiz bo‘lsa, taklif bermoqchi bo‘lsangiz yoki qo‘shimcha
+          ma’lumot kerak bo‘lsa — biz har doim aloqadamiz. Biz bilan bemalol
+          bog‘lanishingiz mumkin, barcha kerakli ma’lumotlar pastda keltirilgan.
         </p>
 
         {/* Contact info */}

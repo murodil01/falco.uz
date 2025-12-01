@@ -9,36 +9,31 @@ import com from "../../../assets/com.webp";
 
 const images = [
   {
-    title: "Agroboost UZ",
-    subtitle: "Seed Stage",
+    title: "Agroboost",
     description:
-      "Agroboost provides farmers with digital tools such as drone monitoring, smart sensors, and data analytics for better crop management. It works by collecting real-time data from fields and offering recommendations on irrigation, fertilization, and harvesting. The main benefit is increased productivity, reduced costs, and more sustainable farming practices. It solves the problems of low efficiency and lack of access to modern technology in agriculture, helping farmers make informed decisions.",
+      "AgroBoost fermerlar uchun zamonaviy raqamli yechimlarni taqdim etadi: dron orqali kuzatuv, aqlli sensorlar va ma’lumotlar tahlili orqali ekinlarni aniq boshqarish imkoniyati yaratiladi. Platforma dalalardan real vaqt rejimida ma’lumot yig‘adi va sug‘orish, o‘g‘itlash hamda hosilni yig‘ib olish bo‘yicha aniq tavsiyalar beradi. \n\nAgroBoostning asosiy afzalligi — hosildorlikning oshishi, xarajatlarning kamayishi va qishloq xo‘jaligida yanada barqaror, samarali jarayonlarning shakllanishidir. U an’anaviy usullardagi past unumdorlik va zamonaviy texnologiyalarga kirishning cheklanganligi kabi muammolarni bartaraf etib, fermerlarning ishonchli va asosli qarorlar qabul qilishiga yordam beradi.",
     image: Agroboost_pro,
   },
   {
     title: "FoodQuest UZ",
-    subtitle: "Pre-Seed Stage",
     description:
       "FoodQuest uses digital tools such as gamification features, special “magic sales,” and dynamic pricing to make food discovery engaging and affordable. It works by connecting restaurants and food providers with customers through a smart platform that offers discounts, rewards, and real-time availability of meals. The benefits include lower food prices, exciting user experiences, and better visibility for food businesses. FoodQuest addresses the problem of high food costs and unnecessary waste by redistributing surplus meals and balancing food consumption across the country.",
     image: fresh_line_pro,
   },
   {
     title: "Robocontest UZ",
-    subtitle: "Growth Stage",
     description:
       "Robocontest offers tools such as coding challenges, problem sets, and automated evaluation systems. It works by providing an online platform where participants can solve tasks, join contests, and receive instant feedback on their solutions. The benefit is hands-on practice, skill improvement, and preparation for real-world programming. It solves the problem of limited opportunities for young developers to test their knowledge and compete on an international level.",
     image: FoodQuest_pro,
   },
   {
     title: "Freshline",
-    subtitle: "Early Seed Stage",
     description:
       "Freshline provides logistics tools like digital tracking, route optimization, and cold-chain monitoring for fresh product delivery. It works by connecting farmers, suppliers, and customers through a transparent platform that ensures timely and safe delivery. The benefits include fresher products, reduced waste, and lower costs for both businesses and consumers. It solves the problem of inefficiency and product loss in traditional supply chains by offering smarter, technology-driven distribution.",
     image: robocontest,
   },
   {
     title: "Coming soon",
-    subtitle: "",
     description:
       "We never get tired of creating. 🚀 Another startup is on the way — bigger, smarter, and ready to inspire. Stay tuned, the future is loading…",
     image: com,
@@ -82,7 +77,7 @@ const ProjectSlider = () => {
 
       <div className="container mx-auto max-w-[1260px] px-4 md:px-6 relative z-10">
         <h3 className="text-4xl text-white md:text-5xl font-[700] mb-[126px] text-center">
-          Our <span className="text-[#E8C777]">Projects</span>
+          Bizning <span className="text-[#E8C777]">loyihalarimiz</span>
         </h3>
 
         <div className="flex flex-col-reverse md:flex-row gap-10 items-center">
@@ -91,10 +86,8 @@ const ProjectSlider = () => {
             <h3 className="text-[36px] text-[#09291B] font-[600]">
               {current.title}
             </h3>
-            <span className="text-[20px] text-[#808080] font-[600]">
-              {current.subtitle}
-            </span>
-            <p className="text-[#6E7074] font-[500] text-[18px] mt-[30px]">
+
+            <p className="text-[#6E7074] font-[500] text-[18px] mt-[30px] whitespace-pre-line">
               {current.description}
             </p>
           </div>

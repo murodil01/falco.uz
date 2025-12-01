@@ -2,97 +2,37 @@ import { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import attend1 from "../../../assets/attended/attend1.png";
+import attend2 from "../../../assets/attended/attend2.png";
+import attend3 from "../../../assets/attended/attend3.png";
+import attend4 from "../../../assets/attended/attend4.png";
+import attend5 from "../../../assets/attended/attend5.png";
+import attend6 from "../../../assets/attended/attend6.png";
 
 const attendedData = [
   {
-    title: "Water City Dreams",
-    date: "September 18, 2022",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 1,
+    image: attend1,
   },
   {
-    title: "Mountain Heights",
-    date: "October 12, 2022",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 2,
+    image: attend2,
   },
   {
-    title: "Ocean Breeze",
-    date: "November 5, 2022",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 3,
+    image: attend3,
   },
   {
-    title: "Sunset Valley",
-    date: "December 1, 2022",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 4,
+    image: attend4,
   },
   {
-    title: "Skyline Towers",
-    date: "January 8, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 5,
+    image: attend5,
   },
   {
-    title: "Forest Retreat",
-    date: "February 14, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Desert Mirage",
-    date: "March 10, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Riverfront Park",
-    date: "April 22, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Golden Fields",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Twelve",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Thirteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Fourteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Fifteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Sexteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Seventeen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Eighteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Nineteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Twenty",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 6,
+    image: attend6,
   },
 ];
 // Custom Arrow komponentlari
@@ -186,17 +126,9 @@ const Attended = () => {
                 {slideItems.map((item, idx) => (
                   <div
                     key={idx}
-                    className="bg-[#C4C4C4] rounded-[10px] p-4 text-white flex flex-col gap-4 min-h-[200px]"
+                    className="rounded-[10px] flex flex-col gap-4 min-h-[200px]"
                   >
-                    <h3 className="text-[20px] lg:text-[23px] font-[700] line-clamp-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-[14px] lg:text-[16px] font-[700]">
-                      {item.date}
-                    </p>
-                    <p className="text-[14px] lg:text-[16px] font-[400] line-clamp-3">
-                      {item.desc}
-                    </p>
+                    <img src={item.image} alt="Image" />
                   </div>
                 ))}
               </div>

@@ -1,11 +1,7 @@
 import { Mail, Phone } from "lucide-react";
 import footer from "../../assets/images/footer-log.png";
 import { Link } from "react-router-dom";
-import {
-  FaFacebookF,
-  FaInstagram,
-  FaTelegramPlane,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
@@ -42,24 +38,24 @@ const Footer = () => {
 
         {/* 2-qism */}
         <div className="flex-1 min-w-[230px]">
-          <h3 className="font-semibold text-[22px] uppercase tracking-wide mb-6">
-            Useful Links
+          <h3 className="font-semibold text-[22px] tracking-wide mb-6">
+            Foydali havolalar
           </h3>
           <ul className="space-y-4 font-[400] text-[18px] text-[#0F2C20]">
             <li>
               <a href="/" aria-label="Go to homepage">
-                Home
+                Bosh sahifa
               </a>
             </li>
             <li>
-              <Link to={"/about"}>About us </Link>
+              <Link to={"/about"}>Biz haqimizda</Link>
             </li>
             <li>
-              <Link to={"/projects"}>Projects </Link>
+              <Link to={"/projects"}>Loyihalar</Link>
             </li>
             <li>
               <HashLink smooth to="/#team">
-                Team
+                Jamoa
               </HashLink>
             </li>
           </ul>
@@ -67,33 +63,36 @@ const Footer = () => {
 
         {/* 3-qism */}
         <div className="flex-1 min-w-[230px]">
-          <h3 className="font-semibold text-[22px] uppercase tracking-wide mb-6">
-            Discover
+          <h3 className="font-semibold text-[22px] tracking-wide mb-6">
+            Bizning xizmatlarimiz
           </h3>
           <ul className="space-y-4 font-[400] text-[18px] text-[#0F2C20]">
             <li>
-              <a href="#">Upcoming Competitions/Events</a>
+              <a href="#">Veb-dizayn</a>
             </li>
             <li>
-              <a href="#">Previous Compertitions/Events</a>
+              <a href="#">Veb-dasturlash</a>
             </li>
             <li>
-              <a href="#">Career</a>
+              <a href="#">Mahsulot boshqaruvi</a>
             </li>
             <li>
-              <a href="#">Achievements</a>
+              <a href="#">Marketing xizmatlari</a>
             </li>
           </ul>
         </div>
 
         {/* 4-qism */}
         <div className="flex-1 min-w-[230px]">
-          <h3 className="font-semibold text-[22px] uppercase tracking-wide mb-6">
-            Follow Us
+          <h3 className="font-semibold text-[22px] tracking-wide mb-6">
+            Bizni kuzatib boring
           </h3>
-          <ul className="space-y-4 font-[400] text-[18px] text-[#0F2C20]">
-            <li>Follow us on social media to stay updated.</li>
-            <li className="flex items-center gap-4 mt-18">
+          <div className="space-y-4 font-[400] text-[18px] text-[#0F2C20]">
+            <p>
+              Yangiliklardan xabardor bo‘lish uchun bizni ijtimoiy tarmoqlarda
+              kuzatib boring.
+            </p>
+            <li className="flex items-center gap-4 mt-10">
               <a
                 href="https://facebook.com/"
                 target="_blank"
@@ -122,7 +121,7 @@ const Footer = () => {
                 <FaTelegramPlane size={20} />
               </a>
             </li>
-          </ul>
+          </div>
         </div>
       </div>
 
@@ -130,7 +129,7 @@ const Footer = () => {
       <div className="md:mt-0 mt-0 bg-gradient-to-r from-[#1c5239] to-[#219e5a] py-5">
         <div className="container mx-auto text-center">
           <p className="text-white text-[16px]">
-            © Copyright Falco community All Rights Reserved
+            © Falco hamjamiyatining barcha huquqlari himoyalangan.
           </p>
         </div>
       </div>

@@ -12,6 +12,7 @@ import JoinUs from "./pages/join-us";
 import ContactUs from "./pages/contact";
 import Documents from "./components/login-parts/documents";
 import NotFound from "./pages/not-found";
+import AboutMin from "./pages/about2";
 
 const App = () => {
   return (
@@ -29,6 +30,7 @@ const App = () => {
         <Route path="/join-us" element={<JoinUs />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/documents" element={<Documents />} />
+        <Route path="/about-min" element={<AboutMin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

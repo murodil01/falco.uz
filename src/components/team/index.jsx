@@ -7,6 +7,9 @@ import "swiper/css";
 import "swiper/css/navigation";
 import teamBg from "../../assets/images/team.png";
 import fozil from "../../assets/team/fozil.png";
+import gauhar from "../../assets/team/gauhar.png";
+import behruz from "../../assets/team/behruz.png";
+import bobur from "../../assets/team/bobur.jpg";
 import { RiTelegram2Line } from "react-icons/ri";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -15,52 +18,43 @@ const teamMembers = [
   {
     id: 1,
     name: "Ruzmamatov Foziljon",
-    role: "Company CEO",
-    desc: "Junior at Tashkent University of Information Technologies named after Muhammad al-Khwarizmi",
+    role: "CEO",
+    desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
     telegram: "@Foziljon_Ruzmamatov",
     linkedin: "Not found",
     instagram: "_mr.fozil_",
     image: fozil,
   },
+
   {
     id: 2,
-    name: "Shaxina Rustambekova",
-    role: "Social Media Manager",
-    desc: "Junior at Tashkent University of Information Technologies named after Muhammad al-Khwarizmi",
-    telegram: "@rushaav",
+    name: "Shohruhbek Sobirov",
+    role: "Manager",
+    desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
+    telegram: " @shohruxbek_s",
     linkedin: "Not found",
     instagram: "Not found",
-    image: fozil,
+    image: behruz,
   },
   {
     id: 3,
-    name: "Behruz Nutfillayev",
-    role: "AI Expert",
-    desc: "Alumnai of Tashkent University of Information Technologies named after Muhammad al-Khwarizmi",
-    telegram: "@bnutfilloyev",
+    name: "Baymatova Gauxar",
+    role: "Media Manager",
+    desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
+    telegram: "",
     linkedin: "Not found",
     instagram: "Not found",
-    image: fozil,
+    image: gauhar,
   },
   {
     id: 4,
     name: "Allayoruv Boburjon",
-    role: "Representer",
-    desc: "Junior at Tashkent University of Information Technologies named after Muhammad al-Khwarizmi",
+    role: "Backend Developer",
+    desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
     telegram: "@allayorovbobur21",
     linkedin: "https://www.linkedin.com/in/bobur-allayorov-66b0622a6/",
     instagram: "Not found",
-    image: fozil,
-  },
-  {
-    id: 5,
-    name: "Shohruhbek Sobirov",
-    role: "Community Manager",
-    desc: "Junior at Tashkent University of Information Technologies named after Muhammad al-Khwarizmi",
-    telegram: " @shohruxbek_s",
-    linkedin: "Not found",
-    instagram: "Not found",
-    image: fozil,
+    image: bobur,
   },
 ];
 
@@ -82,8 +76,8 @@ const Team = () => {
     >
       <div className="max-w-[1220px] mx-auto px-2">
         {/* Title */}
-        <h3 className="text-[50px] text-center font-bold text-[#231f20] mt-[220px] max-md:text-[36px]">
-          Meet Our <span className="text-[#9c8a5d]">Team</span>
+        <h3 className="capitalize text-[50px] text-center font-bold text-[#231f20] mt-[220px] max-md:text-[36px]">
+          Jamoa bilan <span className="text-[#9c8a5d]">tanishish</span>
         </h3>
 
         {/* Custom Navigation Buttons */}
@@ -141,11 +135,11 @@ const Team = () => {
                 }}
               >
                 {/* Image Container */}
-                <div className="w-full h-[270px">
+                <div className="w-full h-[275px]">
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full h-full"
+                    className="w-full max-w-[310px] h-[275px]"
                   />
                 </div>
 
@@ -170,7 +164,7 @@ const Team = () => {
                       }
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] flex items-center justify-center"
+                      className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-blue-500 hover:text-white flex items-center justify-center"
                     >
                       <RiTelegram2Line size={20} />
                     </a>
@@ -181,7 +175,7 @@ const Team = () => {
                       }
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] flex items-center justify-center"
+                      className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-blue-600 hover:text-white flex items-center justify-center"
                     >
                       <FaLinkedinIn size={18} />
                     </a>
@@ -194,7 +188,7 @@ const Team = () => {
                       }
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] flex items-center justify-center"
+                      className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-red-500 hover:text-white flex items-center justify-center"
                     >
                       <FaInstagram size={18} />
                     </a>
@@ -210,6 +204,7 @@ const Team = () => {
 };
 
 export default Team;
+
 /*
 <div className="relative w-full h-[270px] overflow-hidden">
   <svg className="absolute inset-0 w-0 h-0">

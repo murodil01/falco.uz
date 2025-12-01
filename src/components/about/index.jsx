@@ -15,28 +15,28 @@ const About = () => {
       }}
     >
       <div className="max-w-[1260px] mx-auto py-20 md:pt-[120px] px-10 relative z-10">
-        <h3 className="text-[#EBEBEB] text-center font-bold text-[56px] mb-[100px]">
-          Why <span className="text-[#E8C777]">Us</span>
+        <h3 className="capitalize text-[#313131] text-center font-bold text-[clamp(20px,5vw,56px)] mb-[100px]">
+          Nega aynan <span className="text-[#E8C777]">biz?</span>
         </h3>
         <div className="flex flex-col md:flex-row md:items-start items-center gap-y-10 gap-x-40 ">
           {/* Chap taraf */}
           <div className="text-white flex flex-col gap-[20px]">
             <div className="bg-white py-[8px] px-[30px] rounded-[50px] text-center w-full max-w-[353px]">
               <h3 className="text-[17px] text-[#09291B] italic md:text-[24px] font-[300] capitalize">
-                Become our member now
+                Falcoga qo'shilish
               </h3>
             </div>
 
             <h3 className="font-[600] text-[36px]">
-              Lorem Ipsum lore ipsum{" "}
-              <span className="text-[#E8C777]">lorem</span>
+              Falco sizning{" "}
+              <span className="text-[#E8C777]">rivojlanish maydonchangiz</span>
             </h3>
 
             <p className="text-base md:text-[18px] font-[400] leading-relaxed">
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam
-              ipsum nobis asperiores soluta voluptas quas voluptates. Molestiae
-              tempora dignissimos, animi praesentium molestias perferendis porro
-              expedita delectus. Soluta natus porro.
+              Falco — bu yoshlar rivojlanishi uchun yaratilgan kuchli
+              hamjamiyat. Bu yerda siz nafaqat bilim olasiz, balki uni
+              amaliyotda qo‘llab, real loyihalarda ishtirok etasiz, jamoalarda
+              ishlaysiz va zamonaviy texnologiyalar bilan tajriba oshirasiz.
             </p>
             <button
               className="mt-4 w-[310px] flex justify-center items-center gap-2 px-[47px] py-[14px] rounded-[24px] uppercase text-[16px] font-semibold text-white transition-colors cursor-pointer"
@@ -46,7 +46,7 @@ const About = () => {
               }}
             >
               <span className="flex items-center gap-2">
-                Learn more
+                Ko‘proq bilish
                 <motion.span
                   animate={{ x: [0, 5, 0] }}
                   transition={{ repeat: Infinity, duration: 1 }}

@@ -6,19 +6,21 @@ const Hero = () => {
       <div className="max-w-[1260px] pt-35 pb-5 w-full m-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
         {/* Text */}
         <div className="flex-1 text-center md:text-left">
-          <h1 className="text-4xl md:text-6xl font-bold text-[#231F20] mb-[46px] leading-tight">
-            Welcome to <span className="text-[#8e7d53]">Falco</span> Community
+          <h1 className="text-4xl md:text-[57px] font-bold text-[#231F20] mb-[46px] leading-tight">
+            <span className="text-[#8e7d53]">Falco hamjamiyatiga</span> xush
+            kelibsiz
           </h1>
-          <p className="text-lg md:text-xl text-[#231F20] mb-[43px] max-w-xl mx-auto md:mx-0">
-            Where passion meets purpose. Together, we learn, grow, and build the
-            future. Falco is not just a community — it's your launchpad to
-            greatness.
+          <p className="text-lg md:text-[18px] font-normal text-[#231F20] mb-[43px] max-w-xl mx-auto md:mx-0">
+            Falco — bu o‘sish sari tashlangan birinchi qadam. Bu yerda sizni
+            qo‘llaydigan jamoa, o‘rganishga undaydigan muhit va kelajagingizni
+            o‘zgartira oladigan imkoniyatlar bor. Bu yerda istagingiz kuchga,
+            maqsadingiz natijaga aylanadi.
           </p>
           <a
             href="#contact"
             className="bg-[#09291b]  border-none font-[500] rounded-[40px] text-white w-full max-w-[230px] px-[70px] py-[14px] hover:bg-[#8e7d53] transition duration-300 text-lg"
           >
-            Contact us
+            Biz bilan bog’laning
           </a>
         </div>
 

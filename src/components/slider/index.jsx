@@ -21,7 +21,7 @@ const Slider = () => {
     >
       <div className="flex flex-col gap-6 sm:gap-10 md:gap-16 lg:gap-20  relative z-10">
         <h2 className="text-[50px] text-[#09291B] font-bold text-center mb-40">
-          Our <span className="text-[#9C8A5D]">Projects</span>
+          Bizning <span className="text-[#9C8A5D]">loyihalarimiz</span>
         </h2>
 
         {/* Slider container */}
