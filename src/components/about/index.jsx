@@ -7,7 +7,7 @@ const About = () => {
   return (
     <section
       id="about"
-      className="w-full min-h-screen bg-no-repeat"
+      className="w-full min-h-screen bg-no-repeat -mt-[1.3px]"
       style={{
         backgroundImage: `url(${about_bg})`,
         backgroundSize: "100% 100%", // Eni va balandlik to'liq ekran
