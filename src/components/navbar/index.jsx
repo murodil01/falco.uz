@@ -247,7 +247,7 @@ const Navbar = () => {
               {mobileAboutOpen && (
                 <ul className="mt-2 flex flex-col gap-2">
                   <li
-                    onClick={() => handleAboutSelect("about", "/about")}
+                    onClick={() => handleAboutSelect("travel", "/travel")}
                     className={`cursor-pointer px-2 py-2 rounded-[10px] ${
                       activeAbout === "about"
                         ? "bg-[#F7F7F7] text-[#09291]"
@@ -384,12 +384,14 @@ const Navbar = () => {
         className="custom-modal hidden md:block"
         zIndex={60}
       >
-        <h3 className="text-[#9A9EA6] font-[600] text-[16px] mb-2">Biz haqimizda</h3>
+        <h3 className="text-[#9A9EA6] font-[600] text-[16px] mb-2">
+          Biz haqimizda
+        </h3>
         <div className="flex flex-col gap-1">
           <p
-            onClick={() => handleAboutSelect("about", "/about")}
+            onClick={() => handleAboutSelect("travel", "/travel")}
             className={`cursor-pointer font-[600] text-[16px] px-2 py-2 rounded-md transition-colors ${
-              activeAbout === "about"
+              activeAbout === "travel"
                 ? "bg-[#F7F7F7] text-[#09291B]"
                 : "text-[#313131] hover:bg-gray-100"
             }`}
@@ -439,7 +441,9 @@ const Navbar = () => {
         className="custom-modal hidden md:block"
         zIndex={60}
       >
-        <h3 className="text-[#9A9EA6] font-[600] text-[16px] mb-2">Yangiliklar</h3>
+        <h3 className="text-[#9A9EA6] font-[600] text-[16px] mb-2">
+          Yangiliklar
+        </h3>
         <div className="flex flex-col gap-1">
           <p
             onClick={() => handleNewsSelect("expected", "/expected")}

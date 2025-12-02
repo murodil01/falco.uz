@@ -21,7 +21,7 @@ const About = () => {
         <div className="flex flex-col md:flex-row md:items-start items-center gap-y-10 gap-x-40 ">
           {/* Chap taraf */}
           <div className="text-white flex flex-col gap-[20px]">
-            <div className="bg-white py-[8px] px-[30px] rounded-[50px] text-center w-full max-w-[353px]">
+            <div className="bg-white py-[8px] rounded-[50px] text-center w-full max-w-[340px]">
               <h3 className="text-[17px] text-[#09291B] italic md:text-[24px] font-[300] capitalize">
                 Falcoga qo'shilish
               </h3>

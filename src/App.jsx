@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "./components/scroll-top";
 import Home from "./pages/home";
-import About from "./pages/about";
+import Travels from "./pages/travel";
 import News from "./pages/news";
 import Projects from "./pages/projects";
 import Career from "./pages/career";
@@ -12,7 +12,7 @@ import JoinUs from "./pages/join-us";
 import ContactUs from "./pages/contact";
 import Documents from "./components/login-parts/documents";
 import NotFound from "./pages/not-found";
-import AboutMin from "./pages/about2";
+import AboutMin from "./pages/about";
 
 const App = () => {
   return (
@@ -20,7 +20,7 @@ const App = () => {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/travel" element={<Travels />} />
         <Route path="/achievements" element={<Achievements />} />
         <Route path="/news" element={<News />} />
         <Route path="/previous" element={<Previous />} />
@@ -30,7 +30,7 @@ const App = () => {
         <Route path="/join-us" element={<JoinUs />} />
         <Route path="/contact" element={<ContactUs />} />
         <Route path="/documents" element={<Documents />} />
-        <Route path="/about-min" element={<AboutMin />} />
+        <Route path="/about" element={<AboutMin />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </>

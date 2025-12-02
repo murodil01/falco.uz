@@ -1,21 +1,21 @@
+import TravelHero from "../../components/travel-parts/travel-hero";
 import Navbar from "../../components/navbar";
 import Contact from "../../components/contact";
 import Footer from "../../components/footer";
+import Planners from "../../components/travel-parts/planners";
+import Travel from "../../components/travel-parts/travel";
+import Gallery from "../../components/travel-parts/gallery";
 import FloatingMenu from "../../components/floating-menu";
-import Hero from "../../components/about2/hero";
-import Statistics from "../../components/about2/statistics";
-import Purpose from "../../components/about2/purpose";
-import Steps from "../../components/about2/steps";
 import "../../components/travel-parts/planners/Slider.css";
 
-const AboutMin = () => {
+const Travels = () => {
   return (
     <div>
       <Navbar />
-      <Hero />
-      <Statistics />
-      <Purpose />
-      <Steps />
+      <TravelHero />
+      <Planners />
+      <Travel />
+      <Gallery />
       <Contact />
       <Footer />
       <FloatingMenu />
@@ -23,4 +23,4 @@ const AboutMin = () => {
   );
 };
 
-export default AboutMin;
+export default Travels;

@@ -5,7 +5,7 @@ import Footer from "../../components/footer";
 import NewsMain from "../../components/news-main";
 import SplashScreen from "../../components/splash";
 import Team from "../../components/team";
-import Gallery from "../../components/about-parts/gallery";
+import Gallery from "../../components/travel-parts/gallery";
 import TopHeader from "../../components/top-header";
 import FloatingMenu from "../../components/floating-menu"
 import Slider from "../../components/slider";
