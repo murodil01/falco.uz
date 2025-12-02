@@ -8,6 +8,7 @@ const Hero = () => {
       {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-[400px] -z-10">
         <img
+          loading="loader"
           src={project_slider}
           alt="Project Background"
           className="w-full h-[215px] object-cover"
@@ -26,8 +27,8 @@ const Hero = () => {
               <span className="text-[#9C8A5D]">Falco</span> o’zi nima?
             </h3>
             <h3 className="text-[16px] md:text-[18px] text-[#231F20] font-[400]">
-              Falco — bu shunchaki hamjamiyat emas, balki <br /> o‘zgarishlarga olib
-              boruvchi harakatdir.
+              Falco — bu shunchaki hamjamiyat emas, balki <br /> o‘zgarishlarga
+              olib boruvchi harakatdir.
             </h3>
 
             <p className="text-[14px] max-w-[480px] md:text-[18px] text-[#231F20] font-[400] mt-[20px] md:mt-[30px] whitespace-pre-line">
@@ -40,10 +41,16 @@ const Hero = () => {
               bo‘lish imkoniyatini taklif qiladi.
             </p>
             <div className="flex flex-col sm:flex-row items-center gap-3.5 mt-[19.5px]">
-              <button className="bg-[#09291B] w-full sm:max-w-[230px] rounded-[40px] py-[14px] text-[16px] font-semibold text-white text-center transition hover:opacity-90">
+              <button
+                aria-label="contact"
+                className="bg-[#09291B] w-full sm:max-w-[230px] rounded-[40px] py-[14px] text-[16px] font-semibold text-white text-center transition hover:opacity-90"
+              >
                 Biz bilan bog’laning
               </button>
-              <button className="bg-[#E3E3E3] w-full sm:max-w-[230px] rounded-[40px] py-[14px] text-[16px] font-semibold text-black text-center transition hover:bg-[#d9d9d9]">
+              <button
+                aria-label="join"
+                className="bg-[#E3E3E3] w-full sm:max-w-[230px] rounded-[40px] py-[14px] text-[16px] font-semibold text-black text-center transition hover:bg-[#d9d9d9]"
+              >
                 Bizga qo‘shiling
               </button>
             </div>
@@ -54,6 +61,7 @@ const Hero = () => {
             <div className="relative w-full">
               {/* Main Image */}
               <img
+                loading="loader"
                 src={about1}
                 alt="Main Image"
                 className="w-full max-w-full md:max-w-[577px] object-cover rounded-[10px] shadow-lg"
@@ -61,6 +69,7 @@ const Hero = () => {
 
               {/* Overlay Image */}
               <img
+                loading="loader"
                 src={about2}
                 alt="Small Image"
                 className="

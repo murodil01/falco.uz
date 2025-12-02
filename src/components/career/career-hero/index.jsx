@@ -48,6 +48,7 @@ const CareerHero = () => {
       {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-[400px] -z-10">
         <img
+          loading="loader"
           src={career_hero}
           alt="Project Background"
           className="w-full h-[400px] object-cover"
@@ -104,6 +105,7 @@ const CareerHero = () => {
                   className="w-full md:w-[399px] h-[150px] md:h-[372px] rounded-[10px] md:rounded-[26px] object-cover"
                   src={item.img}
                   alt={item.title}
+                  loading="loader"
                 />
               </div>
             </div>

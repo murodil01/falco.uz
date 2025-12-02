@@ -17,6 +17,7 @@ const Hero = () => {
             maqsadingiz natijaga aylanadi.
           </p>
           <a
+            aria-label="contact"
             href="#contact"
             className="bg-[#09291b]  border-none font-[500] rounded-[40px] text-white w-full max-w-[230px] px-[30px] py-[14px] hover:bg-[#8e7d53] transition duration-300 text-lg"
           >
@@ -32,6 +33,7 @@ const Hero = () => {
               alt="Falco Illustration"
               fetchPriority="high"
               decoding="async"
+              loading="loader"
               className="w-full h-auto object-cover transition-transform duration-300 ease-in-out hover:scale-110"
             />
           </div>

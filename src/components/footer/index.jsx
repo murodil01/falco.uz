@@ -12,6 +12,7 @@ const Footer = () => {
         <div className="flex-1 min-w-[230px] -mt-16 mb-10 mr-10">
           <a href="#">
             <img
+              loading="loader"
               src={footer}
               alt="Company Logo"
               className="max-w-[180px] mb-5 block"
@@ -22,15 +23,28 @@ const Footer = () => {
             className="text-lg leading-relaxed max-w-[280px]"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="location"
           >
             108 Amir Temur Avenue Tashkent 100200, Uzbekistan
           </a>
 
-          <a href="tel:+998908086383" className="flex items-center gap-2 my-3">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="phone"
+            href="tel:+998908086383"
+            className="flex items-center gap-2 my-3"
+          >
             <Phone size={20} />
             +998 90 808 63 83
           </a>
-          <a href="mailto:info@mcompany.uz" className="flex items-center gap-2">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="phone"
+            href="mailto:info@mcompany.uz"
+            className="flex items-center gap-2"
+          >
             <Mail size={20} />
             info@mcompany.uz
           </a>

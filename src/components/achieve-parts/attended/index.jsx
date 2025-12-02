@@ -128,7 +128,7 @@ const Attended = () => {
                     key={idx}
                     className="rounded-[10px] flex flex-col gap-4 min-h-[200px]"
                   >
-                    <img src={item.image} alt="Image" />
+                    <img src={item.image} alt="Image" loading="loader"/>
                   </div>
                 ))}
               </div>

@@ -162,6 +162,7 @@ const Team = () => {
                           ? `https://t.me/${member.telegram.replace("@", "")}`
                           : "#"
                       }
+                      aria-label="telegram"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-blue-500 hover:text-white flex items-center justify-center"
@@ -173,6 +174,7 @@ const Team = () => {
                       href={
                         member.linkedin !== "Not found" ? member.linkedin : "#"
                       }
+                      aria-label="linkedin"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-blue-600 hover:text-white flex items-center justify-center"
@@ -186,6 +188,7 @@ const Team = () => {
                           ? `https://instagram.com/${member.instagram}`
                           : "#"
                       }
+                      aria-label="instagram"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-red-500 hover:text-white flex items-center justify-center"

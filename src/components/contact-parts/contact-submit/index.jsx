@@ -1,15 +1,15 @@
 import { Button, Input } from "antd";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const { TextArea } = Input;
 
 const ContactSubmit = () => {
-  const navigate = useNavigate(); 
+  const navigate = useNavigate();
 
   const handleSubmit = () => {
-    navigate("/"); 
+    navigate("/");
   };
 
   return (
@@ -25,6 +25,7 @@ const ContactSubmit = () => {
 
       {/* Submit button */}
       <Button
+        aria-label="submit"
         onClick={handleSubmit}
         className="w-full max-w-[560px] !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500]"
         style={{

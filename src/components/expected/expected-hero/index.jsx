@@ -132,6 +132,7 @@ const ExpectedHero = () => {
             <div key={card.id} className="flex flex-col">
               <div className="h-[225px] bg-[#C4C4C4] rounded-[10px] flex items-end justify-start p-4">
                 <button
+                  aria-label="view more"
                   className="bg-[#0F2C20] font-[700] text-white text-[16px] px-[27px] py-2 rounded-[40px]"
                   style={{
                     background:
@@ -166,6 +167,7 @@ const ExpectedHero = () => {
               >
                 <div className="h-[225px] bg-[#C4C4C4] rounded-[10px] flex items-end justify-start p-4">
                   <button
+                    aria-label="view more"
                     className="bg-[#0F2C20] font-[700] text-white text-[16px] px-[27px] py-2 rounded-[40px]"
                     style={{
                       background:

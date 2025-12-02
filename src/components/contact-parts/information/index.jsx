@@ -13,6 +13,7 @@ const Information = ({ onNext }) => {
       </p>
 
       <button
+        aria-label="get started"
         onClick={onNext}
         className="mt-4 w-full max-w-[360px] flex justify-center items-center gap-2 px-4 sm:px-6 py-3 sm:py-[22px] font-[500] text-[18px] sm:text-[24px] rounded-[12px] text-white transition-colors"
         style={{

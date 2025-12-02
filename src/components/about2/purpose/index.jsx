@@ -89,11 +89,13 @@ const Purpose = () => {
             <div className="flex-1 flex flex-wrap justify-center gap-4">
               <div className="flex items-center gap-4">
                 <img
+                  loading="loader"
                   src="https://tse1.mm.bing.net/th/id/OIP.9uQeXJPOGm7x6d4fFhnXxAHaD4?rs=1&pid=ImgDetMain&o=7&rm=3"
                   alt="Purpose Image 1"
                   className="w-[120px] h-[120px] md:w-[250px] md:h-[150px] object-cover rounded-lg"
                 />
                 <img
+                  loading="loader"
                   src="https://thewowstyle.com/wp-content/uploads/2015/01/nature-images..jpg"
                   alt="Purpose Image 2"
                   className="w-[120px] h-[120px] md:w-[250px] md:h-[270px] object-cover rounded-lg"
@@ -101,11 +103,13 @@ const Purpose = () => {
               </div>
               <div className="flex items-center gap-4">
                 <img
+                  loading="loader"
                   src="https://www.pixelstalk.net/wp-content/uploads/2016/07/Download-Free-Pictures-3840x2160.jpg"
                   alt="Purpose Image 3"
                   className="w-[120px] h-[120px] md:w-[250px] md:h-[270px] object-cover rounded-lg"
                 />
                 <img
+                  loading="loader"
                   src="https://www.eviltwin.io/wp-content/uploads/2024/01/google-images.jpg"
                   alt="Purpose Image 4"
                   className="w-[120px] h-[120px] md:w-[250px] md:h-[150px] object-cover rounded-lg"

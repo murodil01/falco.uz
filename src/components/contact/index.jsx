@@ -44,13 +44,19 @@ const Contact = () => {
             <MapPin size={30} className="flex-none" />
             <div className="flex flex-col space-y-1 text-left">
               <a
-                href="..."
+                href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="location"
                 className="text-white text-[15px] font-medium block"
               >
                 108 Amir Temur Avenue
               </a>
               <a
-                href="..."
+                href="https://maps.app.goo.gl/uWMwkSMMZnvdKLsX7"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="location"
                 className="text-white text-[15px] font-medium block"
               >
                 Tashkent 100200, Uzbekistan
@@ -66,13 +72,19 @@ const Contact = () => {
             <Phone size={30} className="flex-none" />
             <div className="flex flex-col space-y-1 text-left">
               <a
-                href="tel:..."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="phone"
+                href="tel:+998991292614"
                 className="text-white text-[15px] font-medium block"
               >
                 +998 90 808 63 83
               </a>
               <a
-                href="tel:..."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="phone"
+                href="tel:+998991292614"
                 className="text-white text-[15px] font-medium block"
               >
                 +998 99 129 26 14
@@ -88,13 +100,19 @@ const Contact = () => {
             <Mail size={30} className="flex-none" />
             <div className="flex flex-col space-y-1 text-left">
               <a
-                href="mailto:..."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="mail"
+                href="mailto:hamrayev-2000@mail.ru"
                 className="text-white text-[15px] font-medium block"
               >
                 hamrayev-2000@mail.ru
               </a>
               <a
-                href="mailto:..."
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="mail"
+                href="mailto:hamrayev-2000@mail.ru"
                 className="text-white text-[15px] font-medium block"
               >
                 fozilruzmamatoz@gmail.com

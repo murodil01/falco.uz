@@ -213,27 +213,6 @@ const cardsData = [
       "President Tech Award” tanlovi va Hakaton uchun ro‘yxatdan o‘tish muddatlari uzaytirildi",
     link: "",
   },
-  {
-    id: 4,
-    image: "https://mms.businesswire.com/media/20181010005302/en/683609/23/Falco+horizontal+logo+teal_1X.jpg",
-    date: "20.12.2025",
-    title: "IT Hackathon g‘oliblari taqdirlandi",
-    link: "",
-  },
-  {
-    id: 5,
-    image: "https://mms.businesswire.com/media/20181010005302/en/683609/23/Falco+horizontal+logo+teal_1X.jpg",
-    date: "25.12.2025",
-    title: "Innovatsion texnologiyalar tanlovi boshlandi",
-    link: "",
-  },
-  {
-    id: 6,
-    image: "https://mms.businesswire.com/media/20181010005302/en/683609/23/Falco+horizontal+logo+teal_1X.jpg",
-    date: "25.12.2025",
-    title: "Welcome to Falco Community",
-    link: "",
-  },
 ];
 
 const NewsMain = () => {
@@ -298,6 +277,7 @@ const NewsMain = () => {
           </h3>
           <div className="flex justify-center md:justify-end gap-3 mt-2 md:mt-0">
             <button
+              aria-label="arrowleft"
               onClick={handlePrev}
               disabled={currentIndex === 0}
               className={`p-2 rounded-full shadow transition ${
@@ -354,6 +334,7 @@ const NewsMain = () => {
                   <img
                     src={card.image}
                     alt={card.title}
+                    loading="loader"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
 
@@ -362,6 +343,7 @@ const NewsMain = () => {
 
                   {/* Button */}
                   <a
+                    aria-label="View More"
                     href={card.link}
                     className="absolute bottom-4 left-4 bg-gradient-to-r from-[#191B21] via-[#22A75D] to-[#1F8A54]
                    font-semibold text-white text-sm px-6 py-2 rounded-full

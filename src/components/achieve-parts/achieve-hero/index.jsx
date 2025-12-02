@@ -18,6 +18,7 @@ const AchieveHero = () => {
       {/* Background Image */}
       <div className="absolute top-0 left-0 w-full h-[400px] -z-10">
         <img
+          loading="loader"
           src={achieve_bg}
           alt="Project Background"
           className="w-full h-[400px] object-cover"
@@ -32,6 +33,7 @@ const AchieveHero = () => {
         {/* Buttons */}
         <div className="flex justify-center items-center gap-4 md:gap-6 shadow-md p-4 md:p-5 rounded-[100px] bg-white w-fit mx-auto border border-[#C6FFDFE5]">
           <button
+            aria-label="attended"
             onClick={() => setActive("attended")}
             className={`text-[12px] md:text-[18px] font-[500] px-[25px] md:px-[55px] py-[8px] md:py-[12px] rounded-[30px] cursor-pointer ${
               active === "attended"
@@ -49,6 +51,7 @@ const AchieveHero = () => {
           </button>
 
           <button
+            aria-label="awarded"
             onClick={() => setActive("awarded")}
             className={`text-[12px] md:text-[18px] font-[500] px-[25px] md:px-[55px] py-[8px] md:py-[12px] rounded-[30px] cursor-pointer ${
               active === "awarded"

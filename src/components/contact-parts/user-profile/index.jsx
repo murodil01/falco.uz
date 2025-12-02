@@ -52,6 +52,7 @@ const UserProfile = ({ onNext }) => {
 
       {/* Continue button */}
       <Button
+        aria-label="continue"
         onClick={onNext}
         className="w-full !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500]"
         style={{
