@@ -1,6 +1,11 @@
 import { useState } from "react";
-import { FaTelegramPlane, FaInstagram, FaPhoneAlt } from "react-icons/fa";
-import { IoLogoYoutube, IoMdChatboxes } from "react-icons/io";
+import {
+  FaTelegramPlane,
+  FaInstagram,
+  FaPhoneAlt,
+  FaFacebook,
+} from "react-icons/fa";
+import { IoMdChatboxes } from "react-icons/io";
 import { Headset, X } from "lucide-react";
 
 const FloatingMenu = () => {
@@ -11,24 +16,25 @@ const FloatingMenu = () => {
       <div className="flex flex-col items-center z-50">
         {/* Social / Chat Icons */}
         <div className="flex flex-col items-center gap-3 mb-4">
-          {["youtube", "telegram", "instagram", "phone", "chat"].map(
+          {["facebook", "telegram", "instagram", "phone", "chat"].map(
             (item, index) => {
               const hrefs = {
-                youtube: "",
+                facebook: "",
                 telegram: "https://t.me/Falco_uz",
-                instagram: "https://www.instagram.com/falco_uz?igsh=cWYzcjJsMndubGR0",
+                instagram:
+                  "https://www.instagram.com/falco_uz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
                 phone: "tel:+998908086383",
                 chat: "#faq",
               };
               const colors = {
-                youtube: "bg-[#B91C1C] hover:bg-[#E02424]",
+                facebook: "bg-[#1877F2] hover:bg-[#145DBF]",
                 telegram: "bg-blue-500 hover:bg-blue-600",
                 instagram: "bg-pink-500 hover:bg-pink-600",
                 phone: "bg-green-500 hover:bg-green-600",
                 chat: "bg-gradient-to-r from-[#1FB3F5] to-[#6651FF] hover:opacity-90",
               };
               const Icons = {
-                youtube: IoLogoYoutube,
+                facebook: FaFacebook,
                 telegram: FaTelegramPlane,
                 instagram: FaInstagram,
                 phone: FaPhoneAlt,

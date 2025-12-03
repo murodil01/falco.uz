@@ -78,20 +78,20 @@ const Footer = () => {
         {/* 3-qism */}
         <div className="flex-1 min-w-[230px]">
           <h3 className="font-semibold text-[22px] tracking-wide mb-6">
-            Bizning xizmatlarimiz
+            Tezkor havolalar
           </h3>
           <ul className="space-y-4 font-[400] text-[18px] text-[#0F2C20]">
             <li>
-              <a href="#">Veb-dizayn</a>
+              <a href="#">Bizning Yutuqlarimiz</a>
             </li>
             <li>
-              <a href="#">Veb-dasturlash</a>
+              <a href="#">Kutilayotgan Musobaqalar</a>
             </li>
             <li>
-              <a href="#">Mahsulot boshqaruvi</a>
+              <a href="#">FALCO Yangiliklari</a>
             </li>
             <li>
-              <a href="#">Marketing xizmatlari</a>
+              <a href="#">Sayohatlar</a>
             </li>
           </ul>
         </div>
