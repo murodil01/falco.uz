@@ -13,16 +13,10 @@ const Contact = () => {
   return (
     <section
       id="contact"
-      className="contact bg-cover bg-center text-white pt-70 px-4 top-0 min-h-[1000px]"
-      style={{
-        width: "100%",
-        height: "100%",
-        backgroundImage: `url(${contact})`,
-        backgroundRepeat: "no-repeat",
-        backgroundPosition: "center",
-      }}
+      className="relative w-full h-screen bg-no-repeat bg-bottom bg-[length:100%_100%] text-white flex flex-col items-center justify-center px-4"
+      style={{ backgroundImage: `url(${contact})` }}
     >
-      <div className="max-w-[1260px] mx-auto text-center">
+      <div className="text-center max-w-[1260px] pt-20">
         {/* Title */}
         <h3 className="text-[55px] font-semibold mb-5 max-md:text-[36px] max-sm:text-[28px]">
           Biz bilan bog‘laning

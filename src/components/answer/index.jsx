@@ -90,7 +90,7 @@ const Answer = () => {
             <button
               aria-label="faq"
               onClick={() => toggleFaq(faq.key)}
-              className="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-opacity-80 transition-colors duration-200"
+              className="w-full cursor-pointer px-6 py-5 text-left flex items-center justify-between hover:bg-opacity-80 transition-colors duration-200"
             >
               <span className="text-[20px] font-[600] text-[#09291B] pr-4">
                 {faq.question}

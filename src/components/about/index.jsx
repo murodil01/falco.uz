@@ -15,12 +15,12 @@ const About = () => {
         className="w-full min-h-screen bg-no-repeat -mt-[1.3px]"
         style={{
           backgroundImage: `url(${about_bg})`,
-          backgroundSize: "100% 100%", // Eni va balandlik to'liq ekran
-          backgroundPosition: "center bottom", // Pastki qismga yopishadi
+          backgroundSize: "100% 100%",
+          backgroundPosition: "center bottom",
         }}
       >
         <div className="max-w-[1260px] mx-auto py-20 md:pt-[120px] px-10 relative z-10">
-          <h3 className="capitalize text-[#313131] text-center font-bold text-[clamp(20px,5vw,56px)] mb-[100px]">
+          <h3 className="capitalize text-[#313131] text-center font-bold text-[clamp(30px,5vw,56px)] mb-[100px]">
             Nega aynan <span className="text-[#E8C777]">biz?</span>
           </h3>
           <div className="flex flex-col md:flex-row md:items-start items-center gap-y-10 gap-x-40 ">
@@ -67,12 +67,14 @@ const About = () => {
             </div>
 
             {/* O‘ng taraf */}
-            <img
-              loading="loader"
-              src={about2}
-              alt="Image"
-              className="max-w-[480px] w-full h-auto"
-            />
+            <div className="max-w-[480px] w-full h-auto overflow-hidden rounded-2xl">
+              <img
+                loading="lazy"
+                src={about2}
+                alt="Image"
+                className="w-full h-auto transition-transform duration-700 ease-in-out hover:scale-110"
+              />
+            </div>
           </div>
         </div>
 

@@ -3,7 +3,7 @@ import hero from "../../assets/images/hero.png";
 const Hero = () => {
   return (
     <div className="min-h-screen flex items-center ">
-      <div className="max-w-[1260px] pt-35 pb-5 w-full m-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+      <div className="max-w-[1260px] pt-35 lg:pt-0 pb-5 w-full m-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
         {/* Text */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-4xl md:text-[57px] font-bold text-[#231F20] mb-[46px] leading-tight">
@@ -11,9 +11,9 @@ const Hero = () => {
             kelibsiz
           </h1>
           <p className="text-lg md:text-[18px] font-normal text-[#231F20] mb-[43px] max-w-xl mx-auto md:mx-0">
-            Falco — bu o‘sish sari tashlangan birinchi qadam. Bu yerda sizni
-            qo‘llaydigan jamoa, o‘rganishga undaydigan muhit va kelajagingizni
-            o‘zgartira oladigan imkoniyatlar bor. Bu yerda istagingiz kuchga,
+            Falco - bu o‘sish sari tashlangan birinchi qadam. <br /> Bu yerda sizni
+            qo‘llaydigan jamoa, o‘rganishga <br /> undaydigan muhit va kelajagingizni
+            o‘zgartira oladigan <br /> imkoniyatlar bor. Bu yerda istagingiz kuchga,
             maqsadingiz natijaga aylanadi.
           </p>
           <a
@@ -31,10 +31,9 @@ const Hero = () => {
             <img
               src={hero}
               alt="Falco Illustration"
+              className="w-full h-auto object-cover bird-auto"
               fetchPriority="high"
               decoding="async"
-              loading="loader"
-              className="w-full h-auto object-cover transition-transform duration-300 ease-in-out hover:scale-110"
             />
           </div>
         </div>

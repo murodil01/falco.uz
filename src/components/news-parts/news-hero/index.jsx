@@ -8,22 +8,25 @@ import { ChevronRight } from "lucide-react";
 
 const NewsHero = () => {
   return (
-    <section className="relative py-[80px] mt-27">
+    <section className="relative w-full mt-27">
       {/* Background Image */}
-      <div className="absolute top-0 left-0 w-full h-[400px] -z-10">
-        <img
-          src={news_hero}
-          alt="Project Background"
-          className="w-full h-[250px] object-cover"
-        />
-      </div>
+      <div
+        className="absolute top-0 left-0 w-full"
+        style={{
+          backgroundImage: `url(${news_hero})`,
+          backgroundRepeat: "no-repeat",
+          backgroundPosition: "top center",
+          backgroundSize: "contain", // yoki 'cover' agar ekranni to‘ldirish kerak bo‘lsa
+          paddingTop: "40%", // aspect ratio o‘rnini beradi (height proporsional bo‘lsin)
+        }}
+      />
 
-      <div className="container mx-auto max-w-[1260px] px-4 md:px-6 relative z-10">
+      <div className="container mx-auto max-w-[1260px] px-4 md:px-6 py-8 md:py-[80px] relative z-10">
         <h3 className="text-4xl text-white md:text-5xl font-[700] mb-[150px] text-center">
           Falco <span className="text-[#E8C777]">News</span>
         </h3>
 
-        <div className="flex flex-col gap-12 ">
+        <div className="flex flex-col gap-12 pt-20">
           {/* 1-qator */}
           <div className="flex flex-col md:flex-row gap-10 items-start">
             <div className="flex flex-col gap-6 md:w-[400px] w-full">

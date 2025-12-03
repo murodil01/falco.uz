@@ -20,9 +20,10 @@ const teamMembers = [
     name: "Ruzmamatov Foziljon",
     role: "CEO",
     desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
-    telegram: "@Foziljon_Ruzmamatov",
-    linkedin: "Not found",
-    instagram: "_mr.fozil_",
+    telegram: "https://t.me/falco_ceo",
+    linkedin:
+      "https://www.linkedin.com/in/foziljon-ruzmamatov-98451b294?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bkb%2F%2Bp%2BVPQqSGDpXtuCmoDw%3D%3D",
+    instagram: "https://www.instagram.com/_mr.fozil_?igsh=MWl6Y2NodWtwNWl5ZA==",
     image: fozil,
   },
 
@@ -32,8 +33,10 @@ const teamMembers = [
     role: "Manager",
     desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
     telegram: " @shohruxbek_s",
-    linkedin: "Not found",
-    instagram: "Not found",
+    linkedin:
+      "https://www.linkedin.com/in/shohrux-sobirov-07736a32b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FAeNQ%2BYTTOCLZ%2BsrJs%2Bmgw%3D%3D",
+    instagram:
+      "https://www.instagram.com/shohruxbek.s?igsh=MWUzaXhlNjZoN2Y1cA%3D%3D&utm_source=qr",
     image: behruz,
   },
   {
@@ -41,9 +44,11 @@ const teamMembers = [
     name: "Baymatova Gauxar",
     role: "Media Manager",
     desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
-    telegram: "",
-    linkedin: "Not found",
-    instagram: "Not found",
+    telegram: "https://t.me/anime0077BE",
+    linkedin:
+      "https://www.linkedin.com/in/gauxar-baymatova-357315393?utm_source=share_via&utm_content=profile&utm_medium=member_android",
+    instagram:
+      "https://www.instagram.com/kaokosey?utm_source=qr&igsh=aDFkZTYwcTRja3py",
     image: gauhar,
   },
   {

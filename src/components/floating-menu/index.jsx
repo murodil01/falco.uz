@@ -16,27 +16,27 @@ const FloatingMenu = () => {
       <div className="flex flex-col items-center z-50">
         {/* Social / Chat Icons */}
         <div className="flex flex-col items-center gap-3 mb-4">
-          {["facebook", "telegram", "instagram", "phone", "chat"].map(
+          {["telegram", "instagram", "facebook", "phone", "chat"].map(
             (item, index) => {
               const hrefs = {
-                facebook: "",
                 telegram: "https://t.me/Falco_uz",
                 instagram:
                   "https://www.instagram.com/falco_uz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+                facebook: "",
                 phone: "tel:+998908086383",
                 chat: "#faq",
               };
               const colors = {
-                facebook: "bg-[#1877F2] hover:bg-[#145DBF]",
                 telegram: "bg-blue-500 hover:bg-blue-600",
                 instagram: "bg-pink-500 hover:bg-pink-600",
+                facebook: "bg-[#1877F2] hover:bg-[#145DBF]",
                 phone: "bg-green-500 hover:bg-green-600",
                 chat: "bg-gradient-to-r from-[#1FB3F5] to-[#6651FF] hover:opacity-90",
               };
               const Icons = {
-                facebook: FaFacebook,
                 telegram: FaTelegramPlane,
                 instagram: FaInstagram,
+                facebook: FaFacebook,
                 phone: FaPhoneAlt,
                 chat: IoMdChatboxes,
               };

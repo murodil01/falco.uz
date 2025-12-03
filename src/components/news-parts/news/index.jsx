@@ -33,6 +33,7 @@ const NewsComponents = () => {
           src={project_slider}
           alt="Project Background"
           className="w-full h-[215px] object-cover"
+          loading="loader"
         />
       </div>
 
