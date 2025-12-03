@@ -7,21 +7,22 @@ const { TextArea } = Input;
 const Motivation = ({ onContinue }) => {
   return (
     <div className="flex flex-col gap-6 ">
-      <h3 className="text-[#313131] text-[22px] font-[600]">Motivatsiya va ishtirok</h3>
+      <h3 className="text-[#313131] text-[22px] font-[600]">
+        Motivatsiya va ishtirok
+      </h3>
 
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          Why should we select you over other applicants?
+          Nega Falco jamoasiga qo‘shilmoqchisiz? (Qisqacha izoh qoldiring)
         </h3>
-        <TextArea placeholder="Your answer" rows={4} className="!rounded-lg" />
+        <TextArea placeholder="Sizning javobingiz" rows={4} className="!rounded-lg" />
       </div>
 
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          What role do you usually play in a team? (Leader, strategist,
-          executor, creative, etc.)
+          Falco a’zosi sifatida qanday natijalarga erishishni maqsad qilgansiz?
         </h3>
-        <TextArea placeholder="Your answer" rows={4} className="!rounded-lg" />
+        <TextArea placeholder="Sizning javobingiz" rows={4} className="!rounded-lg" />
       </div>
 
       {/* Continue button */}
@@ -33,7 +34,7 @@ const Motivation = ({ onContinue }) => {
             "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
         }}
       >
-        Continue
+        Davom ettirish
         <motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}

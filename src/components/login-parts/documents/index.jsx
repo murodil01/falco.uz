@@ -13,7 +13,7 @@ const Documents = ({ onContinue }) => {
         <Form layout="vertical">
           <div className="flex flex-col md:flex-row gap-5">
             <Form.Item
-              label="Full Name"
+              label="To‘liq ismingiz"
               labelCol={{
                 style: {
                   fontWeight: "500",
@@ -24,12 +24,12 @@ const Documents = ({ onContinue }) => {
               className="flex-1"
             >
               <Input
-                placeholder="Your answer"
+                placeholder="Sizning javobingiz"
                 style={{ width: "270px", height: "50px", borderRadius: "10px" }}
               />
             </Form.Item>
             <Form.Item
-              label="Age"
+              label="Yoshingiz"
               labelCol={{
                 style: {
                   fontWeight: "500",
@@ -40,42 +40,7 @@ const Documents = ({ onContinue }) => {
               className="flex-1"
             >
               <Input
-                placeholder="Your answer"
-                style={{ width: "270px", height: "50px", borderRadius: "10px" }}
-              />
-            </Form.Item>
-          </div>
-
-          <div className="flex flex-col md:flex-row gap-5">
-            <Form.Item
-              label="City / Region"
-              labelCol={{
-                style: {
-                  fontWeight: "500",
-                  color: "#000000",
-                  fontSize: "16px",
-                },
-              }}
-              className="flex-1"
-            >
-              <Input
-                placeholder="Your answer"
-                style={{ width: "270px", height: "50px", borderRadius: "10px" }}
-              />
-            </Form.Item>
-            <Form.Item
-              label="Contact Email"
-              labelCol={{
-                style: {
-                  fontWeight: "500",
-                  color: "#000000",
-                  fontSize: "16px",
-                },
-              }}
-              className="flex-1"
-            >
-              <Input
-                placeholder="Your answer"
+                placeholder="Sizning javobingiz"
                 style={{ width: "270px", height: "50px", borderRadius: "10px" }}
               />
             </Form.Item>
@@ -83,7 +48,7 @@ const Documents = ({ onContinue }) => {
 
           <div className="flex flex-col md:flex-row gap-5">
             <Form.Item
-              label="Phone Number"
+              label="Shahar / Viloyat"
               labelCol={{
                 style: {
                   fontWeight: "500",
@@ -94,7 +59,42 @@ const Documents = ({ onContinue }) => {
               className="flex-1"
             >
               <Input
-                placeholder="Your answer"
+                placeholder="Sizning javobingiz"
+                style={{ width: "270px", height: "50px", borderRadius: "10px" }}
+              />
+            </Form.Item>
+            <Form.Item
+              label="Elektron pochta"
+              labelCol={{
+                style: {
+                  fontWeight: "500",
+                  color: "#000000",
+                  fontSize: "16px",
+                },
+              }}
+              className="flex-1"
+            >
+              <Input
+                placeholder="Sizning javobingiz"
+                style={{ width: "270px", height: "50px", borderRadius: "10px" }}
+              />
+            </Form.Item>
+          </div>
+
+          <div className="flex flex-col md:flex-row gap-5">
+            <Form.Item
+              label="Telefon raqam"
+              labelCol={{
+                style: {
+                  fontWeight: "500",
+                  color: "#000000",
+                  fontSize: "16px",
+                },
+              }}
+              className="flex-1"
+            >
+              <Input
+                placeholder="Sizning javobingiz"
                 style={{ width: "270px", height: "50px", borderRadius: "10px" }}
               />
             </Form.Item>
@@ -110,7 +110,7 @@ const Documents = ({ onContinue }) => {
               className="flex-1"
             >
               <Input
-                placeholder="Your answer"
+                placeholder="Sizning javobingiz"
                 style={{ width: "270px", height: "50px", borderRadius: "10px" }}
               />
             </Form.Item>
@@ -126,7 +126,7 @@ const Documents = ({ onContinue }) => {
                 padding: " 13px 0",
               }}
             >
-              Continue
+              Saqlash va davom etish
               <motion.span
                 animate={{ x: [0, 5, 0] }}
                 transition={{ repeat: Infinity, duration: 1 }}

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const Agree = ({ onContinue }) => {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 max-w-[600px] w-full">
       <h3 className="text-[#313131] text-[22px] font-[600]">
         Motivatsiya va ishtirok
       </h3>
@@ -12,17 +12,18 @@ const Agree = ({ onContinue }) => {
       {/* Weekly time commitment */}
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          How do you handle feedback or failure in a team environment?*{" "}
+          Jamoada fikr-mulohaza yoki muvaffaqiyatsizlikka qanday munosabat
+          bildirasiz?
         </h3>
         <Select
-          placeholder="Your answer"
+          placeholder="Javob"
           className="custom-select w-full !h-[40px] !rounded-[10px]"
           options={[
-            { value: "5h", label: "Up to 5 hours" },
-            { value: "10h", label: "5 – 10 hours" },
-            { value: "15h", label: "10 – 15 hours" },
-            { value: "20h", label: "15 – 20 hours" },
-            { value: "20plus", label: "20+ hours" },
+            { value: "5h", label: "5 soatgacha" },
+            { value: "10h", label: "5–10 soat" },
+            { value: "15h", label: "10–15 soat" },
+            { value: "20h", label: "15–20 soat" },
+            { value: "20plus", label: "20 soatdan ko‘p" },
           ]}
         />
       </div>
@@ -30,15 +31,15 @@ const Agree = ({ onContinue }) => {
       {/* Open to competitions */}
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          Are you open to participating in competitions, events, and real-world
-          projects?
+          Falco’ning asosiy qadriyatlari — ishonch, o‘sish, sadoqat va
+          tashabbusni qo‘llab-quvvatlaysizmi?
         </h3>
         <Select
-          placeholder="Select yes or no"
+          placeholder="Ha yoki yo‘qni tanlang"
           className="custom-select w-full !h-[40px] !rounded-[10px]"
           options={[
-            { value: "yes", label: "Yes" },
-            { value: "no", label: "No" },
+            { value: "yes", label: "Ha" },
+            { value: "no", label: "Yo'q" },
           ]}
         />
       </div>

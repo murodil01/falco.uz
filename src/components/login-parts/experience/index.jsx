@@ -6,7 +6,7 @@ const { TextArea } = Input;
 
 const Experience = ({ onContinue }) => {
   return (
-    <div className="flex flex-col gap-6 ">
+    <div className="flex flex-col gap-6 max-w-[600px] w-full">
       {/* Title */}
       <h3 className="text-[#313131] text-[22px] font-[600]">
         Ko‘nikmalar va tajriba
@@ -15,20 +15,33 @@ const Experience = ({ onContinue }) => {
       {/* Skills Select */}
       <div className="flex flex-col gap-2">
         <h4 className="text-[#000000] text-[16px] font-[500]">
-          Which areas best describe your skills or interests?
-          <span className="text-gray-500">(Multi-select)</span>
+          Qaysi yo‘nalishlar sizning ko‘nikmangiz yoki qiziqishingizga mos
+          keladi? (Bir nechta tanlash mumkin)
         </h4>
         <Select
           mode="multiple"
           allowClear
-          placeholder="Select your skills and interests"
-          className="custom-select w-full !h-[40px] !rounded-[10px]"
+          placeholder="Ko‘nikmalaringiz va qiziqishlaringizni tanlang"
+          className="custom-select w-full !h-[35px] !rounded-[10px]"
           options={[
-            { value: "frontend", label: "Frontend Development" },
-            { value: "backend", label: "Backend Development" },
-            { value: "uiux", label: "UI/UX Design" },
-            { value: "ml", label: "Machine Learning" },
-            { value: "pm", label: "Project Management" },
+            {
+              value: "programming_software_development",
+              label: "Programming / Software Development",
+            },
+            { value: "ai_machine_learning", label: "AI / Machine Learning" },
+            { value: "cybersecurity", label: "Cybersecurity" },
+            {
+              value: "business_entrepreneurship",
+              label: "Business / Entrepreneurship",
+            },
+            { value: "marketing_sales", label: "Marketing / Sales" },
+            { value: "sports_athletics", label: "Sports / Athletics" },
+            { value: "politics_leadership", label: "Politics / Leadership" },
+            { value: "design_multimedia", label: "Design / Multimedia" },
+            { value: "teaching_education", label: "Teaching / Education" },
+            { value: "public_speaking", label: "Public Speaking" },
+            { value: "soft_skills", label: "Soft Skills" },
+            { value: "other", label: "Other (write below)" },
           ]}
         />
       </div>
@@ -36,11 +49,11 @@ const Experience = ({ onContinue }) => {
       {/* Experience TextArea */}
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          Briefly describe your experience or achievements in the selected
-          areas.
+          Tanlagan yo‘nalishlaringiz bo‘yicha tajribangiz yoki yutuqlaringizni
+          qisqacha yozing.
         </h3>
         <TextArea
-          placeholder="Write your experience here..."
+          placeholder="Javob"
           rows={4}
           className="!rounded-[10px]"
         />
@@ -55,7 +68,7 @@ const Experience = ({ onContinue }) => {
             "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
         }}
       >
-        Continue
+        Davom ettirish
         <motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}

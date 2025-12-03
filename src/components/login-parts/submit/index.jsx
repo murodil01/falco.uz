@@ -23,9 +23,9 @@ const Submit = ({ onSubmit }) => {
 
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          Anything else you'd like to share with us? (Optional)
+          Biz bilan bo‘lishmoqchi bo‘lgan qo‘shimcha fikrlaringiz bormi? (Ixtiyoriy)
         </h3>
-        <TextArea placeholder="Your answer" rows={4} className="!rounded-lg" />
+        <TextArea placeholder="Javob" rows={4} className="!rounded-lg" />
       </div>
 
       {/* Submit button */}
@@ -37,7 +37,7 @@ const Submit = ({ onSubmit }) => {
             "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
         }}
       >
-        Submit
+        YUBORISH
         <motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}

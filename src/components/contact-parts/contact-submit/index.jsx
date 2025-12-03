@@ -14,11 +14,11 @@ const ContactSubmit = () => {
 
   return (
     <div className="flex flex-col gap-6 w-full max-w-[560px]">
-      <h3 className="text-[#313131] text-[22px] font-[600]">Get In Touch</h3>
+      <h3 className="text-[#313131] text-[22px] font-[600]">Bog'lanish</h3>
 
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          Messages (Optional)
+          Xabarlar (Ixtiyoriy)
         </h3>
         <TextArea placeholder="Your answer" rows={4} className="!rounded-lg" />
       </div>
@@ -33,7 +33,7 @@ const ContactSubmit = () => {
             "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
         }}
       >
-        Submit
+        YUBORISH
         <motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}

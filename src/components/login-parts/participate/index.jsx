@@ -15,11 +15,11 @@ const Participate = ({ onContinue }) => {
       {/* Events / Competitions */}
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500] leading-snug">
-          Have you participated in any events, competitions, or team projects
-          before? Please share details.
+          Siz ilgari hech qanday tadbirlarda, musobaqalarda yoki jamoaviy
+          loyihalarda qatnashganmisiz? Iltimos, tafsilotlarni ulashing.
         </h3>
         <TextArea
-          placeholder="Write about your participation..."
+          placeholder="Ishtirokingiz haqida yozing..."
           rows={4}
           className="!rounded-[10px] !h-[90px]"
         />
@@ -28,8 +28,8 @@ const Participate = ({ onContinue }) => {
       {/* Portfolio / Links */}
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500] leading-snug">
-          Do you have a portfolio, GitHub, LinkedIn, or public profile to share?
-          <span className="text-gray-500"> (Optional)</span>
+          Sizda bo'lishi mumkin bo'lgan portfolio, GitHub, LinkedIn yoki ochiq
+          profilni ulashishingiz mumkinmi?
         </h3>
         <TextArea
           placeholder="Paste your portfolio or profile links here..."
@@ -47,7 +47,7 @@ const Participate = ({ onContinue }) => {
             "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
         }}
       >
-        Continue
+        Davom ettirish
         <motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}

@@ -64,8 +64,9 @@ const Statistic = () => {
             <img
               src={item.image}
               alt={item.title}
-              className="w-[170px] h-auto object-contain mb-3"
+              className="w-[170px] h-auto object-contain mb-3 transition-all duration-300 ease-in-out hover:scale-105 hover:-translate-y-1"
             />
+
             <p className="font-semibold h-[70px] text-[20px] md:text-[24px] mb-3.5 whitespace-pre-line">
               {item.title}
             </p>

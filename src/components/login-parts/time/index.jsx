@@ -12,17 +12,15 @@ const Time = ({ onContinue }) => {
       {/* Weekly time commitment */}
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          How much time can you commit to Falco weekly?
+          Haftasiga Falco faoliyatiga qancha vaqt ajrata olasiz?
         </h3>
         <Select
-          placeholder="Select one of them"
+          placeholder="Ulardan birini tanlang"
           className="custom-select w-full !h-[40px] !rounded-[10px]"
           options={[
-            { value: "5h", label: "Up to 5 hours" },
-            { value: "10h", label: "5 – 10 hours" },
-            { value: "15h", label: "10 – 15 hours" },
-            { value: "20h", label: "15 – 20 hours" },
-            { value: "20plus", label: "20+ hours" },
+            { value: "6_8_hours_per_week", label: "6-8 soat/hafta" },
+            { value: "10_15_hours_per_week", label: "10-15 soat/hafta" },
+            { value: "15_20_hours_per_week", label: "15-20 soat/hafta" },
           ]}
         />
       </div>
@@ -30,11 +28,10 @@ const Time = ({ onContinue }) => {
       {/* Open to competitions */}
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          Are you open to participating in competitions, events, and real-world
-          projects?
+          Tanlovlar, tadbirlar va real loyihalarda qatnashishga tayyormisiz?
         </h3>
         <Select
-          placeholder="Select one of them"
+          placeholder="Ulardan birini tanlang"
           className="custom-select w-full !h-[40px] !rounded-[10px]"
           options={[
             { value: "yes", label: "Yes" },
@@ -53,7 +50,7 @@ const Time = ({ onContinue }) => {
             "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
         }}
       >
-        Continue
+        Davom ettirish
         <motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}
