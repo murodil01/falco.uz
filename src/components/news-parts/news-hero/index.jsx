@@ -1,9 +1,9 @@
 import news_hero from "../../../assets/news_hero.png";
-import news_card1 from "../../../assets/news_card1.png";
-import news_card2 from "../../../assets/news_card2.png";
-import news_card3 from "../../../assets/news_card3.png";
-import news_card4 from "../../../assets/news_card4.png";
-import news_card5 from "../../../assets/news_card5.png";
+import news_card1 from "../../../assets/news_card/news_card1.png";
+import news_card2 from "../../../assets/news_card/news_card2.png";
+import news_card3 from "../../../assets/news_card/news_card3.png";
+import news_card4 from "../../../assets/news_card/news_card4.png";
+import news_card5 from "../../../assets/news_card/news_card5.png";
 import { ChevronRight } from "lucide-react";
 
 const NewsHero = () => {

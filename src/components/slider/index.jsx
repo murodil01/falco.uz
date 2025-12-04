@@ -38,6 +38,7 @@ const Slider = () => {
                 "
               >
                 <img
+                  loading="loader"
                   src={img}
                   alt={`project-${idx}`}
                   className="w-16 sm:w-20 md:w-24 lg:w-28 h-auto object-contain"

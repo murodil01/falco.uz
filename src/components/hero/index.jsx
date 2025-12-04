@@ -10,12 +10,17 @@ const Hero = () => {
             <span className="text-[#8e7d53]">Falco hamjamiyatiga</span> xush
             kelibsiz
           </h1>
-          <p className="text-lg md:text-[18px] font-normal text-[#231F20] mb-[43px] max-w-xl mx-auto md:mx-0">
-            Falco - bu o‘sish sari tashlangan birinchi qadam. <br /> Bu yerda sizni
-            qo‘llaydigan jamoa, o‘rganishga <br /> undaydigan muhit va kelajagingizni
-            o‘zgartira oladigan <br /> imkoniyatlar bor. Bu yerda istagingiz kuchga,
-            maqsadingiz natijaga aylanadi.
+          <p className="text-lg md:text-[18px] font-normal text-[#231F20] mb-[43px] max-w-xl mx-auto md:mx-0 leading-relaxed">
+            Falco - bu o‘sish sari tashlangan birinchi qadam.{" "}
+            <br className="hidden md:block" /> {/* faqat md va undan kattada */}
+            Bu yerda sizni qo‘llaydigan jamoa, o‘rganishga{" "}
+            <br className="hidden md:block" /> {/* faqat desktop */}
+            undaydigan muhit va kelajagingizni o‘zgartira oladigan{" "}
+            <br className="hidden md:block" /> {/* faqat desktop */}
+            imkoniyatlar bor. Bu yerda istagingiz kuchga, maqsadingiz natijaga
+            aylanadi.
           </p>
+
           <a
             aria-label="contact"
             href="#contact"

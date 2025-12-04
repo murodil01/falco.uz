@@ -94,7 +94,7 @@ const NewsMain = () => {
           </h3>
           <div className="flex justify-center md:justify-end gap-3 mt-2 md:mt-0">
             <button
-              aria-label="arrowleft"
+              aria-label="handlePrev"
               onClick={handlePrev}
               disabled={currentIndex === 0}
               className={`p-2 rounded-full shadow transition ${
@@ -111,6 +111,7 @@ const NewsMain = () => {
             </button>
 
             <button
+            aria-label="handleNext"
               onClick={handleNext}
               disabled={currentIndex >= cardsData.length - cardsPerView}
               className={`p-2 rounded-full shadow transition ${

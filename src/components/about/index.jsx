@@ -98,6 +98,7 @@ const About = () => {
         `}
         </style>
       </section>
+      
       <Modal
         title="Falco haqida"
         open={open}

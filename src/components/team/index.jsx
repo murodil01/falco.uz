@@ -144,7 +144,7 @@ const Team = () => {
                   <img
                     src={member.image}
                     alt={member.name}
-                    className="w-full max-w-[310px] h-[275px]"
+                    className="w-full max-w-[310px] h-[275px] object-cover"
                   />
                 </div>
 
