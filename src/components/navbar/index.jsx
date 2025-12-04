@@ -105,8 +105,8 @@ const Navbar = () => {
 
     return `${
       isActive
-        ? "text-[#9A9EA6] border-b-2 border-[#9A9EA6]"
-        : "text-[#9C8A5D] border-b-2 border-transparent hover:border-[#9C8A5D]"
+        ? "text-[#7A6A42] border-b-2 border-[#7A6A42]"
+        : "text-[#7A6A42] border-b-2 border-transparent hover:border-[#7A6A42]"
     } pb-1 transition-all duration-300`;
   };
 
@@ -145,7 +145,7 @@ const Navbar = () => {
                 <button
                   ref={aboutRef}
                   onClick={handleAboutClick}
-                  className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
+                  className="flex items-center gap-2 text-[#7A6A42] cursor-pointer"
                 >
                   Biz haqimizda
                   <ChevronDown
@@ -161,7 +161,7 @@ const Navbar = () => {
                 <button
                   ref={newsRef}
                   onClick={handleNewsClick}
-                  className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
+                  className="flex items-center gap-2 text-[#7A6A42] cursor-pointer"
                 >
                   Yangiliklar
                   <ChevronDown
@@ -199,7 +199,7 @@ const Navbar = () => {
               {/* Join Us */}
               <Link
                 to="/join-us"
-                className="w-[180px] px-5 py-2 border-2 border-[#9C8A5D] text-[#9C8A5D] font-semibold text-[16px] rounded-[40px] transition text-center"
+                className="w-[180px] px-5 py-2 border-2 border-[#7A6A42] text-[#7A6A42] font-semibold text-[16px] rounded-[40px] transition text-center"
               >
                 Bizga qo’shiling!
               </Link>
@@ -209,8 +209,9 @@ const Navbar = () => {
           {/* Mobile Menu Icon */}
           <div className="md:hidden">
             <button
+              aria-label="menu"
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#9C8A5D]"
+              className="text-[#7A6A42]"
             >
               {isOpen ? <X size={30} /> : <Menu size={30} />}
             </button>
@@ -221,7 +222,7 @@ const Navbar = () => {
       {/* Mobile Menu */}
       {isOpen && (
         <div className="md:hidden fixed top-0 left-0 w-full h-screen bg-white z-40 flex flex-col pt-16 px-6">
-          <ul className="flex flex-col space-y-6 text-[20px] font-semibold text-[#9C8A5D] mt-20">
+          <ul className="flex flex-col space-y-6 text-[20px] font-semibold text-[#7A6A42] mt-20">
             <li>
               <HashLink
                 smooth
@@ -235,7 +236,7 @@ const Navbar = () => {
 
             <li>
               <button
-                className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
+                className="flex items-center gap-2 text-[#7A6A42] cursor-pointer"
                 onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
               >
                 Biz haqimizda
@@ -296,7 +297,7 @@ const Navbar = () => {
 
             <li>
               <button
-                className="flex items-center gap-2 text-[#9C8A5D] cursor-pointer"
+                className="flex items-center gap-2 text-[#7A6A42] cursor-pointer"
                 onClick={() => setMobileNewsOpen(!mobileNewsOpen)}
               >
                 Yangiliklar
@@ -350,12 +351,12 @@ const Navbar = () => {
             </li>
           </ul>
 
-          <div className="flex flex-col space-y-4 mt-8 border-t pt-6 border-[#9C8A5D]">
+          <div className="flex flex-col space-y-4 mt-8 border-t pt-6 border-[#7A6A42]">
             {/* Contact Us */}
             <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
-              className="w-full px-4 py-3  text-white text-[18px] rounded-[40px] hover:bg-[#9C8A5D] transition text-center"
+              className="w-full px-4 py-3  text-white text-[18px] rounded-[40px] hover:bg-[#7A6A42] transition text-center"
               style={{
                 background:
                   "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
@@ -368,7 +369,7 @@ const Navbar = () => {
             <Link
               to="/join-us"
               onClick={() => setIsOpen(false)}
-              className="w-full px-4 py-3 border-2 border-[#9C8A5D] text-[#9C8A5D] text-[18px] rounded-[40px] hover:bg-[#0F2C20] hover:text-white transition text-center"
+              className="w-full px-4 py-3 border-2 border-[#7A6A42] text-[#7A6A42] text-[18px] rounded-[40px] hover:bg-[#0F2C20] hover:text-white transition text-center"
             >
               Bizga qo'shiling
             </Link>
@@ -394,7 +395,7 @@ const Navbar = () => {
         className="custom-modals hidden md:block"
         zIndex={60}
       >
-        <h3 className="text-[#9A9EA6] font-[600] text-[16px] mb-2">
+        <h3 className="text-[#7A6A42] font-[600] text-[16px] mb-2">
           Biz haqimizda
         </h3>
         <div className="flex flex-col gap-1">
@@ -462,7 +463,7 @@ const Navbar = () => {
         className="custom-modal hidden md:block"
         zIndex={60}
       >
-        <h3 className="text-[#9A9EA6] font-[600] text-[16px] mb-2">
+        <h3 className="text-[#7A6A42] font-[600] text-[16px] mb-2">
           Yangiliklar
         </h3>
         <div className="flex flex-col gap-1">

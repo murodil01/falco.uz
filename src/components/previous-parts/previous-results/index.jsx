@@ -78,7 +78,7 @@ const PreviousResults = () => {
   return (
     <div className="max-w-[1260px] mx-auto px-6 py-12">
       <h3 className="text-[60px] text-[#09291B] font-[700] mb-[100px] text-center">
-        Results
+        Natijalar
       </h3>
 
       <Slider ref={sliderRef} {...settings}>

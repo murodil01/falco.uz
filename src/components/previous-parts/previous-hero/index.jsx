@@ -23,7 +23,7 @@ const PreviousHero = () => {
               text-[#09291B] md:text-[#FFFFFF]
             "
           >
-            Previous <span className="text-[#E8C777]">competitions</span>
+            Oldingi <span className="text-[#E8C777]">musobaqalar</span>
           </h3>
           <p
             className="

@@ -1,5 +1,3 @@
-
-
 import { useEffect, useState } from "react";
 import { Calendar, MapPin, Search } from "lucide-react";
 import { RiPinDistanceFill } from "react-icons/ri";
@@ -43,7 +41,7 @@ const TravelHero = () => {
 
       <div className="container mx-auto max-w-[1260px] px-4 md:px-6">
         <h3 className="text-4xl md:text-5xl font-bold mb-[105px] text-white text-center">
-          Travels
+          Sayohatlar
         </h3>
 
         {/* Responsive Cards */}
@@ -57,9 +55,9 @@ const TravelHero = () => {
             <div className="flex items-center gap-3">
               <Calendar size={20} className="text-[#09291B]" />
               <div className="flex flex-col text-left">
-                <h3 className="font-[500] text-[16px] text-[#09291B]">Time</h3>
+                <h3 className="font-[500] text-[16px] text-[#09291B]">Vaqt</h3>
                 <p className="text-[14px] font-[500] text-[#6E7074]">
-                  Where are you going?
+                  Qayerga ketyapsiz?
                 </p>
               </div>
             </div>
@@ -74,10 +72,10 @@ const TravelHero = () => {
               <MapPin size={20} className="text-[#09291B]" />
               <div className="flex flex-col">
                 <h3 className="font-[500] text-[16px] text-[#09291B]">
-                  Location
+                  Manzil
                 </h3>
                 <p className="text-[14px] font-[500] text-[#6E7074]">
-                  Where are you going?
+                  Qayerga ketyapsiz?
                 </p>
               </div>
             </div>
@@ -92,10 +90,10 @@ const TravelHero = () => {
               <RiPinDistanceFill size={20} className="text-[#09291B]" />
               <div className="flex flex-col">
                 <h3 className="font-[500] text-[16px] text-[#09291B]">
-                  Distance
+                  Masofa
                 </h3>
                 <p className="text-[14px] font-[500] text-[#6E7074]">
-                  Distance k/m
+                  Masofa k/m
                 </p>
               </div>
             </div>
@@ -110,7 +108,7 @@ const TravelHero = () => {
               <SlPeople size={20} className="text-[#09291B]" />
               <div className="flex flex-col">
                 <h3 className="font-[500] text-[16px] text-[#09291B]">
-                  Max People
+                  Maksimal odamlar
                 </h3>
                 <p className="text-[14px] font-[500] text-[#6E7074]">0</p>
               </div>
@@ -143,7 +141,7 @@ const TravelHero = () => {
 
             {/* faqat mobile da korinadi */}
             <h3 className="block md:hidden text-[#191B21] text-[16px] font-[500] ml-3">
-              Search
+              Qidirish
             </h3>
           </div>
         </div>

@@ -67,7 +67,7 @@ const Travel = () => {
 
       <div className="container mx-auto max-w-[1260px] px-4 md:px-8">
         <h3 className="text-4xl md:text-5xl font-bold text-white text-center mb-[80px]">
-          Current <span className="text-[#E8C777]">Travels</span>
+          Hozirgi <span className="text-[#E8C777]">Sayohatlar</span>
         </h3>
 
         {/* Mobile Slider */}

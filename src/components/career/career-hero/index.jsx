@@ -57,7 +57,7 @@ const CareerHero = () => {
 
       <div className="container mx-auto max-w-[1260px] px-4 md:px-6 relative z-10">
         <h3 className="text-[50px] text-white md:text-5xl font-[700] mb-[300px] text-center">
-          Career
+          Karyera
         </h3>
 
         <div className="flex flex-col gap-20">

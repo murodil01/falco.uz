@@ -86,7 +86,7 @@ const ExpectedHero = () => {
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr] items-center mb-6 gap-4">
           <div className="hidden md:block" />
           <h2 className="text-2xl md:text-3xl font-bold text-white text-center">
-            Expected Competitions
+            Kutilayotgan musobaqalar
           </h2>
           <div className="flex justify-center md:justify-end gap-3 mt-2 md:mt-0">
             <button
@@ -139,7 +139,7 @@ const ExpectedHero = () => {
                       "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
                   }}
                 >
-                  View More
+                  Batafsil ko‘rish
                 </button>
               </div>
               <div className="mt-3 bg-[#449367E5]/80 text-white p-3 rounded-[10px] min-h-[100px]">
@@ -174,7 +174,7 @@ const ExpectedHero = () => {
                         "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
                     }}
                   >
-                    View More
+                    Batafsil ko‘rish
                   </button>
                 </div>
                 <div className="mt-3 bg-[#449367E5]/80 text-white p-3 rounded-[10px] min-h-[100px]">

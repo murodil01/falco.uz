@@ -106,35 +106,36 @@ const Footer = () => {
               Yangiliklardan xabardor bo‘lish uchun bizni ijtimoiy tarmoqlarda
               kuzatib boring.
             </p>
-            <li className="flex items-center gap-4 mt-10">
+
+            <div className="flex items-center gap-4 mt-10">
               <a
                 href="https://facebook.com/"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
-                className="text-white bg-[#0F2C20] p-[7px] rounded-full hover:bg-[#1877F2] transition-colors duration-300 "
+                className="text-white bg-[#0F2C20] p-[7px] rounded-full hover:bg-[#1877F2] transition-colors duration-300"
               >
                 <FaFacebookF size={20} />
               </a>
               <a
-                href="https://instagram.com/"
+                href="https://www.instagram.com/falco_uz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
-                className="text-white bg-[#0F2C20] p-[7px] rounded-full hover:bg-[#E4405F] transition-colors duration-300 "
+                className="text-white bg-[#0F2C20] p-[7px] rounded-full hover:bg-[#E4405F] transition-colors duration-300"
               >
                 <FaInstagram size={20} />
               </a>
               <a
-                href="https://t.me/"
+                href="https://t.me/Falco_uz"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Telegram"
-                className="text-white bg-[#0F2C20] p-[7px] rounded-full hover:bg-[#0088cc] transition-colors duration-300 "
+                className="text-white bg-[#0F2C20] p-[7px] rounded-full hover:bg-[#0088cc] transition-colors duration-300"
               >
                 <FaTelegramPlane size={20} />
               </a>
-            </li>
+            </div>
           </div>
         </div>
       </div>

@@ -17,25 +17,25 @@ const images = [
   {
     title: "FoodQuest UZ",
     description:
-      "FoodQuest uses digital tools such as gamification features, special “magic sales,” and dynamic pricing to make food discovery engaging and affordable. It works by connecting restaurants and food providers with customers through a smart platform that offers discounts, rewards, and real-time availability of meals. The benefits include lower food prices, exciting user experiences, and better visibility for food businesses. FoodQuest addresses the problem of high food costs and unnecessary waste by redistributing surplus meals and balancing food consumption across the country.",
-    image: fresh_line_pro,
+      "FoodQuest oziq-ovqatni kashf etishni qiziqarli va arzon qilish uchun gamifikatsiya xususiyatlari, maxsus “sehrli chegirmalar” va dinamik narx belgilash kabi raqamli vositalardan foydalanadi. U restoranlar va oziq-ovqat yetkazib beruvchilarni mijozlar bilan bog‘laydigan aqlli platforma orqali ishlaydi, bu esa chegirmalar, mukofotlar va taomlarning real vaqtdagi mavjudligini taklif qiladi. Foydalari orasida oziq-ovqat narxlarining pasayishi, foydalanuvchilar uchun qiziqarli tajribalar va oziq-ovqat bizneslari uchun yaxshiroq ko‘rinish mavjud. FoodQuest yuqori oziq-ovqat narxlari va ortiqcha chiqindilar muammosini ortiqcha taomlarni qayta taqsimlash va mamlakat bo‘ylab oziq-ovqat iste'molini muvozanatlash orqali hal qiladi.",
+    image: FoodQuest_pro,
   },
   {
     title: "Robocontest UZ",
     description:
-      "Robocontest offers tools such as coding challenges, problem sets, and automated evaluation systems. It works by providing an online platform where participants can solve tasks, join contests, and receive instant feedback on their solutions. The benefit is hands-on practice, skill improvement, and preparation for real-world programming. It solves the problem of limited opportunities for young developers to test their knowledge and compete on an international level.",
-    image: FoodQuest_pro,
+      "Robocontest kodlash bo‘yicha vazifalar, muammo to‘plamlari va avtomatlashtirilgan baholash tizimlari kabi vositalarni taklif etadi. U ishtirokchilarga vazifalarni yechish, musobaqalarda qatnashish va yechimlari bo‘yicha darhol fikr-mulohaza olish imkonini beruvchi onlayn platforma orqali ishlaydi. Foydasi – amaliy mashqlar, ko‘nikmalarni rivojlantirish va real dunyo dasturlashiga tayyorgarlik. Bu esa yosh dasturchilarga bilimlarini sinash va xalqaro miqyosda raqobatlasha olish imkoniyati cheklangan muammoni hal qiladi.",
+    image: robocontest,
   },
   {
     title: "Freshline",
     description:
-      "Freshline provides logistics tools like digital tracking, route optimization, and cold-chain monitoring for fresh product delivery. It works by connecting farmers, suppliers, and customers through a transparent platform that ensures timely and safe delivery. The benefits include fresher products, reduced waste, and lower costs for both businesses and consumers. It solves the problem of inefficiency and product loss in traditional supply chains by offering smarter, technology-driven distribution.",
-    image: robocontest,
+      "Freshline yangi mahsulot yetkazib berish uchun raqamli kuzatuv, marshrutni optimallashtirish va sovutgichli zanjir monitoringi kabi logistika vositalarini taqdim etadi. U fermerlar, yetkazib beruvchilar va mijozlarni shaffof platforma orqali bog‘lab, vaqtida va xavfsiz yetkazib berilishini ta’minlaydi. Foydalari – mahsulotlarning yangi bo‘lishi, isrofning kamayishi va ham biznes, ham iste’molchilar uchun xarajatlarning pasayishi. U an’anaviy ta’minot zanjirlarida samaradorlik va mahsulot yo‘qolishi muammosini aqlli, texnologiyaga asoslangan tarqatish orqali hal qiladi.",
+    image: fresh_line_pro,
   },
   {
-    title: "Coming soon",
+    title: "Tez orada",
     description:
-      "We never get tired of creating. 🚀 Another startup is on the way — bigger, smarter, and ready to inspire. Stay tuned, the future is loading…",
+      "Biz yaratishda hech qachon charchamaymiz. 🚀 Yana bir startup yo‘lda — kattaroq, aqlliroq va ilhom berishga tayyor. Kuzatib boring, kelajak yuklanmoqda…",
     image: com,
   },
 ];
