@@ -1,8 +1,8 @@
 import projects from "../../assets/images/projects.png";
-import agrobust from "../../assets/agrobust.png";
-import fresh_line_pro from "../../assets/fresh_line_pro.png";
-import robcont from "../../assets/robcont.png";
-import foodquest from "../../assets/foodquest.png";
+import agrobust from "../../assets/slider/agrobust.png";
+import fresh_line_pro from "../../assets/slider/fresh_line_pro.png";
+import robcont from "../../assets/slider/robcont.png";
+import foodquest from "../../assets/slider/foodquest.png";
 
 const Slider = () => {
   const images = [agrobust, fresh_line_pro, robcont, foodquest];

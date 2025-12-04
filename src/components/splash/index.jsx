@@ -21,7 +21,7 @@ const SplashScreen = () => {
         muted
         playsInline
         preload="auto"
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute top-1/2 left-1/2 w-full max-w-[500px] h-[400px] object-cover -translate-x-1/2 -translate-y-1/2"
       />
 
       {/* Overlay for better look (optional) */}
@@ -32,8 +32,6 @@ const SplashScreen = () => {
 
 export default SplashScreen;
 
-
-
 // import { useEffect, useState } from "react";
 // import video from "../../assets/video/video.mp4"
 
@@ -41,7 +39,7 @@ export default SplashScreen;
 //   const [hide, setHide] = useState(false);
 
 //   useEffect(() => {
-//     const timer = setTimeout(() => setHide(true), 1150); 
+//     const timer = setTimeout(() => setHide(true), 1150);
 //     return () => clearTimeout(timer);
 //   }, []);
 

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import project_slider from "../../../assets/project_slider.png";
 import { ArrowLeft, ArrowRight } from "lucide-react";
-import Agroboost_pro from "../../../assets/Agroboost_pro.png";
-import fresh_line_pro from "../../../assets/fresh_line_pro.png";
-import FoodQuest_pro from "../../../assets/FoodQuest_pro.png";
-import robocontest from "../../../assets/robocontest.png";
-import com from "../../../assets/com.webp";
+import Agroboost_pro from "../../../assets/projects/Agroboost_pro.png";
+import fresh_line_pro from "../../../assets/slider/fresh_line_pro.png";
+import FoodQuest_pro from "../../../assets/projects/FoodQuest_pro.png";
+import robocontest from "../../../assets/projects/robocontest.png";
+import com from "../../../assets/projects/com.webp";
 
 const images = [
   {
