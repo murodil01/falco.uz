@@ -47,7 +47,7 @@ const Purpose = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <h3 className="font-semibold text-[20px] md:text-[24px] mb-2">
-                    1. <br /> Biz kimimiz
+                    1. Biz kimimiz
                   </h3>
                   <p className="text-[16px] md:text-[18px]">
                     Biz yoshlar uchun imkoniyat yaratadigan o‘sish va
@@ -56,8 +56,7 @@ const Purpose = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-[20px] md:text-[24px] mb-2">
-                    2.
-                    <br /> Biz maqsadimiz
+                    2. Biz maqsadimiz
                   </h3>
                   <p className="text-[16px] md:text-[18px]">
                     Har bir ishtirokchi o‘z g‘oyasini rivojlantirishi va real
@@ -69,8 +68,7 @@ const Purpose = () => {
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 <div>
                   <h3 className="font-semibold text-[20px] md:text-[24px] mb-2">
-                    3.
-                    <br /> Qanday yordam beramiz
+                    3. Qanday yordam beramiz
                   </h3>
                   <p className="text-[16px] md:text-[18px]">
                     Mentorlik, treninglar va amaliy loyihalar orqali
@@ -79,8 +77,7 @@ const Purpose = () => {
                 </div>
                 <div className="w-[330px]">
                   <h3 className="font-semibold text-[20px] md:text-[24px] mb-2">
-                    4.
-                    <br /> O‘z muvaffaqiyat yo‘lingizni birga quramiz
+                    4. O‘z muvaffaqiyat yo‘lingizni birga quramiz
                   </h3>
                   <p className="text-[16px] md:text-[18px]">
                     Falco sizga imkoniyatlar eshigini ochadi — siz esa u orqali

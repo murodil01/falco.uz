@@ -53,7 +53,7 @@ const Agree = ({ onContinue }) => {
             "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
         }}
       >
-        Continue
+        Davom ettirish
         <motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}

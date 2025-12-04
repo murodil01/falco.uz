@@ -1,6 +1,6 @@
 // import planners from "../../../assets/planners.png";
 import { ChevronRight } from "lucide-react";
-import { motion } from "framer-motion";
+import * as Motion from "framer-motion";
 import ImageSlider from "./ImageSlider";
 
 const Planners = () => {
@@ -38,12 +38,12 @@ const Planners = () => {
           >
             <span className="flex items-center gap-2">
               Bizga Qo'shiling
-              <motion.span
+              <Motion.motion.span
                 animate={{ x: [0, 5, 0] }}
                 transition={{ repeat: Infinity, duration: 1 }}
               >
                 <ChevronRight size={30} />
-              </motion.span>
+              </Motion.motion.span>
             </span>
           </button>
         </div>

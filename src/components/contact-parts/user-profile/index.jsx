@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import * as Motion from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Form, Input, Button } from "antd";
 
@@ -62,19 +62,19 @@ const UserProfile = ({ onNext }) => {
       <Button
         aria-label="continue"
         onClick={onNext}
-        className="w-full !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500]"
+        className="w-full uppercase !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500]"
         style={{
           background:
             "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
         }}
       >
-        Saqlash va davom etish
-        <motion.span
+        Davom etish
+        <Motion.motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}
         >
           <ArrowRight size={30} />
-        </motion.span>
+        </Motion.motion.span>
       </Button>
     </div>
   );

@@ -1,6 +1,6 @@
 import project_slider from "../../../assets/project_slider.png";
 import about1 from "../../../assets/about2/about1.png";
-import about2 from "../../../assets/about2/about2.png";
+import about2 from "../../../assets/about2/about2.jpg";
 
 const Hero = () => {
   return (
@@ -74,7 +74,7 @@ const Hero = () => {
                 alt="Small Image"
                 className="
             absolute bottom-0 left-1/2 transform -translate-x-1/2
-            md:bottom-[-85px] md:left-[-65px] md:translate-x-0
+            md:bottom-[-15px] md:left-[-65px] md:translate-x-0
             max-w-[180px] sm:max-w-[220px] md:max-w-[272px]
             w-full object-cover rounded-[10px] "
               />

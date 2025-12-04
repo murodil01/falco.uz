@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import project_slider from "../../../assets/project_slider.png";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import Agroboost_pro from "../../../assets/projects/Agroboost_pro.png";
@@ -55,15 +55,7 @@ const ProjectSlider = () => {
   const current = images[currentIndex];
   const next = images[(currentIndex + 1) % totalImages]; // keyingi rasm
 
-  // 🔹 Auto slide har 5 sekunda
-  useEffect(() => {
-    const interval = setInterval(() => {
-      handleNext();
-    }, 5000);
-
-    return () => clearInterval(interval); // cleanup
-  }, []);
-
+ 
   return (
     <section className="relative py-[80px] mt-30">
       {/* Background Image */}

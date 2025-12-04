@@ -400,17 +400,6 @@ const Navbar = () => {
         </h3>
         <div className="flex flex-col gap-1">
           <p
-            onClick={() => handleAboutSelect("about", "/about")}
-            className={`cursor-pointer font-[600] text-[16px] px-2 py-2 rounded-md transition-colors ${
-              activeAbout === "about"
-                ? "bg-[#F7F7F7] text-[#09291B]"
-                : "text-[#313131] hover:bg-gray-100"
-            }`}
-          >
-            Biz haqimizda
-          </p>
-
-          <p
             onClick={() => handleAboutSelect("travel", "/travel")}
             className={`cursor-pointer font-[600] text-[16px] px-2 py-2 rounded-md transition-colors ${
               activeAbout === "travel"
@@ -441,6 +430,17 @@ const Navbar = () => {
             }`}
           >
             Yutuqlar
+          </p>
+
+          <p
+            onClick={() => handleAboutSelect("about", "/about")}
+            className={`cursor-pointer font-[600] text-[16px] px-2 py-2 rounded-md transition-colors ${
+              activeAbout === "about"
+                ? "bg-[#F7F7F7] text-[#09291B]"
+                : "text-[#313131] hover:bg-gray-100"
+            }`}
+          >
+            Biz haqimizda
           </p>
         </div>
       </Modal>

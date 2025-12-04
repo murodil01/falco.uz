@@ -39,8 +39,8 @@ const statistic = [
     image: statistic4,
     title: (
       <>
-        Start Up olgan jami <br />{" "}
-        <span className="text-[#9C8A5D]">investitsiya miqdori</span>
+        Jalb qilingan jami <br />{" "}
+        <span className="text-[#9C8A5D]">investitsiyalar miqdori</span>
       </>
     ),
     number: "Tez orada",

@@ -2,37 +2,45 @@ import { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import attend1 from "../../../assets/attended/attend1.png";
-import attend2 from "../../../assets/attended/attend2.png";
-import attend3 from "../../../assets/attended/attend3.png";
-import attend4 from "../../../assets/attended/attend4.png";
-import attend5 from "../../../assets/attended/attend5.png";
+import attend1 from "../../../assets/attended/attend1.jpg";
+import attend2 from "../../../assets/attended/attend2.jpg";
+import attend3 from "../../../assets/attended/attend3.jpg";
+import attend4 from "../../../assets/attended/attend4.jpg";
+import attend5 from "../../../assets/attended/attend5.jpg";
 import attend6 from "../../../assets/attended/attend6.png";
 
 const attendedData = [
   {
     id: 1,
     image: attend1,
+    description: "QISQIT FALL FEST 2025 QUIZ WINNERS",
   },
   {
     id: 2,
     image: attend2,
+    description: "QISQIT FALL FEST 2025 HACKATHON WINNERS",
   },
   {
     id: 3,
     image: attend3,
+    description: "President tech awards hakatonida 4-o'rin qo'lga kiritildi !",
   },
   {
     id: 4,
     image: attend4,
+    description:
+      "K-Lab Uzbekistan StartUp Competition 4-o'rin qo'lga kiritildi !",
   },
   {
     id: 5,
     image: attend5,
+    description:
+      "Butunjahon kasb-hunar kollejlari ko'nikmalar tanlovida faxrli 2-o'rin!",
   },
   {
     id: 6,
     image: attend6,
+    description: "Rektor Kubogi - Dron musobaqasida 1-o'rin!",
   },
 ];
 // Custom Arrow komponentlari
@@ -126,9 +134,18 @@ const Attended = () => {
                 {slideItems.map((item, idx) => (
                   <div
                     key={idx}
-                    className="rounded-[10px] flex flex-col gap-4 min-h-[200px]"
+                    className="group rounded-[10px] flex flex-col gap-4 min-h-[200px] relative overflow-hidden cursor-pointer"
                   >
-                    <img src={item.image} alt="Image" loading="loader"/>
+                    <img
+                      src={item.image}
+                      alt="Image"
+                      loading="lazy"
+                      className="w-full h-[260px] object-cover"
+                    />
+
+                    <p className="absolute bottom-3 left-3 right-3 text-white font-semibold text-[16px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 px-2 py-1 rounded">
+                      {item.description}
+                    </p>
                   </div>
                 ))}
               </div>

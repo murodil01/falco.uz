@@ -1,22 +1,19 @@
-import projects from "../../assets/images/projects.png";
 import agrobust from "../../assets/slider/agrobust.png";
 import fresh_line_pro from "../../assets/slider/fresh_line_pro.png";
 import robcont from "../../assets/slider/robcont.png";
 import foodquest from "../../assets/slider/foodquest.png";
+import about_slider from "../../assets/about_slider.jpg";
+import About from "../about";
 
 const Slider = () => {
   const images = [agrobust, fresh_line_pro, robcont, foodquest];
-  const repeatedImages = [...images, ...images, ...images]; // faqat 3 marta
+  const repeatedImages = [...images, ...images];
 
   return (
     <section
       id="projects"
-      className="
-        relative w-full mt-20 lg:-mt-130
-        min-h-[400px] md:min-h-screen overflow-hidden
-        bg-no-repeat bg-cover bg-bottom
-      "
-      style={{ backgroundImage: `url(${projects})` }}
+      className="relative w-full mt-20 lg:-mt-90 min-h-[400px] md:min-h-screen overflow-hidden bg-no-repeat bg-cover bg-bottom"
+      style={{ backgroundImage: `url(${about_slider})` }}
     >
       <div className="relative z-10 flex flex-col gap-10 lg:gap-20">
         <h2 className="text-[clamp(30px,5vw,50px)] text-[#09291B] font-bold text-center mb-20">
@@ -29,13 +26,7 @@ const Slider = () => {
             {repeatedImages.map((img, idx) => (
               <div
                 key={idx}
-                className="
-                  flex-shrink-0
-                  w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48
-                  bg-white rounded-full
-                  flex items-center justify-center
-                  shadow-lg mx-3
-                "
+                className="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-white rounded-full flex items-center justify-center shadow-lg mx-3"
               >
                 <img
                   loading="loader"
@@ -47,6 +38,8 @@ const Slider = () => {
             ))}
           </div>
         </div>
+
+        <About />
       </div>
 
       {/* CSS */}

@@ -4,8 +4,8 @@ import { ArrowRight } from "lucide-react";
 const Welcome = ({ onContinue }) => {
   return (
     <div className="flex flex-col items-center gap-6 justify-center">
-      <h3 className="text-center text-[#09291B] text-[28px] sm:text-[36px] md:text-[44px] lg:text-[50px] font-[700] leading-tight">
-        Welcome to <span className="text-[#9C8A5D]">Falco</span>
+      <h3 className="capitalize text-center text-[#09291B] text-[28px] sm:text-[36px] md:text-[44px] lg:text-[50px] font-[700] leading-tight">
+        Falcoga <span className="text-[#9C8A5D]">xush kelibsiz</span>
       </h3>
 
       <p className="text-center text-[#313131] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-[400]">
@@ -28,7 +28,7 @@ const Welcome = ({ onContinue }) => {
             "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
         }}
       >
-        Get Started
+        Boshlash
         <motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}

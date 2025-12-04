@@ -28,7 +28,7 @@ const Steps = () => {
       style={{
         backgroundImage: `url(${steps_bg2})`,
         backgroundPosition: "right center",
-        backgroundSize: "22%", 
+        backgroundSize: "22%",
       }}
     >
       <div className="relative max-w-[1260px] mx-auto w-full overflow-hidden py-[100px] px-4">
@@ -47,14 +47,6 @@ const Steps = () => {
 
           {/* DESCRIPTION */}
           <div className="mt-[60px]">
-            <p
-              className="uppercase text-[14px] font-semibold
-            bg-[linear-gradient(99.32deg,#191B21_0.56%,rgba(34,167,93,0.9)_59.52%,#22A75D_117.27%)]
-            bg-clip-text text-transparent"
-            >
-              Stockie’ning dunyo miqyosidagi operatsiyalari
-            </p>
-
             <h3 className="text-[#09291B] font-bold text-[28px] lg:text-[36px] mt-3">
               Har bir qadam — sizning rivojlanish tarixingiz
             </h3>
@@ -70,25 +62,25 @@ const Steps = () => {
             <div className="mt-[80px]">
               {/* DESKTOP ABSOLUTE */}
               <div className="hidden lg:block relative w-full h-[350px]">
-                <div className="absolute left-[140px] top-[220px]">
+                <div className="absolute left-[140px] top-[260px]">
                   {desktopStep(stepsText[0], 1)}
                 </div>
 
-                <div className="absolute left-[750px] top-[85px] -translate-x-1/2">
+                <div className="absolute left-[750px] top-[120px] -translate-x-1/2">
                   {desktopStep(stepsText[1], 2)}
                 </div>
 
-                <div className="absolute right-[40px] top-[-160px]">
+                <div className="absolute right-[40px] top-[-130px]">
                   {desktopStep(stepsText[2], 3)}
                 </div>
 
-                <h3 className="absolute left-[270px] top-[115px] text-black/10 font-[900] text-[204px]">
+                <h3 className="absolute left-[270px] top-[155px] text-black/10 font-[900] text-[204px]">
                   1
                 </h3>
-                <h3 className="absolute left-[850px] -top-[20px] text-black/10 font-[900] text-[204px]">
+                <h3 className="absolute left-[780px] top-[15px] text-black/10 font-[900] text-[204px]">
                   2
                 </h3>
-                <h3 className="absolute right-0 -top-60 text-black/10 font-[900] text-[204px]">
+                <h3 className="absolute right-0 -top-[250px] text-black/10 font-[900] text-[204px]">
                   3
                 </h3>
               </div>

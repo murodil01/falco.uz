@@ -7,17 +7,12 @@ const TopHeader = () => {
     <div className="relative min-h-screen lg:min-h-[1400px] overflow-hidden">
       {/* Background */}
       <img
+        loading="eager"
         fetchPriority="high"
         decoding="async"
         src={header}
         alt="header"
-        className="
-          absolute inset-0 -z-10
-          w-full h-full
-          object-cover
-          pointer-events-none
-          select-none
-        "
+        className="absolute inset-0 -z-10 w-full h-full object-cover pointer-events-none select-none"
       />
       <Navbar />
       <Hero />

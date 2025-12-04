@@ -1,4 +1,3 @@
-import About from "../../components/about";
 import Answer from "../../components/answer";
 import Contact from "../../components/contact";
 import Footer from "../../components/footer";
@@ -16,7 +15,6 @@ const Home = () => {
       <SplashScreen />
       <TopHeader />
       <Slider />
-      <About />
       <Answer />
       <NewsMain/>
       <Team/>

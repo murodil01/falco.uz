@@ -1,5 +1,5 @@
 import { Button, Input } from "antd";
-import { motion } from "framer-motion";
+import * as Motion from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
@@ -34,12 +34,12 @@ const ContactSubmit = () => {
         }}
       >
         YUBORISH
-        <motion.span
+        <Motion.motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}
         >
           <ArrowRight size={28} />
-        </motion.span>
+        </Motion.motion.span>
       </Button>
     </div>
   );

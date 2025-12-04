@@ -5,8 +5,9 @@ const ScrollToTop = () => {
   const { pathname, hash } = useLocation();
 
   useEffect(() => {
+    // Faqat hash bo'lmasa tepaga chiqadi
     if (!hash) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
+      window.scrollTo({ top: 0, behavior: "auto" }); // smooth o'rniga auto
     }
   }, [pathname, hash]);
 

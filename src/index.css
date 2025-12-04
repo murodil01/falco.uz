@@ -132,3 +132,8 @@ body {
   animation: birdFloat 3.5s ease-in-out infinite;
   will-change: transform;
 }
+
+.text-border {
+  -webkit-text-stroke: 2px #8e7d53; /* kontur rangi */
+  color: white; /* ichki matn rangi */
+}

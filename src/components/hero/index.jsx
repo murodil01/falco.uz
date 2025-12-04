@@ -3,12 +3,12 @@ import hero from "../../assets/images/hero.png";
 const Hero = () => {
   return (
     <div className="min-h-screen flex items-center ">
-      <div className="max-w-[1260px] pt-35 lg:pt-5 pb-5 w-full m-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center justify-between gap-10">
+      <div className="max-w-[1260px] pt-35 lg:pt-25 pb-5 w-full m-auto px-4 sm:px-6 lg:px-8 flex flex-col-reverse md:flex-row items-center md:items-start justify-between gap-10">
         {/* Text */}
         <div className="flex-1 text-center md:text-left">
-          <h1 className="text-4xl md:text-[57px] font-bold text-[#231F20] mb-[46px] leading-tight">
+          <h1 className="capitalize text-4xl md:text-[57px] font-bold text-[#231F20] mb-[46px] leading-tight">
             <span className="text-[#8e7d53]">Falco hamjamiyatiga</span> xush
-            kelibsiz
+            <span className="text-border"> kelibsiz!</span>
           </h1>
           <p className="text-lg md:text-[18px] font-normal text-[#231F20] mb-[43px] max-w-xl mx-auto md:mx-0 leading-relaxed">
             Falco - bu o‘sish sari tashlangan birinchi qadam.{" "}

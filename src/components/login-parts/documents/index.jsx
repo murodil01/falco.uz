@@ -126,7 +126,7 @@ const Documents = ({ onContinue }) => {
                 padding: " 13px 0",
               }}
             >
-              Saqlash va davom etish
+              Davom ettirish
               <motion.span
                 animate={{ x: [0, 5, 0] }}
                 transition={{ repeat: Infinity, duration: 1 }}

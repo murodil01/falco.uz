@@ -78,7 +78,7 @@ const ExpectedHero = () => {
         backgroundImage: `url(${bgImage})`,
         backgroundRepeat: "no-repeat",
         backgroundPosition: "top center",
-        backgroundSize: "contain",
+        backgroundSize: "100% auto",
       }}
     >
       <div className="max-w-[1260px] mx-auto px-4 flex flex-col gap-[60px]">
