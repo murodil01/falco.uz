@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import * as Motion from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
 const Welcome = ({ onContinue }) => {
@@ -16,20 +16,20 @@ const Welcome = ({ onContinue }) => {
       </p>
       <button
         onClick={onContinue}
-        className="mt-4 w-[200px] sm:w-[280px] md:w-[300px] lg:w-[360px] 
+        className="mt-4 w-[200px] sm:w-[280px] md:w-[300px] lg:w-[360px] uppercase
              flex justify-center items-center gap-2 
              px-4 sm:px-5 md:px-6 
              py-3 sm:py-4 md:py-5 lg:py-[22px] 
              font-[500] rounded-[10px] md:rounded-[12px] 
              text-[15px] sm:text-[16px] md:text-[20px] lg:text-[24px] 
-             text-white transition-colors"
+             !text-white transition-colors"
         style={{
           background:
             "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
         }}
       >
         Boshlash
-        <motion.span
+        <Motion.motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}
         >
@@ -37,7 +37,7 @@ const Welcome = ({ onContinue }) => {
             size={20}
             className="sm:size-[24px] md:size-[26px] lg:size-[30px]"
           />
-        </motion.span>
+        </Motion.motion.span>
       </button>
     </div>
   );

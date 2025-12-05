@@ -16,7 +16,7 @@ import gallery14 from "../../../assets/gallery/gallery14.JPG";
 import gallery15 from "../../../assets/gallery/gallery15.jpg";
 import gallery16 from "../../../assets/gallery/gallery16.jpg";
 
-// Rasm ma'lumotlari
+// Rasmlar ro'yxati
 const galleryImages = [
   { id: 1, image: gallery1 },
   { id: 2, image: gallery2 },
@@ -36,73 +36,69 @@ const galleryImages = [
   { id: 16, image: gallery16 },
 ];
 
-// Tasvirlarni ikki qatorga ajratish
-const firstRowImages = galleryImages.slice(0, 8);
-const secondRowImages = galleryImages.slice(8, 16);
+// 3 qatorga bo‘lamiz
+const firstRowImages = galleryImages.slice(0, 5);
+const secondRowImages = galleryImages.slice(5, 10);
+const thirdRowImages = galleryImages.slice(10, 16);
 
-const Gallery = () => {
-  // Cheksiz aylanish effekti uchun slaydlar to'plamini ikki marta takrorlash
-  const repeatedFirstRow = [...firstRowImages, ...firstRowImages];
-  const repeatedSecondRow = [...secondRowImages, ...secondRowImages];
-
-  // Cheksiz aylanish effekti uchun alohida komponent
-  const InfiniteScrollRow = ({ images, direction = "forward" }) => {
-    // CSS animatsiya nomi. Bu nom `index.css`dagi @keyframes bilan mos kelishi kerak.
-    const animationName =
-      direction === "forward" ? "scroll-forward" : "scroll-backward";
-
-    return (
-      <div className="relative overflow-x-hidden whitespace-nowrap py-2">
-        <div
-          className="flex space-x-4 md:space-x-6"
-          // `index.css` da aniqlangan animatsiya to'g'ridan-to'g'ri style atributida ishlatiladi
-          style={{ animation: `${animationName} 40s linear infinite` }}
-        >
-          {images.map((img, index) => (
-            <div
-              key={index}
-              // Rasmlar bir xil kenglikda bo'lishi va buralishga yo'l qo'ymasligi uchun
-              className="inline-block flex-shrink-0 w-[200px] md:w-[300px] h-[150px] md:h-[200px] overflow-hidden rounded-[15px]"
-            >
-              <img
-                src={img.image}
-                alt={`Gallery ${img.id}`}
-                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
-              />
-            </div>
-          ))}
-        </div>
-      </div>
-    );
-  };
+// Infinite scroll komponent
+const InfiniteScrollRow = ({ images, direction }) => {
+  const animationName = direction === "down" ? "scroll-down" : "scroll-up";
+  const repeatedImages = [...images, ...images];
 
   return (
-    <section className="relative py-[100px] text-[#09291B]">
-      {/* Background Image */}
+    <div className="h-[600px] overflow-hidden">
+      <div
+        className="flex flex-col gap-4"
+        style={{
+          animation: `${animationName} 20s linear infinite`,
+        }}
+      >
+        {repeatedImages.map((img, index) => (
+          <img
+            key={index}
+            src={img.image}
+            alt="gallery"
+            className="w-full h-[200px] object-cover rounded-xl hover:scale-105 transition-all duration-300"
+          />
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Gallery = () => {
+  return (
+    <section className="relative py-[100px]">
+      {/* Background */}
       <div className="absolute inset-0 -z-10">
         <img
           src={worldMap}
-          alt="World Map Background"
+          alt="background"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0"></div> {/* overlay */}
       </div>
 
-      <div className="px-4 md:px-8">
-        {/* Sarlavha qismi */}
-        <h3 className="text-4xl md:text-5xl font-bold text-[#313131] text-center mb-[40px]">
+      <div className="max-w-[1200px] mx-auto px-4">
+        <h3 className="text-4xl md:text-5xl font-bold text-center mb-8">
           Falco <span className="text-[#9C8A5D]">Gallereyasi</span>
         </h3>
-        <p className="text-center text-[#0B2727] font-[400] text-[18px] md:text-[20px] mb-[80px]">
-          Falco — bu harakat, o‘sish va ilhom manbai. Galereyamiz orqali bizning
-          safarimiz, yutuqlarimiz va jamoamizning ruhini <br /> his eting.
+
+        <p className="text-center mb-[60px]">
+          Falco — bu harakat, o‘sish va ilhom. Galereyamiz orqali jamoamiz
+          hayotidan lavhalarni tomosha qiling.
         </p>
 
-        {/* Ikkita Cheksiz Aylanuvchi Qator */}
-        <div className="space-y-4 md:space-y-6">
-          {/* Ikkala qator ham faqat oldinga (o'ngdan chapga) harakatlanadi */}
-          <InfiniteScrollRow images={repeatedFirstRow} direction="forward" />
-          <InfiniteScrollRow images={repeatedSecondRow} direction="back" />
+        {/* 3 QATOR */}
+        <div className="grid md:grid-cols-3 gap-6">
+          {/* 1-qator pastga */}
+          <InfiniteScrollRow images={firstRowImages} direction="down" />
+
+          {/* 2-qator tepaga */}
+          <InfiniteScrollRow images={secondRowImages} direction="up" />
+
+          {/* 3-qator pastga */}
+          <InfiniteScrollRow images={thirdRowImages} direction="down" />
         </div>
       </div>
     </section>

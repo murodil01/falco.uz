@@ -1,10 +1,10 @@
 import { Button, Radio, Select } from "antd";
 import TextArea from "antd/es/input/TextArea";
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import * as Motion from "framer-motion";
+import { ArrowLeft, ArrowRight } from "lucide-react";
 import { useState } from "react";
 
-const Education = ({ onContinue }) => {
+const Education = ({ onContinue, onBack }) => {
   const [isStudent, setIsStudent] = useState(null);
   const [educationLevel, setEducationLevel] = useState(null);
 
@@ -73,23 +73,39 @@ const Education = ({ onContinue }) => {
         rows={4}
       />
 
-      {/* Continue button */}
-      <Button
-        onClick={onContinue}
-        className="w-full !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500]"
-        style={{
-          background:
-            "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
-        }}
-      >
-        Davom ettirish
-        <motion.span
-          animate={{ x: [0, 5, 0] }}
-          transition={{ repeat: Infinity, duration: 1 }}
+      <div className="flex items-center justify-between gap-5 flex-wrap">
+        {/* Back button */}
+        <Button
+          onClick={onBack}
+          className="flex-1 max-w-[300px] uppercase !h-[50px] !text-[#313131] !bg-[#E1E3E699]/60 !border-none !rounded-[10px] !text-[16px] !font-[500] flex items-center justify-center gap-2"
         >
-          <ArrowRight size={30} />
-        </motion.span>
-      </Button>
+          <Motion.motion.span
+            animate={{ x: [0, 5, 0] }}
+            transition={{ repeat: Infinity, duration: 1 }}
+          >
+            <ArrowLeft size={30} />
+          </Motion.motion.span>
+          Orqaga
+        </Button>
+
+        {/* Continue button */}
+        <Button
+          onClick={onContinue}
+          className="flex-1 max-w-[300px] uppercase !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500] flex items-center justify-center gap-2"
+          style={{
+            background:
+              "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
+          }}
+        >
+          Davom ettirish
+          <Motion.motion.span
+            animate={{ x: [0, 5, 0] }}
+            transition={{ repeat: Infinity, duration: 1 }}
+          >
+            <ArrowRight size={30} />
+          </Motion.motion.span>
+        </Button>
+      </div>
     </div>
   );
 };

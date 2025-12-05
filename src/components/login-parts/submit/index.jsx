@@ -1,20 +1,10 @@
 import { Button, Input } from "antd";
-import { motion } from "framer-motion";
+import * as Motion from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 const { TextArea } = Input;
 
-const Submit = ({ onSubmit }) => {
-  const navigate = useNavigate();
-
-  const handleSubmit = () => {
-    if (onSubmit) {
-      onSubmit(); 
-    }
-    navigate("/"); // ✅ home sahifaga yo‘naltirish
-  };
-
+const Submit = ({ onContinue }) => {
   return (
     <div className="flex flex-col gap-6 !max-w-[500px] w-full">
       <h3 className="text-[#313131] text-[22px] font-[600]">
@@ -23,14 +13,15 @@ const Submit = ({ onSubmit }) => {
 
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          Biz bilan bo‘lishmoqchi bo‘lgan qo‘shimcha fikrlaringiz bormi? (Ixtiyoriy)
+          Biz bilan bo‘lishmoqchi bo‘lgan qo‘shimcha fikrlaringiz bormi?
+          (Ixtiyoriy)
         </h3>
         <TextArea placeholder="Javob" rows={4} className="!rounded-lg" />
       </div>
 
       {/* Submit button */}
       <Button
-        onClick={handleSubmit}
+        onClick={onContinue}
         className="w-full !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500]"
         style={{
           background:
@@ -38,12 +29,12 @@ const Submit = ({ onSubmit }) => {
         }}
       >
         YUBORISH
-        <motion.span
+        <Motion.motion.span
           animate={{ x: [0, 5, 0] }}
           transition={{ repeat: Infinity, duration: 1 }}
         >
           <ArrowRight size={28} />
-        </motion.span>
+        </Motion.motion.span>
       </Button>
     </div>
   );
