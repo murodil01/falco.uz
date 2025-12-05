@@ -26,13 +26,12 @@ const teamMembers = [
     instagram: "https://www.instagram.com/_mr.fozil_?igsh=MWl6Y2NodWtwNWl5ZA==",
     image: fozil,
   },
-
   {
     id: 2,
     name: "Shohruhbek Sobirov",
     role: "Manager",
     desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
-    telegram: " @shohruxbek_s",
+    telegram: "https://t.me/shohruxbek_s",
     linkedin:
       "https://www.linkedin.com/in/shohrux-sobirov-07736a32b?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2FAeNQ%2BYTTOCLZ%2BsrJs%2Bmgw%3D%3D",
     instagram:
@@ -56,9 +55,9 @@ const teamMembers = [
     name: "Allayoruv Boburjon",
     role: "Backend Developer",
     desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
-    telegram: "@boburallayorov",
+    telegram: "https://t.me/boburallayorov",
     linkedin: "https://www.linkedin.com/in/boburallayorov/",
-    instagram: "Not found",
+    instagram: null,
     image: bobur,
   },
 ];
@@ -158,48 +157,45 @@ const Team = () => {
                     {member.desc}
                   </p>
 
-                  {/* Social Links */}
                   <div className="flex justify-start gap-3">
                     {/* Telegram */}
-                    <a
-                      href={
-                        member.telegram !== "Not found"
-                          ? `https://t.me/${member.telegram.replace("@", "")}`
-                          : "#"
-                      }
-                      aria-label="telegram"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-blue-500 hover:text-white flex items-center justify-center"
-                    >
-                      <RiTelegram2Line size={20} />
-                    </a>
+                    {member.telegram && (
+                      <a
+                        href={member.telegram}
+                        aria-label="telegram"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-blue-500 hover:text-white flex items-center justify-center"
+                      >
+                        <RiTelegram2Line size={20} />
+                      </a>
+                    )}
+
                     {/* LinkedIn */}
-                    <a
-                      href={
-                        member.linkedin !== "Not found" ? member.linkedin : "#"
-                      }
-                      aria-label="linkedin"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-blue-600 hover:text-white flex items-center justify-center"
-                    >
-                      <FaLinkedinIn size={18} />
-                    </a>
+                    {member.linkedin && (
+                      <a
+                        href={member.linkedin}
+                        aria-label="linkedin"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-blue-600 hover:text-white flex items-center justify-center"
+                      >
+                        <FaLinkedinIn size={18} />
+                      </a>
+                    )}
+
                     {/* Instagram */}
-                    <a
-                      href={
-                        member.instagram !== "Not found"
-                          ? `https://instagram.com/${member.instagram}`
-                          : "#"
-                      }
-                      aria-label="instagram"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-red-500 hover:text-white flex items-center justify-center"
-                    >
-                      <FaInstagram size={18} />
-                    </a>
+                    {member.instagram && (
+                      <a
+                        href={member.instagram}
+                        aria-label="instagram"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-red-500 hover:text-white flex items-center justify-center"
+                      >
+                        <FaInstagram size={18} />
+                      </a>
+                    )}
                   </div>
                 </div>
               </div>

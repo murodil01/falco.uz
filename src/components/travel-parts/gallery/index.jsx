@@ -80,11 +80,11 @@ const Gallery = () => {
       </div>
 
       <div className="max-w-[1200px] mx-auto px-4">
-        <h3 className="text-4xl md:text-5xl font-bold text-center mb-8">
+        <h3 className="text-4xl text-[#313131] md:text-5xl font-bold text-center mb-8">
           Falco <span className="text-[#9C8A5D]">Gallereyasi</span>
         </h3>
 
-        <p className="text-center mb-[60px]">
+        <p className="text-center text-[18px] font-normal mb-[60px]">
           Falco — bu harakat, o‘sish va ilhom. Galereyamiz orqali jamoamiz
           hayotidan lavhalarni tomosha qiling.
         </p>
