@@ -192,9 +192,19 @@ const Awarded = () => {
                 {slideItems.map((item, idx) => (
                   <div
                     key={idx}
-                    className="bg-[#C4C4C4] rounded-[10px] p-4 text-white flex flex-col gap-4"
+                    className="group rounded-[10px] flex flex-col gap-4 min-h-[200px] relative overflow-hidden cursor-pointer"
                   >
-                    <p className="text-[16px] font-[700]">{item.description}</p>
+                    <img
+                      src={item.image}
+                      alt="Image"
+                      loading="lazy"
+                      className="w-full h-[260px] object-cover"
+                    />
+
+                    {/* Hover paytida ko‘rinadigan text */}
+                    <p className="absolute bottom-3 left-3 right-3 text-white font-semibold text-[16px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 px-2 py-1 rounded">
+                      {item.description}
+                    </p>
                   </div>
                 ))}
               </div>
