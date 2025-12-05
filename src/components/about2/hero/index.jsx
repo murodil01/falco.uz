@@ -1,5 +1,5 @@
 import project_slider from "../../../assets/project_slider.png";
-import about1 from "../../../assets/about2/about1.png";
+import attend4 from "../../../assets/attended/attend4.jpg";
 import about2 from "../../../assets/about2/about2.jpg";
 
 const Hero = () => {
@@ -20,7 +20,7 @@ const Hero = () => {
           Biz <span className="text-[#E8C777]">Haqimizda</span>
         </h3>
 
-        <div className="flex flex-col-reverse md:flex-row gap-10 items-center md:items-start">
+        <div className="flex flex-col-reverse md:flex-row gap-10 items-center ">
           {/* Left text part */}
           <div className="md:w-1/2 space-y-4 min-h-[360px] flex flex-col">
             <h3 className="text-[28px] md:text-[36px] text-[#09291B] font-[600]">
@@ -57,28 +57,33 @@ const Hero = () => {
           </div>
 
           {/* Right slider part */}
-          <div className="flex flex-col items-center md:w-1/2">
-            <div className="relative w-full">
+          <div className="flex flex-col items-center md:w-1/2 gap-4">
+            <div className="relative w-full md:relative">
               {/* Main Image */}
               <img
-                loading="loader"
-                src={about1}
+                loading="lazy"
+                src={attend4}
                 alt="Main Image"
-                className="w-full max-w-full md:max-w-[577px] object-cover rounded-[10px] shadow-lg"
+                className="w-full object-cover rounded-[10px] shadow-lg
+                 h-[250px] sm:h-[300px] md:h-[350px] md:max-w-[577px]"
               />
 
-              {/* Overlay Image */}
+              {/* Overlay Image: desktop only as overlay */}
               <img
-                loading="loader"
+                loading="lazy"
                 src={about2}
-                alt="Small Image"
-                className="
-            absolute bottom-0 left-1/2 transform -translate-x-1/2
-            md:bottom-[-15px] md:left-[-65px] md:translate-x-0
-            max-w-[180px] sm:max-w-[220px] md:max-w-[272px]
-            w-full object-cover rounded-[10px] "
+                alt="Overlay Image"
+                className="hidden md:block absolute bottom-[-15px] left-[-65px] w-[272px] h-auto object-cover rounded-[10px]"
               />
             </div>
+
+            {/* Mobile only: second image stacked */}
+            <img
+              loading="lazy"
+              src={about2}
+              alt="Second Image"
+              className="block md:hidden w-full h-[250px] sm:h-[300px] object-cover rounded-[10px]"
+            />
           </div>
         </div>
       </div>

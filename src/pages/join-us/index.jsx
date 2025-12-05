@@ -1,10 +1,8 @@
 import { useState } from "react";
 import logo from "../../assets/images/logo.svg";
 import login_bg from "../../assets/login_bg.png";
-import { MoveLeft } from "lucide-react";
 import Welcome from "../../components/login-parts/welcome";
 import Documents from "../../components/login-parts/documents";
-import { Link } from "react-router-dom";
 import Education from "../../components/login-parts/education";
 import Experience from "../../components/login-parts/experience";
 import Participate from "../../components/login-parts/participate";

@@ -8,6 +8,12 @@ import attend3 from "../../../assets/attended/attend3.jpg";
 import attend4 from "../../../assets/attended/attend4.jpg";
 import attend5 from "../../../assets/attended/attend5.jpg";
 import attend6 from "../../../assets/attended/attend6.png";
+import attend7 from "../../../assets/attended/attend7.jpg";
+import attend8 from "../../../assets/attended/attend8.jpg";
+import attend9 from "../../../assets/attended/attend9.jpg";
+import attend10 from "../../../assets/attended/attend10.jpg";
+import attend11 from "../../../assets/attended/attend11.jpg";
+import attend12 from "../../../assets/attended/attend12.jpg";
 
 const attendedData = [
   {
@@ -35,14 +41,48 @@ const attendedData = [
     id: 5,
     image: attend5,
     description:
-      "Butunjahon kasb-hunar kollejlari ko'nikmalar tanlovida faxrli 2-o'rin!",
+      "Butunjahon kasb-hunar kollejlari ko'nikmalar tanlovi saralash bosqichi",
   },
   {
     id: 6,
     image: attend6,
     description: "Rektor Kubogi - Dron musobaqasida 1-o'rin!",
   },
+  {
+    id: 7,
+    image: attend7,
+    description:
+      "World Skills Competition 2025 musobaqasining yakuniy bosqichi",
+  },
+  {
+    id: 8,
+    image: attend8,
+    description:
+      "VIT Chennai, International IBM Quantum Computing Courses 2025",
+  },
+  {
+    id: 9,
+    image: attend9,
+    description: "Uzbekistan R&D camp 2025",
+  },
+  {
+    id: 10,
+    image: attend10,
+    description:
+      "Design Thinking & Digital Transformation” and “Living Lab Startup” hackathons, Janubiy Koreya 2024",
+  },
+  {
+    id: 11,
+    image: attend11,
+    description: "Game Fest 2025, Toshkent",
+  },
+  {
+    id: 12,
+    image: attend12,
+    description: "Plug and Play 2025 – The Ultimate Startup Pitch",
+  },
 ];
+
 // Custom Arrow komponentlari
 const NextArrow = ({ onClick, disabled }) => (
   <button

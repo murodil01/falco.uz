@@ -2,97 +2,51 @@ import { useRef, useState } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import award1 from "../../../assets/awarded/award1.jpg";
+import award2 from "../../../assets/awarded/award2.jpg";
+import award3 from "../../../assets/awarded/award3.jpg";
+import award4 from "../../../assets/awarded/award4.jpg";
+import award5 from "../../../assets/awarded/award5.jpg";
+import award6 from "../../../assets/awarded/award6.jpg";
+import award7 from "../../../assets/awarded/award7.jpg";
 
 const awardedData = [
   {
-    title: "Water City Dreams",
-    date: "September 18, 2022",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 1,
+    image: award1,
+    description: "Cultural Exchange Program 2024 (CEP) Winners",
   },
   {
-    title: "Mountain Heights",
-    date: "October 12, 2022",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 2,
+    image: award2,
+    description:
+      "Sog'lom Inson-Sog'lom millat Urganch Forumi Suzish bo'yicha 1-o'rin !",
   },
   {
-    title: "Ocean Breeze",
-    date: "November 5, 2022",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 3,
+    image: award3,
+    description: "Rektor Kubogi - Dron musobaqasida 1-o'rin!",
   },
   {
-    title: "Sunset Valley",
-    date: "December 1, 2022",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 4,
+    image: award4,
+    description: "Uzbekistan Robotics Guinness World Records",
   },
   {
-    title: "Skyline Towers",
-    date: "January 8, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 5,
+    image: award5,
+    description:
+      "Butunjahon kasb-hunar kollejlari ko'nikmalar tanlovida faxrli 2-o'rin!",
   },
   {
-    title: "Forest Retreat",
-    date: "February 14, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 6,
+    image: award6,
+    description: "QISQIT FALL FEST HAKATHON 2025 1-o'rin !",
   },
   {
-    title: "Desert Mirage",
-    date: "March 10, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Riverfront Park",
-    date: "April 22, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Golden Fields",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Twelve",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Thirteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Fourteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Fifteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Sexteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Seventeen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Eighteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Nineteen",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
-  },
-  {
-    title: "Twenty",
-    date: "May 18, 2023",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit ut aliquam, purus sit amet luctus venenatis",
+    id: 7,
+    image: award7,
+    description: "QISQIT FALL FEST QUIZ 2025 1-o'rin!",
   },
 ];
 
@@ -186,16 +140,16 @@ const Awarded = () => {
                 {slideItems.map((item, idx) => (
                   <div
                     key={idx}
-                    className="bg-[#C4C4C4] rounded-[10px] p-4 text-white flex flex-col gap-4 min-h-[200px]"
+                    className="group rounded-[10px] flex flex-col gap-4 min-h-[200px] relative overflow-hidden cursor-pointer"
                   >
-                    <h3 className="text-[20px] lg:text-[23px] font-[700] line-clamp-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-[14px] lg:text-[16px] font-[700]">
-                      {item.date}
-                    </p>
-                    <p className="text-[14px] lg:text-[16px] font-[400] line-clamp-3">
-                      {item.desc}
+                    <img
+                      src={item.image}
+                      alt="Image"
+                      loading="lazy"
+                      className="w-full h-[260px] object-cover rounded-[10px]"
+                    />
+                    <p className="absolute bottom-3 left-3 right-3 text-white font-semibold text-[16px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 px-2 py-1 rounded">
+                      {item.description}
                     </p>
                   </div>
                 ))}
@@ -210,11 +164,9 @@ const Awarded = () => {
             onClick={() => desktopSliderRef.current?.slickPrev()}
             disabled={currentSlide === 0}
           />
-
           <span className="text-gray-600 text-sm">
             {currentSlide + 1} / {desktopSlides.length}
           </span>
-
           <NextArrow
             onClick={() => desktopSliderRef.current?.slickNext()}
             disabled={currentSlide === desktopSlides.length - 1}
@@ -242,9 +194,7 @@ const Awarded = () => {
                     key={idx}
                     className="bg-[#C4C4C4] rounded-[10px] p-4 text-white flex flex-col gap-4"
                   >
-                    <h3 className="text-[20px] font-[700]">{item.title}</h3>
-                    <p className="text-[14px] font-[700]">{item.date}</p>
-                    <p className="text-[14px] font-[400]">{item.desc}</p>
+                    <p className="text-[16px] font-[700]">{item.description}</p>
                   </div>
                 ))}
               </div>
@@ -258,11 +208,9 @@ const Awarded = () => {
             onClick={() => mobileSliderRef.current?.slickPrev()}
             disabled={currentSlide === 0}
           />
-
           <span className="text-gray-600 text-sm">
             {currentSlide + 1} / {mobileSlides.length}
           </span>
-
           <NextArrow
             onClick={() => mobileSliderRef.current?.slickNext()}
             disabled={currentSlide === mobileSlides.length - 1}
@@ -274,4 +222,3 @@ const Awarded = () => {
 };
 
 export default Awarded;
-

@@ -8,11 +8,24 @@ const Welcome = ({ onContinue }) => {
         Falcoga <span className="text-[#9C8A5D]">xush kelibsiz</span>
       </h3>
 
-      <p className="text-center text-[#313131] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-[400]">
-        Falco is an exclusive network of ambitious youth across Uzbekistan,
-        uniting future leaders in tech, business, sports, education, and more.
-        If you’re ready for real challenges, teamwork, and growth — start your
-        application below.
+      <p className="text-left text-[#313131] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] font-[400]">
+        <span className="font-semibold">
+          FALCO jamoasiga qo‘shilish qoidalari:
+        </span>
+        <br />
+        1.Barcha ma’lumotlarni to‘g‘ri va rostgo‘y tarzda to‘ldiring. <br />
+        2.Aloqa uchunn kiritilgan telefon raqam va Telegram username faol
+        bo‘lishi shart.
+        <br />
+        3.Tajriba va yutuqlarni aniq va qisqa yozing. <br />
+        4.Portfolio, GitHub yokiLinkedIn havolalari mavjud bo‘lsa, iloji boricha
+        kiriting. <br />
+        5.So‘rovnoma yakunida ma’lumotlaringiz tekshiruvdan o‘tkazilishi mumkin.
+        <br />
+        6.Soxta,noto‘g‘ri yoki yolg‘on ma’lumotlar aniqlansa, ariza bekor
+        qilinadi.
+        <br /> 7.FALCO jamoasi faqat faol, intizomli va rivojlanishga tayyor
+        yoshlarnigina qabul qiladi.
       </p>
       <button
         onClick={onContinue}

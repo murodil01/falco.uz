@@ -1,17 +1,10 @@
 import { Button, Input } from "antd";
 import * as Motion from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 const { TextArea } = Input;
 
-const ContactSubmit = () => {
-  const navigate = useNavigate();
-
-  const handleSubmit = () => {
-    navigate("/");
-  };
-
+const ContactSubmit = ({ onNext }) => {
   return (
     <div className="flex flex-col gap-6 w-full max-w-[560px]">
       <h3 className="text-[#313131] text-[22px] font-[600]">Bog'lanish</h3>
@@ -26,7 +19,7 @@ const ContactSubmit = () => {
       {/* Submit button */}
       <Button
         aria-label="submit"
-        onClick={handleSubmit}
+        onClick={onNext}
         className="w-full max-w-[560px] !h-[50px] !text-white !border-none !rounded-[10px] !text-[16px] !font-[500]"
         style={{
           background:

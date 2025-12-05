@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Information from "../../components/contact-parts/information";
 import UserProfile from "../../components/contact-parts/user-profile";
 import ContactSubmit from "../../components/contact-parts/contact-submit";
-
+import Succes from "../../components/login-parts/succes";
 const ContactUs = () => {
   const [step, setStep] = useState(1); // 1 - Welcome, 2 - Documents
 
@@ -34,53 +34,61 @@ const ContactUs = () => {
             borderRadius: "22px",
           }}
         >
-          {/* Progress Line */}
-          <div className="max-w-[300px] w-full relative">
-            <div className="relative flex items-center justify-between">
-              {/* Background line */}
-              <div className="absolute top-1/2 left-0 w-full h-[6px] bg-[#EFF0F6] -translate-y-1/2 rounded-full" />
+          {/* Progress Line → faqat Succes bo'lmagan steplarda chiqadi */}
+          {step !== 4 && (
+            <>
+              <div className="max-w-[520px] w-full relative">
+                <div className="relative flex items-center justify-between">
+                  {/* Background line */}
+                  <div className="absolute top-1/2 left-0 w-full h-[6px] bg-[#EFF0F6] -translate-y-1/2 rounded-full" />
 
-              {/* Active line */}
-              <div
-                className="absolute top-1/2 left-0 h-[6px] bg-[#22A75D] -translate-y-1/2 rounded-full transition-all duration-500"
-                style={{
-                  width:
-                    step === 1
-                      ? "0%"
-                      : step === 2
-                      ? "50%"
-                      : step === 3
-                      ? "100%"
-                      : "100%",
-                }}
-              />
+                  {/* Active line */}
+                  {step >= 2 && (
+                    <div
+                      className="absolute top-1/2 left-0 h-[6px] bg-[#22A75D] -translate-y-1/2 rounded-full transition-all duration-500"
+                      style={{
+                        width:
+                          step === 1
+                            ? "0%"
+                            : step === 2
+                            ? "50%"
+                            : step === 3
+                            ? "100%"
+                            : "0%",
+                      }}
+                    />
+                  )}
 
-              {/* Steps */}
-              {[1, 2, 3].map((s) => {
-                const isActive = step >= s;
-                return (
-                  <div
-                    key={s}
-                    onClick={() => setStep(s)} // 👈 step tugmasiga bosganda shu stepga o'tadi
-                    className={`relative z-10 w-8 h-8 flex items-center justify-center rounded-full border-2 transition-all cursor-pointer ${
-                      isActive
-                        ? "bg-[#22A75D] border-[#22A75D] text-white"
-                        : "bg-white border-[#EFF0F6] text-gray-400"
-                    }`}
-                  >
-                    {s}
-                  </div>
-                );
-              })}
-            </div>
-          </div>
+                  {/* Steps */}
+                  {[1, 2, 3].map((s) => {
+                    const isActive = step >= s; // ← o'zgartirildi
 
-          <div className="bg-[#D9DBE9] w-full max-w-[560px] h-[2px]"></div>
+                    return (
+                      <div
+                        key={s}
+                        onClick={() => setStep(s)}
+                        className={`relative z-10 w-8 h-8 flex items-center justify-center rounded-full border-2 transition-colors cursor-pointer ${
+                          isActive
+                            ? "bg-[#22A75D] border-[#22A75D] text-white"
+                            : "bg-white border-[#EFF0F6] text-gray-400"
+                        }`}
+                      >
+                        {s}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              <div className="bg-[#D9DBE9] w-full max-w-[570px] h-[2px]"></div>
+            </>
+          )}
 
           {/* Dynamic Pages */}
           {step === 1 && <Information onNext={() => setStep(2)} />}
           {step === 2 && <UserProfile onNext={() => setStep(3)} />}
           {step === 3 && <ContactSubmit onNext={() => setStep(4)} />}
+          {step === 4 && <Succes />}
         </div>
       </div>
     </div>

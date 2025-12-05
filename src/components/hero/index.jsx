@@ -8,7 +8,7 @@ const Hero = () => {
         <div className="flex-1 text-center md:text-left">
           <h1 className="capitalize text-4xl md:text-[57px] font-bold text-[#231F20] mb-[46px] leading-tight">
             <span className="text-[#8e7d53]">Falco hamjamiyatiga</span> xush
-            <span className="text-border"> kelibsiz!</span>
+            <span className="text-[#8e7d53]"> kelibsiz!</span>
           </h1>
           <p className="text-lg md:text-[18px] font-normal text-[#231F20] mb-[43px] max-w-xl mx-auto md:mx-0 leading-relaxed">
             Falco - bu o‘sish sari tashlangan birinchi qadam.{" "}

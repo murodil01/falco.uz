@@ -326,7 +326,7 @@ const Navbar = () => {
                         : ""
                     }`}
                   >
-                    Tugallangan tanlovlar
+                    Yetakchi Loyihalar
                   </li>
                   <li
                     onClick={() => handleNewsSelect("falco", "/news")}
@@ -485,7 +485,7 @@ const Navbar = () => {
                 : "text-[#313131] hover:bg-gray-100"
             }`}
           >
-            Tugallangan tanlovlar
+            Yetakchi loyihalar
           </p>
           <p
             onClick={() => handleNewsSelect("falco", "/news")}

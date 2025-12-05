@@ -1,9 +1,5 @@
 import { useState } from "react";
-import {
-  FaTelegramPlane,
-  FaInstagram,
-  FaPhoneAlt,
-} from "react-icons/fa";
+import { FaTelegramPlane, FaInstagram, FaPhoneAlt } from "react-icons/fa";
 import { IoMdChatboxes } from "react-icons/io";
 import { Headset, X } from "lucide-react";
 
@@ -15,54 +11,59 @@ const FloatingMenu = () => {
       <div className="flex flex-col items-center z-50">
         {/* Social / Chat Icons */}
         <div className="flex flex-col items-center gap-3 mb-4">
-          {["telegram", "instagram", "phone", "chat"].map(
-            (item, index) => {
-              const hrefs = {
-                telegram: "https://t.me/Falco_uz",
-                instagram:
-                  "https://www.instagram.com/falco_uz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
-                phone: "tel:+998908086383",
-                chat: "https://t.me/+ZHiRSzPPGwdlMGEy",
-              };
-              const colors = {
-                telegram: "bg-blue-500 hover:bg-blue-600",
-                instagram: "bg-pink-500 hover:bg-pink-600",
-                phone: "bg-green-500 hover:bg-green-600",
-                chat: "bg-gradient-to-r from-[#1FB3F5] to-[#6651FF] hover:opacity-90",
-              };
-              const Icons = {
-                telegram: FaTelegramPlane,
-                instagram: FaInstagram,
-                phone: FaPhoneAlt,
-                chat: IoMdChatboxes,
-              };
-              const Icon = Icons[item];
+          {["telegram", "instagram", "phone", "chat"].map((item, index) => {
+            const hrefs = {
+              telegram: "https://t.me/Falco_uz",
+              instagram:
+                "https://www.instagram.com/falco_uz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==",
+              phone: "tel:+998908086383",
+              chat: "https://t.me/+ZHiRSzPPGwdlMGEy",
+            };
+            const colors = {
+              telegram: "bg-blue-500 hover:bg-blue-600",
+              instagram: "bg-pink-500 hover:bg-pink-600",
+              phone: "bg-green-500 hover:bg-green-600",
+              chat: "bg-gradient-to-r from-[#09291B] to-[#22A75DE5] hover:opacity-90",
+            };
+            const Icons = {
+              telegram: FaTelegramPlane,
+              instagram: FaInstagram,
+              phone: FaPhoneAlt,
+              chat: IoMdChatboxes,
+            };
+            const Icon = Icons[item];
 
-              return (
-                <a
-                  key={item}
-                  href={hrefs[item]}
-                  target={
-                    item === "phone" || item === "chat" ? "_self" : "_blank" // 👈 chat uchun ham _self
-                  }
-                  rel="noopener noreferrer"
-                  aria-label={`Go to ${item}`}
-                  title={`Go to ${item}`}
-                  className={`w-12 h-12 flex items-center justify-center rounded-full text-white shadow-lg transition-all duration-500 
+            return (
+              <a
+                key={item}
+                href={
+                  item === "phone"
+                    ? "tel:+998908086383"
+                    : item === "chat"
+                    ? "https://t.me/+ZHiRSzPPGwdlMGEy"
+                    : hrefs[item]
+                }
+                target={
+                  item === "telegram" || item === "instagram"
+                    ? "_blank"
+                    : "_self"
+                }
+                rel="noopener noreferrer"
+                aria-label={`Go to ${item}`}
+                title={`Go to ${item}`}
+                className={`w-12 h-12 flex items-center justify-center rounded-full text-white shadow-lg transition-all duration-500 
     ${colors[item]} 
     ${
       open
         ? "opacity-100 translate-y-0 pointer-events-auto"
         : "opacity-0 translate-y-4 pointer-events-none"
-    }
-  `}
-                  style={{ transitionDelay: `${index * 100}ms` }}
-                >
-                  <Icon size={22} />
-                </a>
-              );
-            }
-          )}
+    }`}
+                style={{ transitionDelay: `${index * 100}ms` }}
+              >
+                <Icon size={22} />
+              </a>
+            );
+          })}
         </div>
 
         {/* Main Floating Button */}

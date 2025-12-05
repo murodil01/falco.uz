@@ -34,17 +34,17 @@ const Purpose = () => {
       {/* Content */}
       {!loading && (
         <div className="relative z-10 max-w-[1260px] mx-auto px-4 md:px-6 text-white">
-          <h3 className="text-3xl md:text-[50px] font-bold text-center">
+          <h3 className="text-3xl md:text-[50px] font-bold text-center mt-6 md:mt-0">
             Falco <span className="text-[#E8C777]">Maqsadi</span>
           </h3>
-          <p className="mt-5 font-normal md:text-[24px] text-center">
+          <p className="mt-6 font-normal md:text-[24px] text-center">
             “Falco faqatgina hamjamiyat emas — u o‘zgarishlar harakatidir.
           </p>
 
-          <div className="mt-16 flex flex-col md:flex-row gap-10">
+          <div className="mt-16 flex items-center flex-col-reverse md:flex-row gap-5 md:gap-10">
             {/* Left side */}
-            <div className="flex-1 flex flex-col gap-8">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="flex-1 flex items-start gap-3 md:gap-8">
+              <div className="grid grid-cols-2 gap-6 w-full">
                 <div>
                   <h3 className="font-semibold text-[20px] md:text-[24px] mb-2">
                     1. Biz kimimiz
@@ -63,9 +63,6 @@ const Purpose = () => {
                     natijaga erishishi uchun zarur muhitni taqdim etamiz.
                   </p>
                 </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
                 <div>
                   <h3 className="font-semibold text-[20px] md:text-[24px] mb-2">
                     3. Qanday yordam beramiz
@@ -75,7 +72,7 @@ const Purpose = () => {
                     rivojlanishingizga ko‘maklashamiz.
                   </p>
                 </div>
-                <div className="w-[330px]">
+                <div>
                   <h3 className="font-semibold text-[20px] md:text-[24px] mb-2">
                     4. O‘z muvaffaqiyat yo‘lingizni birga quramiz
                   </h3>
