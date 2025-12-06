@@ -43,13 +43,16 @@ const thirdRowImages = galleryImages.slice(10, 16);
 
 // Infinite scroll komponent
 const InfiniteScrollRow = ({ images, direction }) => {
-  const animationName = direction === "down" ? "scroll-down" : "scroll-up";
+  // Ekran o'lchamiga qarab yo'nalishni belgilaymiz
+  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const animationName = isMobile ? "scroll-up" : direction === "down" ? "scroll-down" : "scroll-up";
+
   const repeatedImages = [...images, ...images];
 
   return (
     <div className="h-[600px] overflow-hidden">
       <div
-        className="flex flex-col gap-4"
+        className="flex flex-col gap-4 md:flex-col"
         style={{
           animation: `${animationName} 20s linear infinite`,
         }}
@@ -70,7 +73,6 @@ const InfiniteScrollRow = ({ images, direction }) => {
 const Gallery = () => {
   return (
     <section className="relative py-[100px]">
-      {/* Background */}
       <div className="absolute inset-0 -z-10">
         <img
           src={worldMap}
@@ -90,7 +92,7 @@ const Gallery = () => {
         </p>
 
         {/* 3 QATOR */}
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="flex flex-col md:grid md:grid-cols-3 gap-6">
           {/* 1-qator pastga */}
           <InfiniteScrollRow images={firstRowImages} direction="down" />
 
@@ -106,3 +108,4 @@ const Gallery = () => {
 };
 
 export default Gallery;
+

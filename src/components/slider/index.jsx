@@ -21,7 +21,7 @@ const Slider = () => {
           Bizning <span className="text-[#9C8A5D]">loyihalarimiz</span>
         </h2>
 
-        <div className="overflow-hidden">
+        <div className="overflow-hidden max-w-[1200px] mx-auto px-4">
           <div className="marquee-track">
             {repeatedImages.map((img, idx) => (
               <div
