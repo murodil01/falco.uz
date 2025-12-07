@@ -240,8 +240,9 @@ const Attended = () => {
                       className="w-full h-[260px] object-cover"
                     />
 
-                    {/* Hover paytida ko‘rinadigan text */}
-                    <p className="absolute bottom-3 left-3 right-3 text-white font-semibold text-[16px] opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-black/50 px-2 py-1 rounded">
+                    {/* Text overlay */}
+                    <p
+                      className="absolute bottom-3 left-3 right-3 text-white font-semibold text-[16px] bg-black/50 px-2 py-1 rounded transition-opacity duration-300 opacity-100 md:opacity-0 group-hover:opacity-100">
                       {item.description}
                     </p>
                   </div>

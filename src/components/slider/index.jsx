@@ -3,10 +3,11 @@ import fresh_line_pro from "../../assets/slider/fresh_line_pro.png";
 import robcont from "../../assets/slider/robcont.png";
 import foodquest from "../../assets/slider/foodquest.png";
 import about_slider from "../../assets/about_slider.jpg";
+import clinicgo from "../../assets/slider/clinicgo.webp";
 import About from "../about";
 
 const Slider = () => {
-  const images = [agrobust, fresh_line_pro, robcont, foodquest];
+  const images = [agrobust, fresh_line_pro, robcont, foodquest, clinicgo];
   // 3 marta takrorlaymiz. Endi xato ehtimoli ancha kamayadi.
   const repeatedImages = [...images, ...images, ...images];
 

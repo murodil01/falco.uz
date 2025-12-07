@@ -1,7 +1,7 @@
 import { Mail, Phone } from "lucide-react";
 import footer from "../../assets/images/footer-log.png";
 import { Link } from "react-router-dom";
-import { FaFacebookF, FaInstagram, FaTelegramPlane } from "react-icons/fa";
+import { FaInstagram, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
 import { HashLink } from "react-router-hash-link";
 
 const Footer = () => {
@@ -109,13 +109,13 @@ const Footer = () => {
 
             <div className="flex items-center gap-4 mt-10">
               <a
-                href="https://facebook.com/"
+                href="https://www.linkedin.com/company/falco-community/?viewAsMember=true"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
                 className="text-white bg-[#0F2C20] p-[7px] rounded-full hover:bg-[#1877F2] transition-colors duration-300"
               >
-                <FaFacebookF size={20} />
+                <FaLinkedin size={20} />
               </a>
               <a
                 href="https://www.instagram.com/falco_uz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="

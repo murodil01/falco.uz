@@ -5,6 +5,7 @@ import Agroboost_pro from "../../../assets/projects/Agroboost_pro.png";
 import fresh_line_pro from "../../../assets/slider/fresh_line_pro.png";
 import FoodQuest_pro from "../../../assets/projects/FoodQuest_pro.png";
 import robocontest from "../../../assets/projects/robocontest.png";
+import clinicgo from "../../../assets/slider/clinicgo.webp";
 import com from "../../../assets/projects/com.webp";
 
 const images = [
@@ -13,30 +14,42 @@ const images = [
     description:
       "AgroBoost fermerlar uchun zamonaviy raqamli yechimlarni taqdim etadi: dron orqali kuzatuv, aqlli sensorlar va ma’lumotlar tahlili orqali ekinlarni aniq boshqarish imkoniyati yaratiladi. Platforma dalalardan real vaqt rejimida ma’lumot yig‘adi va sug‘orish, o‘g‘itlash hamda hosilni yig‘ib olish bo‘yicha aniq tavsiyalar beradi. \n\nAgroBoostning asosiy afzalligi — hosildorlikning oshishi, xarajatlarning kamayishi va qishloq xo‘jaligida yanada barqaror, samarali jarayonlarning shakllanishidir. U an’anaviy usullardagi past unumdorlik va zamonaviy texnologiyalarga kirishning cheklanganligi kabi muammolarni bartaraf etib, fermerlarning ishonchli va asosli qarorlar qabul qilishiga yordam beradi.",
     image: Agroboost_pro,
+    new: null,
   },
   {
     title: "FoodQuest UZ",
     description:
       "FoodQuest oziq-ovqatni kashf etishni qiziqarli va arzon qilish uchun gamifikatsiya xususiyatlari, maxsus “sehrli chegirmalar” va dinamik narx belgilash kabi raqamli vositalardan foydalanadi. U restoranlar va oziq-ovqat yetkazib beruvchilarni mijozlar bilan bog‘laydigan aqlli platforma orqali ishlaydi, bu esa chegirmalar, mukofotlar va taomlarning real vaqtdagi mavjudligini taklif qiladi. Foydalari orasida oziq-ovqat narxlarining pasayishi, foydalanuvchilar uchun qiziqarli tajribalar va oziq-ovqat bizneslari uchun yaxshiroq ko‘rinish mavjud. FoodQuest yuqori oziq-ovqat narxlari va ortiqcha chiqindilar muammosini ortiqcha taomlarni qayta taqsimlash va mamlakat bo‘ylab oziq-ovqat iste'molini muvozanatlash orqali hal qiladi.",
     image: FoodQuest_pro,
+    new: null,
   },
   {
     title: "Robocontest UZ",
     description:
       "Robocontest kodlash bo‘yicha vazifalar, muammo to‘plamlari va avtomatlashtirilgan baholash tizimlari kabi vositalarni taklif etadi. U ishtirokchilarga vazifalarni yechish, musobaqalarda qatnashish va yechimlari bo‘yicha darhol fikr-mulohaza olish imkonini beruvchi onlayn platforma orqali ishlaydi. Foydasi – amaliy mashqlar, ko‘nikmalarni rivojlantirish va real dunyo dasturlashiga tayyorgarlik. Bu esa yosh dasturchilarga bilimlarini sinash va xalqaro miqyosda raqobatlasha olish imkoniyati cheklangan muammoni hal qiladi.",
     image: robocontest,
+    new: null,
   },
   {
     title: "Freshline",
     description:
       "Freshline yangi mahsulot yetkazib berish uchun raqamli kuzatuv, marshrutni optimallashtirish va sovutgichli zanjir monitoringi kabi logistika vositalarini taqdim etadi. U fermerlar, yetkazib beruvchilar va mijozlarni shaffof platforma orqali bog‘lab, vaqtida va xavfsiz yetkazib berilishini ta’minlaydi. Foydalari – mahsulotlarning yangi bo‘lishi, isrofning kamayishi va ham biznes, ham iste’molchilar uchun xarajatlarning pasayishi. U an’anaviy ta’minot zanjirlarida samaradorlik va mahsulot yo‘qolishi muammosini aqlli, texnologiyaga asoslangan tarqatish orqali hal qiladi.",
     image: fresh_line_pro,
+    new: null,
+  },
+  {
+    title: "ClinicGo",
+    description:
+      "ClinicGo — bu sizning sog‘lig‘ingiz va sog‘lom hayotingiz uchun yaratilgan yagona raqamli platforma bo‘lib, u onlayn shifokor konsultatsiyasi, uyga hamshira yoki shifokor chaqirish, klinikalar va sport zallarni solishtirib tanlash, laboratoriya tahlillarini buyurtma qilish hamda dori vositalarini onlayn xarid qilish imkoniyatlarini bir joyda jamlaydi. ClinicGo orqali siz eng yaqin va ishonchli mutaxassisni tez topasiz, narxlarni solishtirasiz, shifokorlar va xizmatlar reytingini ko‘rasiz hamda barcha tibbiy ma’lumotlaringizni bitta xavfsiz tizimda saqlaysiz. Bizning asosiy maqsadimiz — sog‘liqni saqlash va sog‘lom turmush xizmatlarini har bir inson uchun tez, qulay, ishonchli va hammabop qilish.",
+    image: clinicgo,
+    new: "Yangi",
   },
   {
     title: "Tez orada",
     description:
       "Biz yaratishda hech qachon charchamaymiz. 🚀 Yana bir startup yo‘lda — kattaroq, aqlliroq va ilhom berishga tayyor. Kuzatib boring, kelajak yuklanmoqda…",
     image: com,
+    new: null,
   },
 ];
 
@@ -55,7 +68,6 @@ const ProjectSlider = () => {
   const current = images[currentIndex];
   const next = images[(currentIndex + 1) % totalImages]; // keyingi rasm
 
- 
   return (
     <section className="relative py-[80px] mt-30">
       {/* Background Image */}
@@ -86,13 +98,20 @@ const ProjectSlider = () => {
 
           {/* Right slider part */}
           <div className="md:w-1/2 flex flex-col items-center">
-            <div className="flex flex-row items-center gap-4 md:gap-6">
-              {/* Main Image */}
-              <img
-                src={current.image}
-                alt={current.title}
-                className="w-[180px] h-[180px] md:w-[320px] md:h-[320px] object-cover rounded-[10px] shadow-lg"
-              />
+            <div className="flex flex-row items-center gap-4 md:gap-6 relative">
+              {/* Main Image with overlay */}
+              <div className="relative">
+                <img
+                  src={current.image}
+                  alt={current.title}
+                  className="w-[180px] h-[180px] md:w-[320px] md:h-[320px] object-cover rounded-[10px] shadow-lg"
+                />
+                {current.new && (
+                  <span className="absolute top-3 left-3 bg-red-500 text-white text-xs md:text-sm font-bold px-2 py-1 rounded-lg">
+                    {current.new}
+                  </span>
+                )}
+              </div>
 
               {/* Next preview image */}
               <img
