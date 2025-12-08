@@ -154,6 +154,7 @@ const ProjectSlider = () => {
 
           {/* Next Button */}
           <button
+            aria-label="ArrowRight"
             onClick={handleNext}
             className="text-[#09291B] p-2 hover:bg-gray-200 rounded-full transition"
           >

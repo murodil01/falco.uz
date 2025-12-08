@@ -106,7 +106,7 @@ const Team = () => {
           spaceBetween={10}
           slidesPerView={4}
           autoplay={{ delay: 3000, disableOnInteraction: false }}
-          loop={true}
+          loop={teamMembers.length > 4}
           navigation={{
             nextEl: ".custom-next",
             prevEl: ".custom-prev",

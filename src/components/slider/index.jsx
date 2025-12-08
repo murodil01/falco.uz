@@ -30,7 +30,6 @@ const Slider = () => {
                 className="flex-shrink-0 w-24 h-24 sm:w-32 sm:h-32 md:w-40 md:h-40 lg:w-48 lg:h-48 bg-white rounded-full flex items-center justify-center shadow-lg mx-3"
               >
                 <img
-                  loading="lazy"
                   src={img}
                   alt={`project-${idx}`}
                   className="w-16 sm:w-20 md:w-24 lg:w-28 h-auto object-contain"

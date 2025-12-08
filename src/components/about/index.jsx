@@ -54,7 +54,6 @@ const About = () => {
           {/* O‘ng taraf */}
           <div className="max-w-[480px] w-full h-auto overflow-hidden rounded-2xl">
             <img
-              loading="lazy"
               src={about2}
               alt="Image"
               className="w-full h-auto transition-transform duration-700 ease-in-out hover:scale-110"
