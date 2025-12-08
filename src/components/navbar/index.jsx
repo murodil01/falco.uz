@@ -14,6 +14,7 @@ const Navbar = () => {
   const [aboutModalVisible, setAboutModalVisible] = useState(false);
   const [mobileNewsOpen, setMobileNewsOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+  // Google form redirect
   const handleFormRedirect = () => {
     window.open(
       "https://docs.google.com/forms/d/e/1FAIpQLSfRHguEMypnJXz_YQJhj-PKg7wUf5W4FdAKwn_DCOLWXzpcFA/viewform?usp=header",

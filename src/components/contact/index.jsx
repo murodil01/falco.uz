@@ -6,6 +6,13 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Contact = () => {
+  // Google form redirect
+  const handleFormRedirect = () => {
+    window.open(
+      "https://docs.google.com/forms/d/e/1FAIpQLSfRHguEMypnJXz_YQJhj-PKg7wUf5W4FdAKwn_DCOLWXzpcFA/viewform?usp=header",
+      "_blank"
+    );
+  };
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -121,13 +128,19 @@ const Contact = () => {
           data-aos="zoom-in-up"
         >
           <Link
-            to={"/contact"}
+            onClick={() => {
+              handleFormRedirect();
+            }}
+            // to={"/contact"}
             className="w-[250px] h-[85px] flex justify-center items-center bg-[#2bffff26] text-white rounded-[17px] text-[28px] font-medium hover:bg-[#9c8a5d] transition max-md:w-[150px] max-md:h-[50px] max-md:text-[16px] max-md:rounded-md max-sm:w-[130px] max-sm:h-[45px] max-sm:text-[14px]"
           >
             Bog'laning
           </Link>
           <Link
-            to={"/join-us"}
+            onClick={() => {
+              handleFormRedirect();
+            }}
+            // to={"/join-us"}
             className="w-[250px] h-[85px] flex justify-center items-center bg-[#2bffff26] text-white rounded-[17px] text-[28px] font-medium hover:bg-[#9c8a5d] transition max-md:w-[150px] max-md:h-[50px] max-md:text-[16px] max-md:rounded-md max-sm:w-[130px] max-sm:h-[45px] max-sm:text-[14px]"
           >
             Bizga qo'shiling
