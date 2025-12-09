@@ -32,11 +32,11 @@ const Footer = () => {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="phone"
-            href="tel:+998908086383"
+            href="tel:+998991292614"
             className="flex items-center gap-2 my-3"
           >
             <Phone size={20} />
-            +998 90 808 63 83
+            +998 99 129 26 14
           </a>
           <a
             target="_blank"

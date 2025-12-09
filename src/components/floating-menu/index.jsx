@@ -48,7 +48,7 @@ const FloatingMenu = () => {
                   key={item}
                   href={
                     item === "phone"
-                      ? "tel:+998908086383"
+                      ? "tel:+998991292614"
                       : item === "chat"
                       ? "https://t.me/+ZHiRSzPPGwdlMGEy"
                       : hrefs[item]
