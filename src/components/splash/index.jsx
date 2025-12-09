@@ -5,21 +5,21 @@ const SplashScreen = () => {
   const [hide, setHide] = useState(true);
 
   useEffect(() => {
-    const hasSeenSplash = localStorage.getItem("splashShown");
+    const hasSeenSplash = sessionStorage.getItem("splashShown");
 
     if (!hasSeenSplash) {
-      setHide(false); // ko‘rsatish
+      setHide(false); // Splashni ko‘rsatamiz
 
       const timer = setTimeout(() => {
         setHide(true);
-        localStorage.setItem("splashShown", "true"); // belgilab qo‘yamiz
+        sessionStorage.setItem("splashShown", "true"); // faqat session uchun
       }, 6000);
 
       return () => clearTimeout(timer);
     }
   }, []);
 
-  if (hide) return null; // umuman render bo‘lmaydi
+  if (hide) return null;
 
   return (
     <div className="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
