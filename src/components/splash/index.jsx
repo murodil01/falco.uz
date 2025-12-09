@@ -2,19 +2,27 @@ import { useEffect, useState } from "react";
 import video from "../../assets/video/video.mp4";
 
 const SplashScreen = () => {
-  const [hide, setHide] = useState(false);
+  const [hide, setHide] = useState(true);
 
   useEffect(() => {
-    const timer = setTimeout(() => setHide(true), 6000);
-    return () => clearTimeout(timer);
+    const hasSeenSplash = localStorage.getItem("splashShown");
+
+    if (!hasSeenSplash) {
+      setHide(false); // ko‘rsatish
+
+      const timer = setTimeout(() => {
+        setHide(true);
+        localStorage.setItem("splashShown", "true"); // belgilab qo‘yamiz
+      }, 6000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
+  if (hide) return null; // umuman render bo‘lmaydi
+
   return (
-    <div
-      className={`fixed inset-0 z-[9999] bg-black transition-opacity duration-700 flex items-center justify-center ${
-        hide ? "opacity-0 pointer-events-none" : "opacity-100"
-      }`}
-    >
+    <div className="fixed inset-0 z-[9999] bg-black flex items-center justify-center">
       <video
         src={video}
         autoPlay
@@ -23,14 +31,13 @@ const SplashScreen = () => {
         preload="auto"
         className="absolute top-1/2 left-1/2 w-full max-w-[500px] h-[400px] object-cover -translate-x-1/2 -translate-y-1/2"
       />
-
-      {/* Overlay for better look (optional) */}
       <div className="absolute inset-0 bg-black/10"></div>
     </div>
   );
 };
 
 export default SplashScreen;
+
 
 // import { useEffect, useState } from "react";
 // import video from "../../assets/video/video.mp4"
