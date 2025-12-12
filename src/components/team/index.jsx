@@ -47,7 +47,7 @@ const teamMembers = [
     linkedin:
       "https://www.linkedin.com/in/gauxar-baymatova-357315393?utm_source=share_via&utm_content=profile&utm_medium=member_android",
     instagram:
-      "https://www.instagram.com/kaokosey?utm_source=qr&igsh=aDFkZTYwcTRja3py",
+      "https://www.instagram.com/lamiaadiana?igsh=cWt3MnFydnV0NHhx",
     image: gauhar,
   },
   {
