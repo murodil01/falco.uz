@@ -35,3 +35,4 @@ const Information = ({ onNext }) => {
 };
 
 export default Information;
+

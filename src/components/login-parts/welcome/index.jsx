@@ -13,18 +13,18 @@ const Welcome = ({ onContinue }) => {
           FALCO jamoasiga qo‘shilish qoidalari:
         </span>
         <br />
-        1.Barcha ma’lumotlarni to‘g‘ri va rostgo‘y tarzda to‘ldiring. <br />
-        2.Aloqa uchunn kiritilgan telefon raqam va Telegram username faol
+        1. Barcha ma’lumotlarni to‘g‘ri va rostgo‘y tarzda to‘ldiring. <br />
+        2. Aloqa uchun kiritilgan telefon raqam va Telegram username faol
         bo‘lishi shart.
         <br />
-        3.Tajriba va yutuqlarni aniq va qisqa yozing. <br />
-        4.Portfolio, GitHub yokiLinkedIn havolalari mavjud bo‘lsa, iloji boricha
+        3. Tajriba va yutuqlarni aniq va qisqa yozing. <br />
+        4. Portfolio, GitHub yoki LinkedIn havolalari mavjud bo‘lsa, iloji boricha
         kiriting. <br />
-        5.So‘rovnoma yakunida ma’lumotlaringiz tekshiruvdan o‘tkazilishi mumkin.
+        5. So‘rovnoma yakunida ma’lumotlaringiz tekshiruvdan o‘tkazilishi mumkin.
         <br />
-        6.Soxta,noto‘g‘ri yoki yolg‘on ma’lumotlar aniqlansa, ariza bekor
+        6. Soxta,noto‘g‘ri yoki yolg‘on ma’lumotlar aniqlansa, ariza bekor
         qilinadi.
-        <br /> 7.FALCO jamoasi faqat faol, intizomli va rivojlanishga tayyor
+        <br /> 7. FALCO jamoasi faqat faol, intizomli va rivojlanishga tayyor
         yoshlarnigina qabul qiladi.
       </p>
       <button

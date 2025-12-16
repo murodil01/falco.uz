@@ -14,13 +14,6 @@ const Navbar = () => {
   const [aboutModalVisible, setAboutModalVisible] = useState(false);
   const [mobileNewsOpen, setMobileNewsOpen] = useState(false);
   const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
-  // Google form redirect
-  const handleFormRedirect = () => {
-    window.open(
-      "https://docs.google.com/forms/d/e/1FAIpQLSfRHguEMypnJXz_YQJhj-PKg7wUf5W4FdAKwn_DCOLWXzpcFA/viewform?usp=header",
-      "_blank"
-    );
-  };
 
   const location = useLocation();
   const navigate = useNavigate();
@@ -195,9 +188,8 @@ const Navbar = () => {
               <Link
                 onClick={() => {
                   setIsOpen(false);
-                  handleFormRedirect();
                 }}
-                // to="/contact"
+                to="/contact"
                 className="w-[140px] px-5 flex justify-center items-center  text-white font-semibold text-[16px] rounded-[40px] transition text-center"
                 style={{
                   background:
@@ -211,9 +203,8 @@ const Navbar = () => {
               <Link
                 onClick={() => {
                   setIsOpen(false);
-                  handleFormRedirect();
                 }}
-                // to="/join-us"
+                to="/join-us"
                 className="w-[180px] px-5 py-2 border-2 border-[#7A6A42] text-[#7A6A42] font-semibold text-[16px] rounded-[40px] transition text-center"
               >
                 Bizga qo’shiling!
@@ -368,34 +359,10 @@ const Navbar = () => {
 
           <div className="flex flex-col space-y-4 mt-8 border-t pt-6 border-[#7A6A42]">
             {/* Contact Us */}
-            {/* <Link
+            <Link
               to="/contact"
               onClick={() => setIsOpen(false)}
               className="w-full px-4 py-3  text-white text-[18px] rounded-[40px] hover:bg-[#7A6A42] transition text-center"
-              style={{
-                background:
-                  "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
-              }}
-            >
-              Bog’laning
-            </Link> */}
-
-            {/* Join Us */}
-            {/* <Link
-              to="/join-us"
-              onClick={() => setIsOpen(false)}
-              className="w-full px-4 py-3 border-2 border-[#7A6A42] text-[#7A6A42] text-[18px] rounded-[40px] hover:bg-[#0F2C20] hover:text-white transition text-center"
-            >
-              Bizga qo'shiling
-            </Link> */}
-            
-            {/* Contact Us */}
-            <Link
-              onClick={() => {
-                setIsOpen(false);
-                handleFormRedirect();
-              }}
-              className="w-full px-4 py-3 text-white text-[18px] rounded-[40px] hover:bg-[#7A6A42] transition text-center"
               style={{
                 background:
                   "linear-gradient(99.32deg, #191B21 0.56%, rgba(34, 167, 93, 0.9) 59.52%, #22A75D 117.27%)",
@@ -406,10 +373,8 @@ const Navbar = () => {
 
             {/* Join Us */}
             <Link
-              onClick={() => {
-                setIsOpen(false);
-                handleFormRedirect();
-              }}
+              to="/join-us"
+              onClick={() => setIsOpen(false)}
               className="w-full px-4 py-3 border-2 border-[#7A6A42] text-[#7A6A42] text-[18px] rounded-[40px] hover:bg-[#0F2C20] hover:text-white transition text-center"
             >
               Bizga qo'shiling
