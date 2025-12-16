@@ -142,5 +142,3 @@ const Documents = ({ onContinue }) => {
 };
 
 export default Documents;
-
-

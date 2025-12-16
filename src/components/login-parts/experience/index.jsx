@@ -19,7 +19,6 @@ const Experience = ({ onContinue, onBack }) => {
           keladi? (Bir nechta tanlash mumkin)
         </h4>
         <Select
-          mode="multiple"
           allowClear
           placeholder="Ko‘nikmalaringiz va qiziqishlaringizni tanlang"
           className="custom-select w-full !h-[35px] !rounded-[10px]"

@@ -1,43 +1,36 @@
-import { Button, Select } from "antd";
+import { Button, Input } from "antd";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 import * as Motion from "framer-motion";
 
-const Time = ({ onContinue, onBack }) => {
+const { TextArea } = Input;
+
+const Option = ({ onContinue, onBack }) => {
   return (
     <div className="flex flex-col gap-6 max-w-[600px] w-full">
       <h3 className="text-[#313131] text-[22px] font-[600]">
         Motivatsiya va ishtirok
       </h3>
 
-      {/* Weekly time commitment */}
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          Haftasiga Falco faoliyatiga qancha vaqt ajrata olasiz?
+          Nima uchun aynan sizni tanlashimiz kerak?
         </h3>
-        <Select
-          placeholder="Ulardan birini tanlang"
-          className="custom-select w-full !h-[40px] !rounded-[10px]"
-          options={[
-            { value: "6_8_hours_per_week", label: "6-8 soat/hafta" },
-            { value: "10_15_hours_per_week", label: "10-15 soat/hafta" },
-            { value: "15_20_hours_per_week", label: "15-20 soat/hafta" },
-          ]}
+        <TextArea
+          placeholder="Sizning javobingiz"
+          rows={4}
+          className="!rounded-lg"
         />
       </div>
 
-      {/* Open to competitions */}
       <div className="flex flex-col gap-2">
         <h3 className="text-[#000000] text-[16px] font-[500]">
-          Tanlovlar, tadbirlar va real loyihalarda qatnashishga tayyormisiz?
+          Jamoada ko‘proq qaysi rolni egallaysiz? (Lider, strateg, ijrochi,
+          kreativ, va hokazo)
         </h3>
-        <Select
-          placeholder="Ulardan birini tanlang"
-          className="custom-select w-full !h-[40px] !rounded-[10px]"
-          options={[
-            { value: "yes", label: "Yes" },
-            { value: "no", label: "No" },
-            { value: "maybe", label: "Maybe, depends on schedule" },
-          ]}
+        <TextArea
+          placeholder="Sizning javobingiz"
+          rows={4}
+          className="!rounded-lg"
         />
       </div>
 
@@ -78,4 +71,4 @@ const Time = ({ onContinue, onBack }) => {
   );
 };
 
-export default Time;
+export default Option;

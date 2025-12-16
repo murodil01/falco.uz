@@ -9,7 +9,7 @@ const Education = ({ onContinue, onBack }) => {
   const [educationLevel, setEducationLevel] = useState(null);
 
   return (
-    <div className="flex flex-col gap-6 max-w-[500px] w-full">
+    <div className="flex flex-col gap-6 max-w-[600px] w-full">
       <h3 className="text-[#313131] text-[22px] font-[600]">
         Ta’lim va faoliyat
       </h3>
