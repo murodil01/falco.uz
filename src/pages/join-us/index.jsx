@@ -12,24 +12,28 @@ import Agree from "../../components/login-parts/agree";
 import Submit from "../../components/login-parts/submit";
 import Succes from "../../components/login-parts/succes";
 import Option from "../../components/login-parts/option";
+import { joinUsService } from "../../api/join";
+import { message } from "antd";
 
 const JoinUs = () => {
   const [step, setStep] = useState(1);
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     // Documents qismi
     full_name: "",
-    age: 0, // number bo‘lishi kerak
+    age: null,
     living_place: "",
     phone_number: "",
     tg_username: "",
+    email: "",
 
     // Education qismi
-    is_student: false, // boolean default qiymat
+    is_student: false,
     degree_type: "",
     degree_desc: "",
 
     // Experience qismi
-    skills: [], // array, backendga yuborishda stringga aylantiriladi
+    skills: [],
     skill_desc: "",
 
     // Participate qismi
@@ -40,15 +44,17 @@ const JoinUs = () => {
     join_team_desc: "",
     join_team_aim: "",
 
+    // Option qismi
+    team_why_choose: "",
+    team_role: "",
+
     // Time qismi
     time_commit: "",
     ready_participate: "",
 
     // Agree qismi
-    team_why_choose: "",
-    team_role: "",
     team_failure: "",
-    falco_core: false, // boolean default qiymat
+    falco_core: false,
 
     // Submit qismi
     share_message: "",
@@ -61,7 +67,7 @@ const JoinUs = () => {
 
   // Keyingi stepga o'tish
   const handleNext = (newData = {}) => {
-    if (newData) {
+    if (Object.keys(newData).length > 0) {
       updateFormData(newData);
     }
     setStep((prev) => (prev < 11 ? prev + 1 : prev));
@@ -71,6 +77,77 @@ const JoinUs = () => {
   const handleBack = () => {
     setStep((prev) => (prev > 1 ? prev - 1 : prev));
   };
+
+  // Formni yuborish
+  const handleSubmit = async (finalData = {}) => {
+    try {
+      setLoading(true);
+
+      // So'nggi ma'lumotlarni qo'shish
+      const completeData = { ...formData, ...finalData };
+
+      // Bo'sh maydonlarni null ga o'tkazish
+      const dataToSend = Object.fromEntries(
+        Object.entries(completeData).map(([key, value]) => [
+          key,
+          value === "" ? null : value,
+        ])
+      );
+
+      console.log("Submitting data:", dataToSend);
+
+      const response = await joinUsService.submitJoinForm(dataToSend);
+
+      if (response) {
+        message.success("Arizangiz muvaffaqiyatli yuborildi!");
+        setStep(11);
+      }
+    } catch (error) {
+      message.error(
+        error.message || "Xatolik yuz berdi. Qayta urinib ko'ring."
+      );
+      console.error("Submit error:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Skills mapping
+  const skillOptions = [
+    { value: 1, label: "Programming / Software Development" },
+    { value: 2, label: "AI / Machine Learning" },
+    { value: 3, label: "Cybersecurity" },
+    { value: 4, label: "Business / Entrepreneurship" },
+    { value: 5, label: "Marketing / Sales" },
+    { value: 6, label: "Sports / Athletics" },
+    { value: 7, label: "Politics / Leadership" },
+    { value: 8, label: "Design / Multimedia" },
+    { value: 9, label: "Teaching / Education" },
+    { value: 10, label: "Public Speaking" },
+    { value: 11, label: "Soft Skills" },
+    { value: 12, label: "Other" },
+  ];
+
+  const degreeOptions = [
+    { value: "bachelor", label: "O‘rta ta'lim" },
+    { value: "master", label: "Master" },
+    { value: "phd", label: "PHD" },
+    { value: "other", label: "Boshqa" },
+  ];
+
+  const timeCommitOptions = [
+    { value: "less_5", label: "5 soatgacha" },
+    { value: "5-10", label: "5-10 soat" },
+    { value: "10-20", label: "10-20 soat" },
+    { value: "more_20", label: "20 soatdan ko'p" },
+    { value: "full_time", label: "To'liq vaqt" },
+  ];
+
+  const readyParticipateOptions = [
+    { value: "yes", label: "Ha" },
+    { value: "no", label: "Yo'q" },
+    { value: "maybe", label: "Maybe, depends on schedule" },
+  ];
 
   return (
     <div>
@@ -137,13 +214,19 @@ const JoinUs = () => {
           {/* Dynamic Pages */}
           {step === 1 && <Welcome onContinue={() => handleNext()} />}
           {step === 2 && (
-            <Documents onContinue={handleNext} formData={formData} />
+            <Documents
+              onContinue={handleNext}
+              formData={formData}
+              updateFormData={updateFormData}
+            />
           )}
           {step === 3 && (
             <Education
               onContinue={handleNext}
               onBack={handleBack}
               formData={formData}
+              updateFormData={updateFormData}
+              degreeOptions={degreeOptions}
             />
           )}
           {step === 4 && (
@@ -151,6 +234,8 @@ const JoinUs = () => {
               onContinue={handleNext}
               onBack={handleBack}
               formData={formData}
+              updateFormData={updateFormData}
+              skillOptions={skillOptions}
             />
           )}
           {step === 5 && (
@@ -158,6 +243,7 @@ const JoinUs = () => {
               onContinue={handleNext}
               onBack={handleBack}
               formData={formData}
+              updateFormData={updateFormData}
             />
           )}
           {step === 6 && (
@@ -165,6 +251,7 @@ const JoinUs = () => {
               onContinue={handleNext}
               onBack={handleBack}
               formData={formData}
+              updateFormData={updateFormData}
             />
           )}
           {step === 7 && (
@@ -172,6 +259,7 @@ const JoinUs = () => {
               onContinue={handleNext}
               onBack={handleBack}
               formData={formData}
+              updateFormData={updateFormData}
             />
           )}
           {step === 8 && (
@@ -179,6 +267,9 @@ const JoinUs = () => {
               onContinue={handleNext}
               onBack={handleBack}
               formData={formData}
+              updateFormData={updateFormData}
+              timeCommitOptions={timeCommitOptions}
+              readyParticipateOptions={readyParticipateOptions}
             />
           )}
           {step === 9 && (
@@ -186,14 +277,16 @@ const JoinUs = () => {
               onContinue={handleNext}
               onBack={handleBack}
               formData={formData}
+              updateFormData={updateFormData}
             />
           )}
           {step === 10 && (
             <Submit
-              onContinue={handleNext}
+              onSubmit={handleSubmit}
               onBack={handleBack}
               formData={formData}
               updateFormData={updateFormData}
+              loading={loading}
             />
           )}
           {step === 11 && <Succes formData={formData} />}
