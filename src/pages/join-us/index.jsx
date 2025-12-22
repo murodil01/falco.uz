@@ -129,7 +129,7 @@ const JoinUs = () => {
   ];
 
   const degreeOptions = [
-    { value: "bachelor", label: "O‘rta ta'lim" },
+    { value: "bachelor", label: "Bakalavr" },
     { value: "master", label: "Master" },
     { value: "phd", label: "PHD" },
     { value: "other", label: "Boshqa" },
@@ -137,8 +137,8 @@ const JoinUs = () => {
 
   const timeCommitOptions = [
     { value: "less_5", label: "5 soatgacha" },
-    { value: "5-10", label: "5-10 soat" },
-    { value: "10-20", label: "10-20 soat" },
+    { value: "5_10", label: "5-10 soat" },
+    { value: "10_20", label: "10-20 soat" },
     { value: "more_20", label: "20 soatdan ko'p" },
     { value: "full_time", label: "To'liq vaqt" },
   ];
@@ -146,7 +146,7 @@ const JoinUs = () => {
   const readyParticipateOptions = [
     { value: "yes", label: "Ha" },
     { value: "no", label: "Yo'q" },
-    { value: "maybe", label: "Maybe, depends on schedule" },
+    { value: "maybe", label: "Ehtimol, jadvalga bog‘liq" },
   ];
 
   return (
