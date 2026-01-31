@@ -6,7 +6,7 @@ import { Navigation, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import teamBg from "../../assets/images/team.png";
-import fozil from "../../assets/team/fozil.png";
+import iskandar from "../../assets/team/iskandar.jpg";
 import gauhar from "../../assets/team/gauhar.png";
 import behruz from "../../assets/team/behruz.png";
 import bobur from "../../assets/team/bobur.jpg";
@@ -17,14 +17,13 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const teamMembers = [
   {
     id: 1,
-    name: "Ruzmamatov Foziljon",
+    name: "Shomurodov Iskandar",
     role: "CEO",
     desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
-    telegram: "https://t.me/falco_ceo",
-    linkedin:
-      "https://www.linkedin.com/in/foziljon-ruzmamatov-98451b294?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bkb%2F%2Bp%2BVPQqSGDpXtuCmoDw%3D%3D",
-    instagram: "https://www.instagram.com/_mr.fozil_?igsh=MWl6Y2NodWtwNWl5ZA==",
-    image: fozil,
+    telegram: "https://t.me/HamrayevIskandar",
+    linkedin: "",
+    instagram: "",
+    image: iskandar,
   },
   {
     id: 2,
@@ -46,8 +45,7 @@ const teamMembers = [
     telegram: "https://t.me/anime0077BE",
     linkedin:
       "https://www.linkedin.com/in/gauxar-baymatova-357315393?utm_source=share_via&utm_content=profile&utm_medium=member_android",
-    instagram:
-      "https://www.instagram.com/lamiaadiana?igsh=cWt3MnFydnV0NHhx",
+    instagram: "https://www.instagram.com/lamiaadiana?igsh=cWt3MnFydnV0NHhx",
     image: gauhar,
   },
   {
@@ -159,43 +157,46 @@ const Team = () => {
 
                   <div className="flex justify-start gap-3">
                     {/* Telegram */}
-                    {member.telegram && (
-                      <a
-                        href={member.telegram}
-                        aria-label="telegram"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-blue-500 hover:text-white flex items-center justify-center"
-                      >
-                        <RiTelegram2Line size={20} />
-                      </a>
-                    )}
+                    <a
+                      href={member.telegram || "#"}
+                      onClick={(e) => !member.telegram && e.preventDefault()}
+                      className={`w-[38px] h-[38px] rounded-full bg-white flex items-center justify-center
+      ${
+        member.telegram
+          ? "text-[#09291B] hover:bg-blue-500 hover:text-white"
+          : "text-gray-400 opacity-50 cursor-not-allowed"
+      }`}
+                    >
+                      <RiTelegram2Line size={20} />
+                    </a>
 
                     {/* LinkedIn */}
-                    {member.linkedin && (
-                      <a
-                        href={member.linkedin}
-                        aria-label="linkedin"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-blue-600 hover:text-white flex items-center justify-center"
-                      >
-                        <FaLinkedinIn size={18} />
-                      </a>
-                    )}
+                    <a
+                      href={member.linkedin || "#"}
+                      onClick={(e) => !member.linkedin && e.preventDefault()}
+                      className={`w-[38px] h-[38px] rounded-full bg-white flex items-center justify-center
+      ${
+        member.linkedin
+          ? "text-[#09291B] hover:bg-blue-600 hover:text-white"
+          : "text-gray-400 opacity-50 cursor-not-allowed"
+      }`}
+                    >
+                      <FaLinkedinIn size={18} />
+                    </a>
 
                     {/* Instagram */}
-                    {member.instagram && (
-                      <a
-                        href={member.instagram}
-                        aria-label="instagram"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="w-[38px] h-[38px] rounded-full bg-white text-[#09291B] hover:bg-red-500 hover:text-white flex items-center justify-center"
-                      >
-                        <FaInstagram size={18} />
-                      </a>
-                    )}
+                    <a
+                      href={member.instagram || "#"}
+                      onClick={(e) => !member.instagram && e.preventDefault()}
+                      className={`w-[38px] h-[38px] rounded-full bg-white flex items-center justify-center
+      ${
+        member.instagram
+          ? "text-[#09291B] hover:bg-red-500 hover:text-white"
+          : "text-gray-400 opacity-50 cursor-not-allowed"
+      }`}
+                    >
+                      <FaInstagram size={18} />
+                    </a>
                   </div>
                 </div>
               </div>
@@ -208,23 +209,3 @@ const Team = () => {
 };
 
 export default Team;
-
-/*
-<div className="relative w-full h-[270px] overflow-hidden">
-  <svg className="absolute inset-0 w-0 h-0">
-    <defs>
-      <clipPath id="waveClip" clipPathUnits="objectBoundingBox">
-        <path d="M0,0.3 C0.3,1 0.7,0 1,0.7 L1,1 L0,1 Z" />
-      </clipPath>
-    </defs>
-  </svg>
-
-  <img
-    src={member.image}
-    alt={member.name}
-    className="w-full h-full object-cover"
-    style={{ clipPath: "url(#waveClip)" }}
-  />
-</div>
-
-*/
