@@ -17,22 +17,22 @@ import AboutMin from "./pages/about";
 const App = () => {
   return (
     <>
-      <ScrollToTop />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/travel" element={<Travels />} />
-        <Route path="/achievements" element={<Achievements />} />
-        <Route path="/news" element={<News />} />
-        <Route path="/previous" element={<Previous />} />
-        <Route path="/expected" element={<Expected />} />
-        <Route path="/projects" element={<Projects />} />
-        <Route path="/career" element={<Career />} />
-        <Route path="/join-us" element={<JoinUs />} />
-        <Route path="/contact" element={<ContactUs />} />
-        <Route path="/documents" element={<Documents />} />
-        <Route path="/about" element={<AboutMin />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+        <ScrollToTop />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/travel" element={<Travels />} />
+          <Route path="/achievements" element={<Achievements />} />
+          <Route path="/news" element={<News />} />
+          <Route path="/previous" element={<Previous />} />
+          <Route path="/expected" element={<Expected />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/career" element={<Career />} />
+          <Route path="/join-us" element={<JoinUs />} />
+          <Route path="/contact" element={<ContactUs />} />
+          <Route path="/documents" element={<Documents />} />
+          <Route path="/about" element={<AboutMin />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
     </>
   );
 };

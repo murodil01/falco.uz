@@ -9,7 +9,7 @@ import teamBg from "../../assets/images/team.png";
 import iskandar from "../../assets/team/iskandar.jpg";
 import gauhar from "../../assets/team/gauhar.png";
 import behruz from "../../assets/team/behruz.png";
-import bobur from "../../assets/team/bobur.jpg";
+import diyor from "../../assets/team/diyor.jpg";
 import { RiTelegram2Line } from "react-icons/ri";
 import { FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { ChevronLeft, ChevronRight } from "lucide-react";
@@ -50,13 +50,13 @@ const teamMembers = [
   },
   {
     id: 4,
-    name: "Allayoruv Boburjon",
+    name: "Xodjimetov Diyor",
     role: "Backend Developer",
     desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
-    telegram: "https://t.me/boburallayorov",
-    linkedin: "https://www.linkedin.com/in/boburallayorov/",
+    telegram: null,
+    linkedin: null,
     instagram: null,
-    image: bobur,
+    image: diyor,
   },
 ];
 
