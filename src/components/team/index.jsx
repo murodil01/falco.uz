@@ -53,7 +53,7 @@ const teamMembers = [
     name: "Xodjimetov Diyor",
     role: "Backend Developer",
     desc: "Muhammad al-Xorazmiy nomidagi Toshkent Axborot Texnologiyalari Universiteti",
-    telegram: null,
+    telegram: "https://t.me/dvskchan",
     linkedin: null,
     instagram: null,
     image: diyor,
